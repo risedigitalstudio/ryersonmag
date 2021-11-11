@@ -1,0 +1,74 @@
+$black: #000;
+$white: #fff;
+$space: 18px;
+
+@font-face {
+    font-family: "Lynon Reg";
+    src: url("../fonts/lynon-reg/LyonText-Regular.eot");
+    src: url("../fonts/lynon-reg/LyonText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-reg/LyonText-Regular.woff") format("woff"), 
+    url("../fonts/lynon-reg/LyonText-Regular.ttf") format("truetype"), 
+    url("../fonts/lynon-reg/LyonText-Regular.svg#geometric") format("svg");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: "Lynon Bold";
+    src: url("../fonts/lynon-bold/LyonText-Bold.eot");
+    src: url("../fonts/lynon-bold/LyonText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-bold/LyonText-Bold.woff") format("woff"), 
+    url("../fonts/lynon-bold/LyonText-Bold.ttf") format("truetype"), 
+    url("../fonts/lynon-bold/LyonText-Bold.svg#geometric") format("svg");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: "Suisse Reg";
+    src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot");
+    src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-reg/SuisseIntl-Regular.woff") format("woff"), 
+    url("../fonts/suisse-reg/SuisseIntl-Regular.ttf") format("truetype"), 
+    url("../fonts/suisse-reg/SuisseIntl-Regular.svg#geometric") format("svg");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: "Suisse Bold";
+    src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot");
+    src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-bold/SuisseIntl-Bold.woff") format("woff"), 
+    url("../fonts/suisse-bold/SuisseIntl-Bold.ttf") format("truetype"), 
+    url("../fonts/suisse-bold/SuisseIntl-Bold.svg#geometric") format("svg");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+
+body {
+    font-family: 'Lynon Reg', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.full {
+    width: 100%;
+    float: left;
+}
+
+.sec-pad {
+    padding-top: 55px;
+    padding-bottom: 55px;
+}
+
+.sec-pad-half {
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.sec-pad-top {
+    padding-top: 55px;
+}
+
+.sec-pad-bot {
+    padding-bottom: 55px;
+}
+

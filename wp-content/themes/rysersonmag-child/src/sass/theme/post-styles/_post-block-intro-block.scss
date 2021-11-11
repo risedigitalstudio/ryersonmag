@@ -1,0 +1,35 @@
+.addtoany_list.a2a_kit_size_40 a:not(.addtoany_special_service)>span {
+    padding: 6px;
+    border-radius: 100% !important;
+}
+
+.related-articles-sec {
+    h3 {
+        font-family: 'Suisse Bold', sans-serif;
+        font-size: 20px;
+        line-height: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 2px dotted $black;
+    }
+    .primary-category {
+        @include post-cat;
+        margin-bottom: 4px;
+    }
+    h4 a {
+        @include smaller-title;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    
+    .single-related-article {
+        padding-bottom: $space;
+        margin-bottom: $space;
+        border-bottom: 1.5px solid #D9D9D9;
+        &:last-of-type {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+    }
+}

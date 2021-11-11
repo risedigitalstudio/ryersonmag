@@ -1,0 +1,46 @@
+@mixin post-cat {
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Suisse Reg', sans-serif;
+    text-transform: uppercase;
+    padding-bottom: 1px;
+    border-bottom: 1px solid $black;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+@mixin large-title {
+    font-size: 48px;
+    line-height: 50px;
+    font-family: 'Lynon Bold', sans-serif;
+}
+
+@mixin smaller-title {
+    font-size: 20px;
+    line-height: 24px;
+    font-family: 'Lynon Reg', sans-serif;
+}
+
+@mixin single-subheading {
+    font-size: 28px;
+    line-height: 36px;
+    font-family: 'Suisse Reg', sans-serif;
+}
+
+@mixin post-meta {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: 'Suisse Reg', sans-serif;
+    span.bold {
+        font-family: 'Suisse Bold', sans-serif;
+    }
+}
+
+@mixin caption-font {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: 'Suisse Reg', sans-serif;
+    color: #585858;
+}
+
