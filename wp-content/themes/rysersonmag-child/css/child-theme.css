@@ -15084,7 +15084,7 @@ figcaption .caption-arrow {
   top: -7px;
 }
 
-.vertical-caption-sec figcaption {
+figcaption {
   left: 40px;
 }
 
@@ -15236,10 +15236,6 @@ blockquote {
   border: 0;
 }
 
-.video_block figcaption {
-  left: 40px;
-}
-
 .dyk-wrap {
   height: 100%;
   display: flex;
@@ -15312,10 +15308,15 @@ blockquote {
   display: block;
   width: 95px;
   height: 95px;
+  border-radius: 100%;
+}
+.watn-wrap .name-class {
+  font-style: italic;
 }
 .watn-wrap .name-class span {
   font-family: "Suisse Bold", sans-serif;
   display: block;
+  font-style: normal;
 }
 .watn-wrap .watn-bottom span {
   font-family: "Suisse Bold", sans-serif;

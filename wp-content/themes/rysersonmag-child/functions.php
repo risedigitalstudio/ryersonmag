@@ -36,4 +36,5 @@ add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 add_image_size( 'vertical-header', 1030, 1000, true );
 add_image_size( 'horizontal-full-header', 1440, 960, true );
 add_image_size( 'small-square', 150, 150, true );
+add_image_size( 'post-body-image', 533, 355, true );
 

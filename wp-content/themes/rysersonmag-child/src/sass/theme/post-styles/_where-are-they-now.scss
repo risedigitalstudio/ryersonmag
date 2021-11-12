@@ -2,6 +2,7 @@
     @include flex-height;
     @include post-aside-font;
     text-align: center;
+//    max-width: 148px;
     p {
         margin: 0;
     }
@@ -27,11 +28,14 @@
         display: block;
         width: 95px;
         height: 95px;
+        border-radius: 100%;
     }
     .name-class {
+        font-style: italic;
         span {
             font-family: 'Suisse Bold', sans-serif;
             display: block;
+            font-style: normal;
         }
     }
     .watn-bottom {
