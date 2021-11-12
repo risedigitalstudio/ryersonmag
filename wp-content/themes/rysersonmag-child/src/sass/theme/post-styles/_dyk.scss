@@ -1,0 +1,31 @@
+.dyk-wrap {
+    @include flex-height;
+}
+
+.stars-wrapper {
+    width: 79px;
+    height: 77px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}
+
+.dyk-img {
+    margin: $space auto;
+    display: block;
+}
+
+.dyk-content {
+    text-align: center;
+    max-width: 160px;
+    @include post-aside-font;
+    text-align: center;
+    p {
+        margin: 0;
+    }
+}

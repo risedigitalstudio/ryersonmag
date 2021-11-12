@@ -7,7 +7,9 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <?php echo $block_data['intro_content'];?>
+                <div class="post-body">
+                    <?php echo $block_data['intro_content'];?>
+                </div>
             </div>
             <div class="offset-md-1 col-md-2">
                 <div class="related-articles-sec">

@@ -31,6 +31,9 @@ figcaption {
     margin-top: $space;
     margin-bottom: 26px;
     position: relative;
+    p {
+        margin: 0;
+    }
     .caption-arrow {
         position: absolute;
         left: -25px;

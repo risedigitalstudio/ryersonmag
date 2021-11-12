@@ -15075,6 +15075,9 @@ figcaption {
   margin-bottom: 26px;
   position: relative;
 }
+figcaption p {
+  margin: 0;
+}
 figcaption .caption-arrow {
   position: absolute;
   left: -25px;
@@ -15160,6 +15163,163 @@ figcaption .caption-arrow {
 .related-articles-sec .single-related-article:last-of-type {
   border-bottom: none;
   margin-bottom: 0;
+}
+
+.post-body cite {
+  font-style: normal;
+  color: #234586;
+  font-size: 80%;
+  font-family: "Lynon Bold", sans-serif;
+}
+
+.sidebar-citations {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+cite.aside {
+  font-style: normal;
+}
+cite.aside .num {
+  display: block;
+  color: #234586;
+  font-style: normal;
+  font-family: "Suisse Bold", sans-serif;
+  font-size: 14px;
+}
+cite.aside .desc {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Suisse Reg", sans-serif;
+}
+
+.post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Suisse Bold", sans-serif;
+  margin-bottom: 18px;
+}
+
+blockquote {
+  font-family: "Suisse Bold", sans-serif;
+  font-size: 36px;
+  line-height: 44px;
+  margin: 0;
+}
+
+.video {
+  max-width: 100%;
+  /*padding:2.857em 0;*/
+}
+
+.video:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.videoWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 */
+  height: 0;
+}
+
+.videoWrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video_block figcaption {
+  left: 40px;
+}
+
+.dyk-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stars-wrapper {
+  width: 79px;
+  height: 77px;
+  position: relative;
+  margin: 0 auto;
+  display: block;
+}
+.stars-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dyk-img {
+  margin: 18px auto;
+  display: block;
+}
+
+.dyk-content {
+  text-align: center;
+  max-width: 160px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Suisse Reg", sans-serif;
+  text-align: center;
+}
+.dyk-content p {
+  margin: 0;
+}
+
+.watn-wrap {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Suisse Reg", sans-serif;
+  text-align: center;
+}
+.watn-wrap p {
+  margin: 0;
+}
+.watn-wrap h3 {
+  font-family: "Suisse Bold", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  margin: 0;
+}
+.watn-wrap .watn-sub {
+  font-style: italic;
+}
+.watn-wrap .watn-arrow, .watn-wrap .watn-sep {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 0 0;
+}
+.watn-wrap .watn-sep {
+  margin: 18px 0;
+}
+.watn-wrap .watn-img {
+  margin: 18px auto;
+  display: block;
+  width: 95px;
+  height: 95px;
+}
+.watn-wrap .name-class span {
+  font-family: "Suisse Bold", sans-serif;
+  display: block;
+}
+.watn-wrap .watn-bottom span {
+  font-family: "Suisse Bold", sans-serif;
+  display: block;
 }
 
 /*# sourceMappingURL=child-theme.css.map */

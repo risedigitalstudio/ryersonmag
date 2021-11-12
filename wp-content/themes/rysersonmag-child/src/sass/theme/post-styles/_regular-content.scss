@@ -1,0 +1,32 @@
+.post-body cite {
+    font-style: normal;
+    color: #234586;
+    font-size: 80%;
+    font-family: 'Lynon Bold', sans-serif;
+}
+
+
+.sidebar-citations {
+    @include flex-height;
+}
+cite.aside {
+    font-style: normal;
+    .num {
+        display: block;
+        color: #234586;
+        font-style: normal;
+        font-family: 'Suisse Bold', sans-serif;
+        font-size: 14px;
+    }
+    .desc {
+        @include citation-font;
+    }
+}
+
+//subheadings
+.post-body {
+    h1, h2, h3, h4, h5, h6 {
+        @include post-body-subheading;
+        margin-bottom: $space;
+    }
+}
