@@ -1,0 +1,52 @@
+.author-img {
+    width: 120px;
+    float: left;
+}
+.author-info {
+    width: 440px;
+    .author-desc {
+        @include author-font;
+        color: $black;
+    }
+    .author-social {
+        @include citation-font; 
+        margin-top: $space;
+    }
+}
+
+.author-social-item {
+    &.author-twitter { 
+        margin-right: 8px;
+    }
+    display: inline-block;
+    img {
+        float: left;
+        display: block;
+        margin-right:5px;
+    }
+    span {
+        display: block;
+        float: left;
+        position: relative;
+        top: 3px;
+        color: #585858;
+    }
+}
+
+.post-tags {
+    border-top: 2px dotted $black;
+    margin-top: 30px;
+    padding-top: $space;
+    @include post-aside-font;
+    .post-tag-link {
+        background: #e8e8e8;
+        display: inline-block;
+        padding: 2px 8px;
+        margin-right: 5px;
+        border-radius: 5px;
+        &:hover {
+            text-decoration: none;
+            background: darken(#e8e8e8, 10%);
+        }
+    }
+}

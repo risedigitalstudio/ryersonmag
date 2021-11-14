@@ -15323,4 +15323,107 @@ blockquote {
   display: block;
 }
 
+.author-img {
+  width: 120px;
+  float: left;
+}
+
+.author-info {
+  width: 440px;
+}
+.author-info .author-desc {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #000;
+}
+.author-info .author-social {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Suisse Reg", sans-serif;
+  margin-top: 18px;
+}
+
+.author-social-item {
+  display: inline-block;
+}
+.author-social-item.author-twitter {
+  margin-right: 8px;
+}
+.author-social-item img {
+  float: left;
+  display: block;
+  margin-right: 5px;
+}
+.author-social-item span {
+  display: block;
+  float: left;
+  position: relative;
+  top: 3px;
+  color: #585858;
+}
+
+.post-tags {
+  border-top: 2px dotted #000;
+  margin-top: 30px;
+  padding-top: 18px;
+  font-size: 14px;
+  line-height: 19px;
+  font-family: "Suisse Reg", sans-serif;
+}
+.post-tags .post-tag-link {
+  background: #e8e8e8;
+  display: inline-block;
+  padding: 2px 8px;
+  margin-right: 5px;
+  border-radius: 5px;
+}
+.post-tags .post-tag-link:hover {
+  text-decoration: none;
+  background: #cfcfcf;
+}
+
+.main-footer {
+  background: #000;
+  padding: 40px;
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+}
+.main-footer img.white-ryerson-logo {
+  margin-bottom: 27px;
+}
+.main-footer a {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+  text-decoration: underline;
+}
+.main-footer h2.footer-heading {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+}
+.main-footer ul {
+  padding: 0;
+  list-style-type: none;
+}
+.main-footer ul li {
+  margin-bottom: 8px;
+}
+.main-footer .give-btn {
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 7px 15px;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=child-theme.css.map */

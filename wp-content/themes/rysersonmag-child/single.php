@@ -148,43 +148,75 @@ if ($blocks) {
 </div>
 
 
-<?php /* ?>
-<div class="wrapper" id="single-wrapper">
+<section class="author sec-pad-half">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="row">
+                <?php $authorID = get_the_author_meta('ID'); ?>
+                <?php if (get_avatar($authorID)) { ?>
+                    <div class="author-img">
+                        <?php echo get_avatar($authorID, 'small-square'); ?>
+                    </div>
+                <?php } ?>
+                    <div class="author-info">
+                        <div class="author-desc">
+                            <?php echo get_the_author_meta('description'); ?>
+                        </div>
+                        <div class="author-social">
+                            <?php 
+                                if (get_field('twitter_handle', 'user_'.$authorID) && get_field('twitter_link', 'user_'.$authorID)) {
+                                    ?>
+                                    <a href="<?php echo get_field('twitter_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-twitter">
+                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-twitter.png">
+                                        <span><?php echo get_field('twitter_handle', 'user_'.$authorID); ?></span>
+                                    </a>
+                                    <?php
+                                }
+                            ?>
+                            <?php 
+                                if (get_field('instagram_handle', 'user_'.$authorID) && get_field('instagram_link', 'user_'.$authorID)) {
+                                    ?>
+                                    <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">
+                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-instagram.png">
+                                        <span><?php echo get_field('instagram_handle', 'user_'.$authorID); ?></span>
+                                    </a>
+                                    <?php
+                                }
+                            ?>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="post-tags full">
+                        <?php 
+                            $postTagsArray = get_the_tags(get_the_ID());
+                            if(sizeof($postTagsArray) > 0) {
+                                echo 'Read More ';
+                            }
+                            foreach($postTagsArray as $tagObj) {
+                                ?>
+                                <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
+                                <?php
+                            }
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-	<div class="<?php echo esc_attr( $container ); ?>" id="content" tabindex="-1">
 
-		<div class="row">
-
-			<!-- Do the left sidebar check -->
-			<?php get_template_part( 'global-templates/left-sidebar-check' ); ?>
-
-			<main class="site-main" id="main">
-
-				<?php
-				while ( have_posts() ) {
-					the_post();
-					get_template_part( 'loop-templates/content', 'single' );
-					understrap_post_nav();
-
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) {
-						comments_template();
-					}
-				}
-				?>
-
-			</main><!-- #main -->
-
-			<!-- Do the right sidebar check -->
-			<?php get_template_part( 'global-templates/right-sidebar-check' ); ?>
-
-		</div><!-- .row -->
-
-	</div><!-- #content -->
-
-</div><!-- #single-wrapper -->
-
-<?php */ ?>
+<section class="related-articles sec-pad-half">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>related articles go here</h2>
+            </div>
+        </div>
+    </div>
+</section>
 
 <?php
 get_footer();
