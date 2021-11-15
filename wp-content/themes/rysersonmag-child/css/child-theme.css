@@ -15028,6 +15028,57 @@ body strong {
   padding-bottom: 55px;
 }
 
+.navbar-brand {
+  width: 215px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #000;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: lowercase;
+  padding: 4px 0 !important;
+  margin: 0 12px !important;
+}
+
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+  color: #000;
+}
+
+.nav-item {
+  display: block;
+  position: relative;
+}
+
+.navbar-light .navbar-nav .active.green > .nav-link {
+  color: #000;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+  background-image: -webkit-linear-gradient(#00DA2B, #00DA2B);
+}
+.navbar-light .navbar-nav .active.blue > .nav-link {
+  color: #000;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+  background-image: -webkit-linear-gradient(#5BD2FF, #5BD2FF);
+}
+.navbar-light .navbar-nav .active.orange > .nav-link {
+  color: #000;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+  background-image: -webkit-linear-gradient(#FF891D, #FF891D);
+}
+
 .post-header-info-wrap {
   text-align: center;
 }
@@ -15326,6 +15377,17 @@ blockquote {
   display: block;
 }
 
+.drop-cap {
+  color: #000;
+  float: left;
+  font-family: "Suisse Bold", sans-serif;
+  font-size: 100px;
+  line-height: 79px;
+  padding-top: 5px;
+  padding-right: 8px;
+  padding-left: 3px;
+}
+
 .author-img {
   width: 120px;
   float: left;
@@ -15384,6 +15446,124 @@ blockquote {
 .post-tags .post-tag-link:hover {
   text-decoration: none;
   background: #cfcfcf;
+}
+
+.archive-page .single-archive-post-wrap {
+  margin-top: 70px;
+}
+.archive-page .primary-category {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Suisse Reg", sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #000;
+  display: inline;
+}
+.archive-page .primary-category:hover {
+  text-decoration: none;
+}
+.archive-page a {
+  text-decoration: none;
+}
+.archive-page h1.page-title {
+  font-size: 112px;
+  line-height: 90px;
+  letter-spacing: -4px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: lowercase;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 70px;
+  background-size: 100% 30px;
+  padding-bottom: 30px;
+}
+.archive-page h1.page-title.green {
+  background-image: linear-gradient(180deg, #00DA2B, #00DA2B);
+}
+.archive-page h1.page-title.blue {
+  background-image: linear-gradient(180deg, #5BD2FF, #5BD2FF);
+}
+.archive-page h1.page-title.orange {
+  background-image: linear-gradient(180deg, #FF891D, #FF891D);
+}
+.archive-page h2.entry-title {
+  font-size: 26px;
+  line-height: 32px;
+  font-family: "Lynon Bold", sans-serif;
+  margin-bottom: 3px;
+}
+.archive-page h3.subheading {
+  font-size: 26px;
+  line-height: 32px;
+  font-family: "Lynon Reg", sans-serif;
+}
+.archive-page a.taxonomy-thumb {
+  display: block;
+  position: relative;
+  margin-bottom: 18px;
+}
+.archive-page a.taxonomy-thumb.green:hover::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(0, 218, 43, 0.67);
+}
+.archive-page a.taxonomy-thumb.blue:hover::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(91, 210, 255, 0.67);
+}
+.archive-page a.taxonomy-thumb.orange:hover::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(255, 137, 29, 0.67);
+}
+
+#ajax-load-more {
+  margin-top: 75px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.alm-load-more-btn {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 18px;
+  font-family: "Suisse Reg", sans-serif;
+  text-align: center;
+  background: #fff;
+  border: 1.25px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0;
+}
+.alm-load-more-btn:disabled {
+  display: none;
+}
+
+.no-results {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 18px;
+  font-family: "Suisse Reg", sans-serif;
+  margin-bottom: 20px;
 }
 
 .main-footer {

@@ -1,3 +1,59 @@
+//Header
+
+@mixin box-color-hovers {
+    &.green {
+        &:hover {
+            &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+                border: 16px solid rgba(0,218,43,.67);
+            }
+        }
+    }
+    &.blue {
+        &:hover {
+            &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+                border: 16px solid rgba(91,210,255,.67);
+            }
+        }
+    }
+    &.orange {
+        &:hover {
+            &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 16px solid rgba(255, 137, 29, .67);
+            }
+        }
+    }
+} 
+
+
+@mixin nav-items {
+    font-size: 16px;
+    line-height: 20px;
+    font-family: 'Suisse Bold', sans-serif;
+}
+
+//Posts & Archive
+
 @mixin post-cat {
     font-size: 14px;
     line-height: 18px;
@@ -82,3 +138,31 @@
     font-family: 'Suisse Reg', sans-serif;
     color: $white;
 }
+
+@mixin archive-term-font {
+    font-size: 112px;
+    line-height: 90px;
+    letter-spacing: -4px;
+    font-family: 'Suisse Bold', sans-serif;
+    text-transform: lowercase;
+}
+
+@mixin archive-title-font {
+    font-size: 26px;
+    line-height: 32px;
+    font-family: 'Lynon Bold', sans-serif;
+}
+
+@mixin archive-subhading-font {
+    font-size: 26px;
+    line-height: 32px;
+    font-family: 'Lynon Reg', sans-serif;
+}
+
+@mixin alm-btn-font {
+    font-size: 16px;
+    line-height: 18px;
+    padding: 13px 18px;
+    font-family: 'Suisse Reg', sans-serif;
+}
+

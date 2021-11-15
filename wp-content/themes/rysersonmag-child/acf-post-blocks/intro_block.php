@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="post-body">
+                <div class="post-body intro-block-body">
                     <?php echo $block_data['intro_content'];?>
                 </div>
             </div>
