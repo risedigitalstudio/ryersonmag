@@ -15001,6 +15001,9 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
+body strong {
+  font-family: "Lynon Bold", sans-serif;
+}
 
 .full {
   width: 100%;

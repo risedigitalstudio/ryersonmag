@@ -191,13 +191,13 @@ if ($blocks) {
                     <div class="post-tags full">
                         <?php 
                             $postTagsArray = get_the_tags(get_the_ID());
-                            if(sizeof($postTagsArray) > 0) {
+                            if($postTagsArray && sizeof($postTagsArray) > 0) {
                                 echo 'Read More ';
-                            }
-                            foreach($postTagsArray as $tagObj) {
-                                ?>
-                                <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
-                                <?php
+                                foreach($postTagsArray as $tagObj) {
+                                    ?>
+                                    <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
+                                    <?php
+                                }
                             }
                         ?>
                     </div>
@@ -211,8 +211,8 @@ if ($blocks) {
 <section class="related-articles sec-pad-half">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <h2>related articles go here</h2>
+            <div class="col-md-12">
+                <h2>3 related articles go here</h2>
             </div>
         </div>
     </div>

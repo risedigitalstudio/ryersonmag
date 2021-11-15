@@ -14,7 +14,7 @@
             <div class="offset-md-1 col-md-2">
                 <div class="related-articles-sec">
                 <?php 
-                    if (sizeof($block_data['related_articles']) > 0) {
+                    if ($block_data['related_articles']) {
                         echo "<h3>Related Articles</h3><div class='dotted-line'></div>";
                         foreach($block_data['related_articles'] as $relatedArticle) {
                             ?>
