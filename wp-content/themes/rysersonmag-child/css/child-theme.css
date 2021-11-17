@@ -15078,6 +15078,15 @@ body strong {
   background-size: 100% 30px;
   background-image: -webkit-linear-gradient(#FF891D, #FF891D);
 }
+.navbar-light .navbar-nav .active.yellow > .nav-link {
+  color: #000;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+  background-image: -webkit-linear-gradient(#FCF661, #FCF661);
+}
 
 .post-header-info-wrap {
   text-align: center;
@@ -15441,6 +15450,7 @@ blockquote {
   display: inline-block;
   padding: 2px 8px;
   margin-right: 5px;
+  margin-bottom: 10px;
   border-radius: 5px;
 }
 .post-tags .post-tag-link:hover {
@@ -15487,6 +15497,9 @@ blockquote {
 }
 .archive-page h1.page-title.orange {
   background-image: linear-gradient(180deg, #FF891D, #FF891D);
+}
+.archive-page h1.page-title.yellow {
+  background-image: linear-gradient(180deg, #FCF661, #FCF661);
 }
 .archive-page h2.entry-title {
   font-size: 26px;
@@ -15564,6 +15577,62 @@ blockquote {
   padding: 13px 18px;
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 20px;
+}
+
+.current-issue-page .single-archive-post-wrap {
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+.current-issue-page .current-issue-articles {
+  border-left: 1px solid #000;
+  padding-left: 30px;
+}
+
+.current-issue-cover {
+  margin-bottom: 40px;
+}
+
+.current-issue-info {
+  text-align: center;
+}
+.current-issue-info h1 {
+  font-size: 36px;
+  line-height: 36px;
+  font-family: "Lynon Reg", sans-serif;
+}
+.current-issue-info .issue-description {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 18px;
+  font-family: "Suisse Reg", sans-serif;
+  line-height: 22px;
+}
+.current-issue-info .file-link {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Suisse Reg", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.default-btn {
+  font-size: 16px;
+  line-height: 18px;
+  padding: 13px 18px;
+  font-family: "Suisse Reg", sans-serif;
+  text-align: center;
+  background: #fff;
+  border: 1.25px solid #000;
+  border-radius: 5px;
+  box-shadow: 2px 2px 0;
+}
+.default-btn:disabled {
+  display: none;
 }
 
 .main-footer {

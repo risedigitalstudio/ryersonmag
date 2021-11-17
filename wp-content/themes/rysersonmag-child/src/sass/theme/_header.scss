@@ -53,5 +53,15 @@
             background-image: -webkit-linear-gradient($orange, $orange);
         }
     }
-        
+    &.yellow {
+        >.nav-link {
+            color: $black;
+            display: inline-block;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: 0 19px;
+            background-size: 100% 30px;
+            background-image: -webkit-linear-gradient($yellow, $yellow);
+        }
+    }    
 }

@@ -166,3 +166,8 @@
     font-family: 'Suisse Reg', sans-serif;
 }
 
+@mixin current-issue-title-font {
+    font-size: 36px;
+    line-height: 36px;
+    font-family: 'Lynon Reg', sans-serif;
+}

@@ -1,0 +1,47 @@
+.current-issue-page {
+    .single-archive-post-wrap {
+        margin-top: 0;
+        margin-bottom: 75px;
+    }
+    .current-issue-articles {
+        border-left: 1px solid $black;
+        padding-left: 30px;
+    }
+}
+
+.current-issue-cover {
+    margin-bottom: 40px;
+}
+
+.current-issue-info {
+    text-align: center;
+    h1 {
+        @include current-issue-title-font;
+    }
+    .issue-description {
+        @include alm-btn-font;
+        line-height: 22px;
+    }
+    .file-link {
+        @include citation-font;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    }
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+}
+
+.default-btn {
+    @include alm-btn-font;
+    text-align: center;
+    background: $white;
+    border: 1.25px solid $black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 0;
+    &:disabled {
+        display: none;
+    }
+}
