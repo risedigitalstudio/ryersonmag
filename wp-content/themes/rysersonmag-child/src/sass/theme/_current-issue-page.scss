@@ -45,3 +45,19 @@
         display: none;
     }
 }
+
+.past-issues {
+    background: $ryersonBlue;
+    color: $white;
+    .dotted-heading {
+        @include dotted-heading;
+    }
+}
+
+.past-issue {
+    text-align: center;
+    margin-top: 75px;
+    img {
+        margin-bottom: 40px;
+    }
+}

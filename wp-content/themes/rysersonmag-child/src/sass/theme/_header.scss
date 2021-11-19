@@ -17,7 +17,12 @@
     display: block;
     position: relative;
 }
-
+.navbar {
+    padding: 0 1rem;
+}
+.navbar-nav {
+    padding: 35px 0;
+}
 
 .navbar-light .navbar-nav .active {
     &.green {

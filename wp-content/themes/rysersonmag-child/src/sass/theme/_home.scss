@@ -1,0 +1,101 @@
+.sticky-home-intro {
+    position: relative;
+    top: -80px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .sticky-low-p {
+        position: absolute;
+        bottom: 0;
+        width: 300px;
+        font-size: 16px;
+        line-height: 20px;
+        font-family: 'Suisse Reg', sans-serif;
+    }
+    img.home-logo {
+        width: 440px;
+    }
+}
+//overwriting post styles from archive.scss
+.home {
+    a.taxonomy-thumb {
+        img {
+            width: 100%;
+            float: left;
+        }
+    }
+    .single-archive-post-wrap {
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+    .left-border {
+        border-left: 1px solid $black;
+    }
+}
+
+.featured-post-headings {
+    h2.entry-title {
+        @include home-archive-title-font;
+    }
+    h3.subheading {
+        @include home-archive-subhading-font;
+    }
+}
+
+.home-editors-picks {
+    margin: 125px 0;
+    h2 {
+        @include post-body-subheading;
+        margin-bottom: 15px;
+    }
+}
+
+.editors-picks-flex {
+    display: flex;
+    justify-content: space-between;
+    border-top: 2px dotted $black;
+    border-bottom: 2px dotted $black;
+    .pick {
+        position: relative;
+        &:hover {
+//            @include box-color-hovers;
+        }
+        width: 22%;
+        h3 {
+            @include archive-title-font;
+        }
+    }
+}
+
+.featured-cat-heading {
+    @include archive-term-font;
+    display: inline-block;
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: 0 70px;
+    background-size: 100% 30px;
+    padding-bottom: 30px;
+    margin-bottom: 75px;
+    position: relative;
+    left: -100px;
+    a.see-all {
+        @include author-font;
+        font-size: 18px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: red;
+        letter-spacing: normal;
+        color: $white;
+    }
+    &.green {
+        background-image: linear-gradient(180deg, $green, $green);
+    }
+    &.blue {
+        background-image: linear-gradient(180deg, $blue, $blue);
+    }
+    &.orange {
+        background-image: linear-gradient(180deg, $orange, $orange);
+    }
+}

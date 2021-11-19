@@ -37,7 +37,7 @@ if ( have_posts() ) {
 <section class="archive-page sec-pad">
     <div class="container">
         <div class="row">
-            <div class="<?php if (is_category()) {echo 'col-md-12';} else {echo 'col-md-7';} ?>">
+            <div class="col-md-12">
                 <header>
                    <h1 class="page-title <?php echo $colorClass;?>"><?php single_term_title(); ?></h1>
                 </header><!-- .page-header -->

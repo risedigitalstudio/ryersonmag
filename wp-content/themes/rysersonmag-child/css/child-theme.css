@@ -15010,6 +15010,11 @@ body strong {
   float: left;
 }
 
+.container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
+  padding-left: 35px;
+  padding-right: 35px;
+}
+
 .sec-pad {
   padding-top: 55px;
   padding-bottom: 55px;
@@ -15049,6 +15054,14 @@ body strong {
 .nav-item {
   display: block;
   position: relative;
+}
+
+.navbar {
+  padding: 0 1rem;
+}
+
+.navbar-nav {
+  padding: 35px 0;
 }
 
 .navbar-light .navbar-nav .active.green > .nav-link {
@@ -15458,10 +15471,10 @@ blockquote {
   background: #cfcfcf;
 }
 
-.archive-page .single-archive-post-wrap {
+.archive-page .single-archive-post-wrap, .home .single-archive-post-wrap {
   margin-top: 70px;
 }
-.archive-page .primary-category {
+.archive-page .primary-category, .home .primary-category {
   font-size: 14px;
   line-height: 18px;
   font-family: "Suisse Reg", sans-serif;
@@ -15470,13 +15483,13 @@ blockquote {
   border-bottom: 1px solid #000;
   display: inline;
 }
-.archive-page .primary-category:hover {
+.archive-page .primary-category:hover, .home .primary-category:hover {
   text-decoration: none;
 }
-.archive-page a {
+.archive-page a, .home a {
   text-decoration: none;
 }
-.archive-page h1.page-title {
+.archive-page h1.page-title, .home h1.page-title {
   font-size: 112px;
   line-height: 90px;
   letter-spacing: -4px;
@@ -15489,35 +15502,36 @@ blockquote {
   background-size: 100% 30px;
   padding-bottom: 30px;
 }
-.archive-page h1.page-title.green {
+.archive-page h1.page-title.green, .home h1.page-title.green {
   background-image: linear-gradient(180deg, #00DA2B, #00DA2B);
 }
-.archive-page h1.page-title.blue {
+.archive-page h1.page-title.blue, .home h1.page-title.blue {
   background-image: linear-gradient(180deg, #5BD2FF, #5BD2FF);
 }
-.archive-page h1.page-title.orange {
+.archive-page h1.page-title.orange, .home h1.page-title.orange {
   background-image: linear-gradient(180deg, #FF891D, #FF891D);
 }
-.archive-page h1.page-title.yellow {
+.archive-page h1.page-title.yellow, .home h1.page-title.yellow {
   background-image: linear-gradient(180deg, #FCF661, #FCF661);
 }
-.archive-page h2.entry-title {
+.archive-page h2.entry-title, .home h2.entry-title {
   font-size: 26px;
   line-height: 32px;
   font-family: "Lynon Bold", sans-serif;
   margin-bottom: 3px;
 }
-.archive-page h3.subheading {
+.archive-page h3.subheading, .home h3.subheading {
   font-size: 26px;
   line-height: 32px;
   font-family: "Lynon Reg", sans-serif;
 }
-.archive-page a.taxonomy-thumb {
+.archive-page a.taxonomy-thumb, .home a.taxonomy-thumb {
   display: block;
   position: relative;
   margin-bottom: 18px;
+  transition: 0.2s all;
 }
-.archive-page a.taxonomy-thumb.green:hover::before {
+.archive-page a.taxonomy-thumb.green:hover::before, .home a.taxonomy-thumb.green:hover::before {
   display: block;
   content: "";
   position: absolute;
@@ -15527,7 +15541,7 @@ blockquote {
   left: -8px;
   border: 16px solid rgba(0, 218, 43, 0.67);
 }
-.archive-page a.taxonomy-thumb.blue:hover::before {
+.archive-page a.taxonomy-thumb.blue:hover::before, .home a.taxonomy-thumb.blue:hover::before {
   display: block;
   content: "";
   position: absolute;
@@ -15537,7 +15551,7 @@ blockquote {
   left: -8px;
   border: 16px solid rgba(91, 210, 255, 0.67);
 }
-.archive-page a.taxonomy-thumb.orange:hover::before {
+.archive-page a.taxonomy-thumb.orange:hover::before, .home a.taxonomy-thumb.orange:hover::before {
   display: block;
   content: "";
   position: absolute;
@@ -15577,6 +15591,113 @@ blockquote {
   padding: 13px 18px;
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 20px;
+}
+
+.sticky-home-intro {
+  position: relative;
+  top: -80px;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sticky-home-intro .sticky-low-p {
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+}
+.sticky-home-intro img.home-logo {
+  width: 440px;
+}
+
+.home a.taxonomy-thumb img {
+  width: 100%;
+  float: left;
+}
+.home .single-archive-post-wrap {
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+.home .left-border {
+  border-left: 1px solid #000;
+}
+
+.featured-post-headings h2.entry-title {
+  font-size: 44px;
+  line-height: 50px;
+  font-family: "Lynon Bold", sans-serif;
+}
+.featured-post-headings h3.subheading {
+  font-size: 44px;
+  line-height: 50px;
+  font-family: "Lynon Reg", sans-serif;
+}
+
+.home-editors-picks {
+  margin: 125px 0;
+}
+.home-editors-picks h2 {
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Suisse Bold", sans-serif;
+  margin-bottom: 15px;
+}
+
+.editors-picks-flex {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px dotted #000;
+  border-bottom: 2px dotted #000;
+}
+.editors-picks-flex .pick {
+  position: relative;
+  width: 22%;
+}
+.editors-picks-flex .pick h3 {
+  font-size: 26px;
+  line-height: 32px;
+  font-family: "Lynon Bold", sans-serif;
+}
+
+.featured-cat-heading {
+  font-size: 112px;
+  line-height: 90px;
+  letter-spacing: -4px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: lowercase;
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 70px;
+  background-size: 100% 30px;
+  padding-bottom: 30px;
+  margin-bottom: 75px;
+  position: relative;
+  left: -100px;
+}
+.featured-cat-heading a.see-all {
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  font-size: 18px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: red;
+  letter-spacing: normal;
+  color: #fff;
+}
+.featured-cat-heading.green {
+  background-image: linear-gradient(180deg, #00DA2B, #00DA2B);
+}
+.featured-cat-heading.blue {
+  background-image: linear-gradient(180deg, #5BD2FF, #5BD2FF);
+}
+.featured-cat-heading.orange {
+  background-image: linear-gradient(180deg, #FF891D, #FF891D);
 }
 
 .current-issue-page .single-archive-post-wrap {
@@ -15633,6 +15754,29 @@ blockquote {
 }
 .default-btn:disabled {
   display: none;
+}
+
+.past-issues {
+  background: #004C9B;
+  color: #fff;
+}
+.past-issues .dotted-heading {
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: lowercase;
+  font-size: 48px;
+  line-height: 52px;
+  padding-bottom: 25px;
+  color: #fff;
+  border-bottom: 2px dotted #fff;
+  width: 100%;
+}
+
+.past-issue {
+  text-align: center;
+  margin-top: 75px;
+}
+.past-issue img {
+  margin-bottom: 40px;
 }
 
 .main-footer {

@@ -10,8 +10,6 @@ $theCurrentIssueArray = get_field('current_magazine_issue');
 $theCurrentIssueID = $theCurrentIssueArray[0];
 ?>
 
-
-					
 <section class="archive-page current-issue-page sec-pad">
     <div class="container">
         <div class="row">
@@ -48,11 +46,14 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
             
             <div class="col-md-6 offset-md-1 current-issue-articles">
                 <div class="row">
+                    <div class="col-md-6">
                 <?php 
                     $featuredArticleArray = get_field("feature_articles", $theCurrentIssueID);
+                    $featuredArticleArraySize = ceil(sizeof($featuredArticleArray) / 2);
+                    $articleArrayCounter = 0;
                     foreach($featuredArticleArray as $featuredArticle) {
                         ?>
-                        <div class="col-md-6">
+                        
                             <div class="single-archive-post-wrap">
 
                                <?php 
@@ -129,15 +130,58 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                     <h3 class="subheading"><?php echo get_field('subheading', $featuredArticle);?></h3>
                                 </a>
                             </div>
-                        </div>
+                        
                         <?php
+                        $articleArrayCounter++;
+                        if ($featuredArticleArraySize == $articleArrayCounter) {
+                            echo '</div><div class="col-md-6">';
+                        }
                     }
                 ?>
+                </div>
                 </div>
                 <div class="row flex">
                     <a href="<?php echo get_permalink($theCurrentIssueID);?>" class="default-btn">All Stories</a>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="past-issues sec-pad">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="dotted-heading">Past Issues</h2>
+            </div>
+        </div>
+        <div class="row">
+                <?php
+                $args = array (
+                'post_type' => array ('magazine'),
+                'orderby' => array( 'menu_order' => 'ASC'),
+                'posts_per_page' => 9
+                );
+                //$args['search_filter_id'] = 84;
+                $pastIssues = new WP_Query($args);                           
+                $counter = 0;
+                ?>
+
+                    <?php while ( $pastIssues->have_posts() ) : $pastIssues->the_post();?>
+
+                    <div class="col-md-3">
+                       <div class="past-issue">
+                            <a href="<?php the_permalink();?>"><?php echo get_the_post_thumbnail(); ?></a>
+                            <h2><?php the_title();?></h2>
+                       </div>
+                    </div>
+
+                    <?php                                      
+                    $counter++;        
+                    ?>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
         </div>
     </div>
 </section>
