@@ -13,15 +13,69 @@
     color: $black;
 }
 
-.nav-item {
-    display: block;
-    position: relative;
-}
+
 .navbar {
     padding: 0 1rem;
 }
 .navbar-nav {
     padding: 35px 0;
+}
+
+.nav-item {
+    display: block;
+    position: relative;
+    &.green {
+        .nav-link {
+            display: inline-block;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: 0 19px;
+            background-size: 100% 30px;
+            &:hover {
+                color: $black;
+                background-image: -webkit-linear-gradient($green, $green);
+            }
+        }
+    }
+    &.blue {
+        .nav-link {
+            display: inline-block;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: 0 19px;
+            background-size: 100% 30px;
+            &:hover {
+                color: $black;
+                background-image: -webkit-linear-gradient($blue, $blue);
+            }
+        }
+    }
+    &.orange {
+        .nav-link {
+            display: inline-block;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: 0 19px;
+            background-size: 100% 30px;
+            &:hover {
+                color: $black;
+                background-image: -webkit-linear-gradient($orange, $orange);
+            }
+        }
+    }
+    &.yellow {
+        .nav-link {
+            display: inline-block;
+            background-image: none;
+            background-repeat: no-repeat;
+            background-position: 0 19px;
+            background-size: 100% 30px;
+            &:hover {
+                color: $black;
+                background-image: -webkit-linear-gradient($yellow, $yellow);
+            }
+        }
+    }
 }
 
 .navbar-light .navbar-nav .active {

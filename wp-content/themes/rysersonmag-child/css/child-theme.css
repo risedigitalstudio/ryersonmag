@@ -15051,17 +15051,61 @@ body strong {
   color: #000;
 }
 
-.nav-item {
-  display: block;
-  position: relative;
-}
-
 .navbar {
   padding: 0 1rem;
 }
 
 .navbar-nav {
   padding: 35px 0;
+}
+
+.nav-item {
+  display: block;
+  position: relative;
+}
+.nav-item.green .nav-link {
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+}
+.nav-item.green .nav-link:hover {
+  color: #000;
+  background-image: -webkit-linear-gradient(#00DA2B, #00DA2B);
+}
+.nav-item.blue .nav-link {
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+}
+.nav-item.blue .nav-link:hover {
+  color: #000;
+  background-image: -webkit-linear-gradient(#5BD2FF, #5BD2FF);
+}
+.nav-item.orange .nav-link {
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+}
+.nav-item.orange .nav-link:hover {
+  color: #000;
+  background-image: -webkit-linear-gradient(#FF891D, #FF891D);
+}
+.nav-item.yellow .nav-link {
+  display: inline-block;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 19px;
+  background-size: 100% 30px;
+}
+.nav-item.yellow .nav-link:hover {
+  color: #000;
+  background-image: -webkit-linear-gradient(#FCF661, #FCF661);
 }
 
 .navbar-light .navbar-nav .active.green > .nav-link {
@@ -15682,13 +15726,30 @@ blockquote {
   font-size: 15px;
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
   font-size: 18px;
   position: absolute;
-  right: 0;
-  top: 0;
-  background: red;
-  letter-spacing: normal;
-  color: #fff;
+  right: -39px;
+  top: -23px;
+}
+.featured-cat-heading a.see-all img.see-all-circle {
+  width: 75px;
+}
+.featured-cat-heading span.stars {
+  position: absolute;
+  display: block;
+  right: -49px;
+  top: 38px;
+  width: 64px;
+  height: 64px;
+  display: block;
+}
+.featured-cat-heading span.stars img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 .featured-cat-heading.green {
   background-image: linear-gradient(180deg, #00DA2B, #00DA2B);

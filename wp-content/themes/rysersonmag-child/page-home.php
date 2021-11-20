@@ -222,11 +222,20 @@ get_header('home');
     </div>
 </section>
 
+
 <section class="category-featured sec-pad-bot">
     <div class="container">
        <div class="row">
            <div classs="col-md-12">
-               <h2 class="featured-cat-heading green">People<a href="#" class="see-all">See All</a></h2>
+               <h2 class="featured-cat-heading green">People
+                   <a href="<?php echo site_url();?>/category/people" class="see-all">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   </a>
+                    <span class="stars">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                    </span>
+               </h2>
            </div>
        </div>
         <div class="row">
@@ -322,6 +331,240 @@ get_header('home');
         </div>
     </div>
 </section>
+
+
+
+<section class="category-featured sec-pad-bot">
+    <div class="container">
+       <div class="row">
+           <div classs="col-md-12">
+               <h2 class="featured-cat-heading blue">Research &amp; Ideas
+                   <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   </a>
+                    <span class="stars">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                    </span>
+               </h2>
+           </div>
+       </div>
+        <div class="row">
+                
+                <?php 
+                    $researchArticleArray = get_field("research_featured_posts");
+                    foreach($researchArticleArray as $researchArticle) {
+                        ?>
+                        
+                            <div class="col-md-4">
+                            <div class="single-archive-post-wrap">
+
+                               <?php 
+                                $taxImgRatio = get_field('taxonomy_image_ratio', $researchArticle); 
+                                $taxThumbOptionalID = get_field('taxonomy_thumbnail_optional', $researchArticle);
+
+                                $postColorClass = '';
+                                $thePostCat = get_the_category($researchArticle);
+                                $thePostCatSlug = $thePostCat[0]->slug;
+                                if ($thePostCatSlug == 'people') {
+                                    $postColorClass = 'green';
+                                } else if ($thePostCatSlug == 'research-ideas') {
+                                    $postColorClass = 'blue';
+                                } else if ($thePostCatSlug == 'campus') {
+                                    $postColorClass = 'orange';
+                                }
+                                ?>
+
+                                <a href="<?php echo get_the_permalink($researchArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                   <?php if ($taxImgRatio == 'Horizontal') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($researchArticle, 'archive-hor');
+                                        } else {
+                                            echo get_the_post_thumbnail( $researchArticle, 'archive-hor' ); 
+                                        }
+                                        ?>
+
+                                   <?php } else if ($taxImgRatio == 'Vertical') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($researchArticle, 'archive-ver');
+                                        } else {
+                                            echo get_the_post_thumbnail( $researchArticle, 'archive-ver' ); 
+                                        }
+                                        ?>
+
+                                    <?php }  else if ($taxImgRatio == 'Square') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($researchArticle, 'archive-square');
+                                        } else {
+                                            echo get_the_post_thumbnail( $researchArticle, 'archive-square' ); 
+                                        }
+                                        ?>
+
+                                    <?php } else { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($researchArticle, 'archive-square');
+                                        } else {
+                                            echo get_the_post_thumbnail($researchArticle, 'archive-square' ); 
+                                        }
+                                        ?>
+
+                                    <?php } ?>
+                                </a>
+
+                                <?php 
+
+                                $topics = wp_get_post_terms($researchArticle, 'topic');
+                                $topicName = $topics[0]->name;
+                                $topicSlug = $topics[0]->slug;
+
+                                ?>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+
+                                <a href="<?php echo get_the_permalink($researchArticle);?>">
+                                    <h2 class="entry-title"><?php echo get_the_title($researchArticle); ?></h2>
+                                    <h3 class="subheading"><?php echo get_field('subheading', $researchArticle);?></h3>
+                                </a>
+                            </div>
+                            </div>
+                        
+                        <?php
+                    }
+                ?>
+            
+        </div>
+    </div>
+</section>
+
+
+<section class="what-do-you-think sec-pad">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="background:red; padding: 45px;">
+                <h2>What do you think?</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="category-featured sec-pad">
+    <div class="container">
+       <div class="row">
+           <div classs="col-md-12">
+               <h2 class="featured-cat-heading orange">Campus
+                   <a href="<?php echo site_url();?>/category/campus/" class="see-all">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   </a>
+                    <span class="stars">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                    </span>
+               </h2>
+           </div>
+       </div>
+        <div class="row">
+                
+                <?php 
+                    $campusArticleArray = get_field("campus_featured_posts");
+                    foreach($campusArticleArray as $campusArticle) {
+                        ?>
+                        
+                            <div class="col-md-4">
+                            <div class="single-archive-post-wrap">
+
+                               <?php 
+                                $taxImgRatio = get_field('taxonomy_image_ratio', $campusArticle); 
+                                $taxThumbOptionalID = get_field('taxonomy_thumbnail_optional', $campusArticle);
+
+                                $postColorClass = '';
+                                $thePostCat = get_the_category($campusArticle);
+                                $thePostCatSlug = $thePostCat[0]->slug;
+                                if ($thePostCatSlug == 'people') {
+                                    $postColorClass = 'green';
+                                } else if ($thePostCatSlug == 'research-ideas') {
+                                    $postColorClass = 'blue';
+                                } else if ($thePostCatSlug == 'campus') {
+                                    $postColorClass = 'orange';
+                                }
+                                ?>
+
+                                <a href="<?php echo get_the_permalink($campusArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                   <?php if ($taxImgRatio == 'Horizontal') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($campusArticle, 'archive-hor');
+                                        } else {
+                                            echo get_the_post_thumbnail( $campusArticle, 'archive-hor' ); 
+                                        }
+                                        ?>
+
+                                   <?php } else if ($taxImgRatio == 'Vertical') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($campusArticle, 'archive-ver');
+                                        } else {
+                                            echo get_the_post_thumbnail($campusArticle, 'archive-ver' ); 
+                                        }
+                                        ?>
+
+                                    <?php }  else if ($taxImgRatio == 'Square') { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($campusArticle, 'archive-square');
+                                        } else {
+                                            echo get_the_post_thumbnail( $campusArticle, 'archive-square' ); 
+                                        }
+                                        ?>
+
+                                    <?php } else { ?>
+
+                                        <?php 
+                                        if ($taxThumbOptionalID) {
+                                            echo wp_get_attachment_image($campusArticle, 'archive-square');
+                                        } else {
+                                            echo get_the_post_thumbnail($campusArticle, 'archive-square' ); 
+                                        }
+                                        ?>
+
+                                    <?php } ?>
+                                </a>
+
+                                <?php 
+
+                                $topics = wp_get_post_terms($campusArticle, 'topic');
+                                $topicName = $topics[0]->name;
+                                $topicSlug = $topics[0]->slug;
+
+                                ?>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+
+                                <a href="<?php echo get_the_permalink($campusArticle);?>">
+                                    <h2 class="entry-title"><?php echo get_the_title($campusArticle); ?></h2>
+                                    <h3 class="subheading"><?php echo get_field('subheading', $campusArticle);?></h3>
+                                </a>
+                            </div>
+                            </div>
+                        
+                        <?php
+                    }
+                ?>
+            
+        </div>
+    </div>
+</section>
+
+
 
 <?php
 get_footer();
