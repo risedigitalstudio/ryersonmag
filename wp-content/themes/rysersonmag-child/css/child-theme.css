@@ -15145,6 +15145,126 @@ body strong {
   background-image: -webkit-linear-gradient(#FCF661, #FCF661);
 }
 
+.hamburgerMenu {
+  margin-left: 20px;
+}
+
+.header-drawer {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+  background: #004C9B;
+  width: 100vw;
+  height: 100vh;
+}
+
+input.search-submit {
+  background-image: url("../img/search-submit.png");
+  background-repeat: no-repeat;
+  background-size: 66%;
+  background-color: #004c9b;
+  width: 50px;
+  height: 60px;
+  position: relative;
+  top: 26px;
+  background-position: top right;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+
+input[type=search] {
+  background: none !important;
+  border: none;
+  border-bottom: 2px solid #fff;
+  border-radius: 0;
+  padding: 35px 0;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+input[type=search]:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+input[type=search]::-moz-placeholder {
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+input[type=search]::placeholder {
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+input[type=search]:focus {
+  border: none;
+  box-shadow: none;
+  border-bottom: 2px solid #fff;
+}
+input[type=search]:focus:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: transparent;
+}
+input[type=search]:focus::-moz-placeholder {
+  color: transparent;
+}
+input[type=search]:focus::placeholder {
+  color: transparent;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+@-webkit-keyframes autofill {
+  0%, 100% {
+    color: #fff;
+    background: transparent;
+  }
+}
+input[type=search]:-webkit-autofill,
+input[type=search]:-webkit-autofill:hover,
+input[type=search]:-webkit-autofill:focus {
+  border: 1px solid #004C9B;
+  -webkit-text-fill-color: #fff;
+  border-bottom: 2px solid #fff;
+  -webkit-box-shadow: 0 0 0px 80px #004C9B inset;
+  -webkit-transition: none;
+  transition: none;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+
+input[type=search]:-webkit-autofill::first-line {
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+
 .post-header-info-wrap {
   text-align: center;
 }

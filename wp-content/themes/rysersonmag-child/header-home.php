@@ -30,7 +30,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 
-		<nav id="main-nav" class="navbar navbar-expand-md navbar-light" aria-labelledby="main-nav-label">
+		<nav id="main-nav" class="navbar navbar-expand-md navbar-light px-0" aria-labelledby="main-nav-label">
 
 			<h2 id="main-nav-label" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
@@ -59,6 +59,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				);
 				?>
+				
+				<a href="#" class="hamburgerMenu" id="hamburgerMenu">
+				    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.5H26" stroke="black" stroke-width="2"/>
+                    <path d="M0.5 12H26" stroke="black" stroke-width="2"/>
+                    <path d="M0.5 22H26" stroke="black" stroke-width="2"/>
+                    </svg>
+				</a>
+				
+				<?php get_template_part( 'global-templates/header-drawer' ); ?>
 
 			</div><!-- .container -->
 

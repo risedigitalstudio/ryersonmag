@@ -82,6 +82,12 @@
     font-family: 'Suisse Reg', sans-serif;
 }
 
+@mixin search-font {
+    font-family: 'Suisse Reg', sans-serif;
+    color: $white !important;
+    font-size: 48px;
+}
+
 @mixin large-title {
     font-size: 48px;
     line-height: 50px;

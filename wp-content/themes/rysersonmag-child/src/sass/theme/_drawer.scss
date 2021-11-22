@@ -1,0 +1,97 @@
+.header-drawer {
+    display: none;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    background: $ryersonBlue;
+    width: 100vw;
+    height: 100vh;
+}
+
+input.search-submit{
+    background-image: url('../img/search-submit.png');
+    background-repeat: no-repeat;
+    background-size: 66%;
+    background-color: #004c9b;
+    width: 50px;
+    height: 60px;
+    position: relative;
+    top: 26px;
+    background-position: top right;
+    border: none;
+    border-bottom: 2px solid #fff;
+}
+
+input[type=search] {
+    background: none !important;
+    border: none;
+    border-bottom: 2px solid #fff;
+    border-radius: 0;
+    padding: 35px 0;
+    @include search-font;
+    
+    &::-webkit-input-placeholder { /* Edge */
+        @include search-font;
+    }
+
+    &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+        @include search-font;
+    }
+
+    &::placeholder {
+        @include search-font;
+    }
+    
+    &:focus {
+    border: none;
+    box-shadow: none;
+    border-bottom: 2px solid #fff;
+        &::-webkit-input-placeholder { /* Edge */
+            color: transparent;
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+            color: transparent;
+        }
+
+        &::placeholder {
+            color: transparent;
+        }
+    }
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {  display: none; width : 0; height: 0; }
+input[type=search]::-ms-reveal {  display: none; width : 0; height: 0; }
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+
+@-webkit-keyframes autofill {
+    0%,100% {
+        color: #fff;
+        background: transparent;
+    }
+}
+
+input[type="search"]:-webkit-autofill,
+input[type="search"]:-webkit-autofill:hover, 
+input[type="search"]:-webkit-autofill:focus {
+    border: 1px solid $ryersonBlue;
+    -webkit-text-fill-color: $white;
+    border-bottom: 2px solid $white;
+    -webkit-box-shadow: 0 0 0px 80px $ryersonBlue inset;
+    transition: none;
+    @include search-font;
+}
+
+input[type="search"]:-webkit-autofill::first-line {
+  @include search-font;
+}

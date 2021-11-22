@@ -22,7 +22,7 @@ get_header('home');
         <div class="row">
             <div class="col-md-4">
                 <div class="sticky-home-intro" id="timelinepin">
-                    <a href="#" target="_blank">
+                    <a href="https://www.ryerson.ca/next-chapter/" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo">
                     </a>
                     <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. View all topics.</p>
