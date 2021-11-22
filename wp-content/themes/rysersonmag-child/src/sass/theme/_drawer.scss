@@ -1,5 +1,5 @@
 .header-drawer {
-    display: none;
+//    display: none;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -94,4 +94,69 @@ input[type="search"]:-webkit-autofill:focus {
 
 input[type="search"]:-webkit-autofill::first-line {
   @include search-font;
+}
+
+
+
+
+//Explore
+.explore {
+    h2 {
+        font-size: 20px;
+        line-height: 32px;
+        font-family: 'Suisse Reg', sans-serif;
+        color: $white;
+        width: 100%;
+        margin-top: 45px;
+        margin-bottom: $space;
+    }
+}
+
+.drawer-tags-row {
+    a {
+        display: block;
+        font-size: 36px;
+        line-height: 60px;
+        font-family: 'Lynon Reg', sans-serif;
+        color: $white;
+    }
+}
+
+
+.drawer-footer {
+    position: fixed;
+    bottom: 0;
+}
+
+.drawer-footer-inner {
+    border-top: 2px dotted $white;
+    height: 80px;
+    ul {
+        list-style-type: none;
+        padding: 23px 0;
+        li {
+            float: left;
+            margin-right: 45px;
+            a {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: 'Suisse Reg', sans-serif;
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+    ul.drawer-footer-social {
+        display: flex;
+        justify-content: end;
+        li {
+            margin-left: $space;
+            margin-right: 0;
+            a {
+                img {
+                    width: 24px;
+                }
+            }
+        }
+    }
 }

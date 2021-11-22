@@ -39,7 +39,76 @@
 	            <?php get_search_form();?>
 	        </div>
 	    </div>
+	</div>	
+	
+	
+	<div class="container-fluid explore mt-5">
+	    <div class="row full">
+	        <div class="col-md-12">
+	            <h2>Explore</h2>
+	        </div>
+	    </div>
+	    <div class="row full drawer-tags-row">
+	        <div class="col-md-3">
+	            <?php 
+                    $drawerTagsArray = get_field('drawer_tags', 7);
+                    foreach($drawerTagsArray as $drawerTag) {
+                        ?>
+                        <a href="<?php echo site_url();?>/topic/<?php echo $drawerTag->slug; ?>">
+                            <?php echo $drawerTag->name; ?>
+                        </a>
+                        <?php
+                    }
+                ?>
+	        </div>
+	        
+	    </div>
 	</div>
+	
+	
+	<div class="container-fluid drawer-footer">
+	    <div class="row full drawer-footer-inner">
+	        <div class="col-md-8">
+	            <ul class="drawer-footer-links">
+	                <li><a href="#">Ryerson Alumni</a></li>
+	                <li><a href="#">About Us</a></li>
+	                <li><a href="#">Contact Us</a></li>
+	                <li><a href="#">Privacy Policy</a></li>
+	                <li><a href="#">Accessibility</a></li>
+	            </ul>
+	        </div>
+	        <div class="col-md-4">
+	            <ul class="drawer-footer-social">
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
+                        </a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
+	
 </section>
 
 

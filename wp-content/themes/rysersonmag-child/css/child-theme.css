@@ -15150,7 +15150,6 @@ body strong {
 }
 
 .header-drawer {
-  display: none;
   position: fixed;
   left: 0;
   bottom: 0;
@@ -15263,6 +15262,60 @@ input[type=search]:-webkit-autofill::first-line {
   font-family: "Suisse Reg", sans-serif;
   color: #fff !important;
   font-size: 48px;
+}
+
+.explore h2 {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+  width: 100%;
+  margin-top: 45px;
+  margin-bottom: 18px;
+}
+
+.drawer-tags-row a {
+  display: block;
+  font-size: 36px;
+  line-height: 60px;
+  font-family: "Lynon Reg", sans-serif;
+  color: #fff;
+}
+
+.drawer-footer {
+  position: fixed;
+  bottom: 0;
+}
+
+.drawer-footer-inner {
+  border-top: 2px dotted #fff;
+  height: 80px;
+}
+.drawer-footer-inner ul {
+  list-style-type: none;
+  padding: 23px 0;
+}
+.drawer-footer-inner ul li {
+  float: left;
+  margin-right: 45px;
+}
+.drawer-footer-inner ul li a {
+  font-size: 16px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+  text-decoration: underline;
+}
+.drawer-footer-inner ul.drawer-footer-social {
+  display: flex;
+  justify-content: end;
+}
+.drawer-footer-inner ul.drawer-footer-social li {
+  margin-left: 18px;
+  margin-right: 0;
+}
+.drawer-footer-inner ul.drawer-footer-social li a img {
+  width: 24px;
 }
 
 .post-header-info-wrap {
