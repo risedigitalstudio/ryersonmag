@@ -49,8 +49,8 @@ $thisIssue = get_the_ID();
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($issueArticle);?>" class="taxonomy-thumb">
-                                  <span class="lead-img-wrap <?php echo $postColorClass;?>">
+                            <span class="taxonomy-thumb">
+                               <a href="<?php echo get_the_permalink($issueArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -92,8 +92,9 @@ $thisIssue = get_the_ID();
                                         ?>
 
                                     <?php } ?>
-                                    </span>
-                                </a>
+                                    
+                                    </a>
+                                </span>
 
                                 <?php 
 

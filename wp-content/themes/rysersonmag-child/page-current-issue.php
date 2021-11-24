@@ -76,8 +76,8 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="taxonomy-thumb">
-                                  <span class="lead-img-wrap <?php echo $postColorClass;?>">
+                            <span class="taxonomy-thumb">
+                               <a href="<?php echo get_the_permalink($featuredArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -119,8 +119,9 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                         ?>
 
                                     <?php } ?>
-                                    </span>
-                                </a>
+                                    
+                                    </a>
+                                </span>
 
                                 <?php 
 
