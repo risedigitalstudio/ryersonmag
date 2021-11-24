@@ -1,0 +1,11 @@
+.issue-info-row {
+    margin-top: 35px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid $black;
+    .mag-archive-pg-info {
+        text-align: left;
+    }
+    .current-issue-info .issue-description {
+            padding: 0 0 13px 0;
+    }
+}

@@ -15736,6 +15736,11 @@ blockquote {
   text-decoration: none;
   background: #cfcfcf;
 }
+.post-tags.no-border {
+  border-top: none;
+  margin-top: 0;
+  padding-top: 0;
+}
 
 .related-articles {
   padding-top: 100px;
@@ -15890,6 +15895,18 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   padding: 13px 18px;
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 20px;
+}
+
+.issue-info-row {
+  margin-top: 35px;
+  padding-bottom: 45px;
+  border-bottom: 1px solid #000;
+}
+.issue-info-row .mag-archive-pg-info {
+  text-align: left;
+}
+.issue-info-row .current-issue-info .issue-description {
+  padding: 0 0 13px 0;
 }
 
 .sticky-home-intro {

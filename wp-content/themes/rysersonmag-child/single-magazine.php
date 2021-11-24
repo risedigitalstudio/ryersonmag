@@ -23,6 +23,40 @@ $thisIssue = get_the_ID();
                 </header><!-- .page-header -->
             </div>
         </div>
+        <div class="row issue-info-row">
+           <div class="col-md-4">
+               <?php echo get_the_post_thumbnail(); ?>
+           </div>
+            <div class="col-md-6">
+                <div class="current-issue-info mag-archive-pg-info">
+                    <div class="issue-description">
+                        <?php echo get_field("issue_description"); ?>
+                    </div>
+                    <div class="file-link">
+                        <?php 
+                        $pdfFile = get_field("pdf_file"); 
+                        $pdfUrl = $pdfFile['url'];
+                        ?>
+                        <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf">Download PDF</a>
+                    </div>
+                </div>
+                
+                <div class="post-tags full">
+                    <?php 
+                        $tagArray = get_field("tags_in_this_issue");
+                        if($tagArray && sizeof($tagArray) > 0) {
+                            echo 'Read About ';
+                            foreach($tagArray as $tagObj) {
+                                ?>
+                                <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
+                                <?php
+                            }
+                        }
+                    ?>
+                </div>
+            </div>
+
+        </div>
         <div class="row">
             
             
