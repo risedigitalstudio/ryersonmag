@@ -14,7 +14,7 @@ $thisIssue = get_the_ID();
 
 ?>
 					
-<section class="archive-page sec-pad">
+<section class="archive-page sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -49,7 +49,8 @@ $thisIssue = get_the_ID();
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($issueArticle);?>" class="taxonomy-thumb <?php echo $postColorClass;?>">
+                                <a href="<?php echo get_the_permalink($issueArticle);?>" class="taxonomy-thumb">
+                                  <span class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -91,6 +92,7 @@ $thisIssue = get_the_ID();
                                         ?>
 
                                     <?php } ?>
+                                    </span>
                                 </a>
 
                                 <?php 

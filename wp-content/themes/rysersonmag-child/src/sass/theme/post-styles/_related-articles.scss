@@ -1,0 +1,12 @@
+.related-articles {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    h2.related-articles-heading {
+        @include dotted-heading;
+        color: $black;
+        border-color: $black;
+    }
+    .single-archive-post-wrap {
+        margin-top: 40px !important;
+    }
+}

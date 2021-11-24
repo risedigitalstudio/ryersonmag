@@ -39,11 +39,21 @@
     h3.subheading {
         @include archive-subhading-font;
     }
-    a.taxonomy-thumb {
+}
+
+    span.taxonomy-thumb {
         display: block;
         position: relative;
         margin-bottom: $space;
-        @include box-color-hovers;
+        a.lead-img-wrap {
+            display: block;
+            @include box-color-hovers;
+        }
+        &:hover, &:focus{
+            img {
+                filter: grayscale(1);
+            }
+        }
 //        &:hover {
 //            &::before {
 //                display: block;
@@ -57,7 +67,6 @@
 //            }
 //        }
     }
-}
 
 
 #ajax-load-more {

@@ -17,7 +17,7 @@ get_header('home');
 
 ?>
 
-<section class="home">
+<section class="home" id="content">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-4">
@@ -51,9 +51,12 @@ get_header('home');
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($featuredPostID);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
-                                    <?php echo get_the_post_thumbnail( $featuredPostID, 'home-hor', ['class'=>'full'] ); ?>
-                                </a>
+
+                                <span class="taxonomy-thumb full">
+                                   <a href="<?php echo get_the_permalink($featuredPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                        <?php echo get_the_post_thumbnail( $featuredPostID, 'home-hor', ['class'=>'full'] ); ?>
+                                    </a>
+                                </span>
 
                                 <?php 
 
@@ -101,7 +104,8 @@ get_header('home');
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                <span class="taxonomy-thumb">
+                                   <a href="<?php echo get_the_permalink($featuredArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -143,7 +147,8 @@ get_header('home');
                                         ?>
 
                                     <?php } ?>
-                                </a>
+                                    </a>
+                                </span>
 
                                 <?php 
 
@@ -207,9 +212,9 @@ get_header('home');
 
                                 ?>
 
-                            <div class="pick <?php echo $pickPostColorClass;?>">
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $pickTopicSlug; ?>" class="primary-category"><?php echo $pickTopicName; ?></a></p>
-                                <a href="<?php echo get_the_permalink($editorsPick);?>" class="full">
+                            <div class="pick">
+                                <a href="<?php echo get_the_permalink($editorsPick);?>" class="full <?php echo $pickPostColorClass;?>">
+                                    <p class="pb-0 mb-0 primary-category"><?php echo $pickTopicName; ?></p>
                                     <h3><?php echo get_the_title($editorsPick);?></h3>
                                 </a>
                             </div>
@@ -242,10 +247,17 @@ get_header('home');
                 
                 <?php 
                     $peopleArticleArray = get_field("people_featured_posts");
+                    $peopleCounter = 0;
                     foreach($peopleArticleArray as $peopleArticle) {
+                        $peopleColWidth = 'col-md-4';
+                        if ($peopleCounter == 0) {
+                            $peopleColWidth = 'col-md-5';
+                        } else if ($peopleCounter == 2) {
+                            $peopleColWidth = 'col-md-3';
+                        }
                         ?>
                         
-                            <div class="col-md-4">
+                            <div class="<?php echo $peopleColWidth; ?>">
                             <div class="single-archive-post-wrap">
 
                                <?php 
@@ -264,7 +276,8 @@ get_header('home');
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($peopleArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                <span class="taxonomy-thumb">
+                                   <a href="<?php echo get_the_permalink($peopleArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -306,7 +319,9 @@ get_header('home');
                                         ?>
 
                                     <?php } ?>
-                                </a>
+                                   
+                                    </a>
+                                 </span>
 
                                 <?php 
 
@@ -325,6 +340,7 @@ get_header('home');
                             </div>
                         
                         <?php
+                        $peopleCounter++;
                     }
                 ?>
             
@@ -353,10 +369,17 @@ get_header('home');
                 
                 <?php 
                     $researchArticleArray = get_field("research_featured_posts");
+                    $researchCounter = 0;
                     foreach($researchArticleArray as $researchArticle) {
+                        $researchColWidth = 'col-md-4';
+                        if ($researchCounter == 1) {
+                            $researchColWidth = 'col-md-3';
+                        } else if ($researchCounter == 2) {
+                            $researchColWidth = 'col-md-5';
+                        }
                         ?>
                         
-                            <div class="col-md-4">
+                            <div class="<?php echo $researchColWidth; ?>">
                             <div class="single-archive-post-wrap">
 
                                <?php 
@@ -375,7 +398,8 @@ get_header('home');
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($researchArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                <span class="taxonomy-thumb">
+                                   <a href="<?php echo get_the_permalink($researchArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -417,7 +441,9 @@ get_header('home');
                                         ?>
 
                                     <?php } ?>
-                                </a>
+                                    
+                                    </a>
+                                </span>
 
                                 <?php 
 
@@ -436,6 +462,7 @@ get_header('home');
                             </div>
                         
                         <?php
+                        $researchCounter++;
                     }
                 ?>
             
@@ -474,10 +501,18 @@ get_header('home');
                 
                 <?php 
                     $campusArticleArray = get_field("campus_featured_posts");
+                    $campusCounter = 0;
                     foreach($campusArticleArray as $campusArticle) {
+                        
+                        $campusColWidth = 'col-md-4';
+                        if ($campusCounter == 1) {
+                            $campusColWidth = 'col-md-5';
+                        } else if ($campusCounter == 2) {
+                            $campusColWidth = 'col-md-3';
+                        }
                         ?>
                         
-                            <div class="col-md-4">
+                            <div class="<?php echo $campusColWidth; ?>">
                             <div class="single-archive-post-wrap">
 
                                <?php 
@@ -496,7 +531,8 @@ get_header('home');
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($campusArticle);?>" class="taxonomy-thumb full <?php echo $postColorClass;?>">
+                                <span class="taxonomy-thumb">
+                                   <a href="<?php echo get_the_permalink($campusArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -538,7 +574,9 @@ get_header('home');
                                         ?>
 
                                     <?php } ?>
-                                </a>
+                                       
+                                    </a>
+                                </span>
 
                                 <?php 
 
@@ -557,6 +595,7 @@ get_header('home');
                             </div>
                         
                         <?php
+                        $campusCounter++;
                     }
                 ?>
             

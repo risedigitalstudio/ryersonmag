@@ -6,7 +6,7 @@
 //        filter: grayscale(100%);
     }
     &.green {
-        &:hover {
+        &:hover, &:focus {
             &::before {
             display: block;
             content: '';
@@ -15,12 +15,14 @@
             right: -8px;
             bottom: -8px;
             left: -8px;
-                border: 16px solid rgba(0,218,43,.67);
+            border: 16px solid rgba(0,218,43,.67);
+            mix-blend-mode: multiply;
+            z-index: 9;
             }
         }
     }
     &.blue {
-        &:hover {
+        &:hover, &:focus {
             &::before {
             display: block;
             content: '';
@@ -29,12 +31,14 @@
             right: -8px;
             bottom: -8px;
             left: -8px;
-                border: 16px solid rgba(91,210,255,.67);
+            border: 16px solid rgba(91,210,255,.67);
+            mix-blend-mode: multiply;
+            z-index: 9;
             }
         }
     }
     &.orange {
-        &:hover {
+        &:hover, &:focus {
             &::before {
             display: block;
             content: '';
@@ -44,6 +48,8 @@
             bottom: -8px;
             left: -8px;
             border: 16px solid rgba(255, 137, 29, .67);
+            mix-blend-mode: multiply;
+            z-index: 9;
             }
         }
     }

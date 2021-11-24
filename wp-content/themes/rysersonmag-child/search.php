@@ -1,8 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
- *
- * Learn more: http://codex.wordpress.org/Template_Hierarchy
+ * The template for displaying search results pages
  *
  * @package Understrap
  */
@@ -12,49 +10,35 @@ defined( 'ABSPATH' ) || exit;
 
 get_header();
 
-?>
 
-<?php
+global $wp_query;
+$resultsCount = $wp_query->found_posts;
+
+$resultsWord = 'results';
+if ($resultsCount === 1) {
+    $resultsWord = 'result';
+}
+
 if ( have_posts() ) {
-
-    $singleTerm = get_the_archive_title();
-    $colorClass = '';
-    if (is_category() && strpos($singleTerm, 'People') !== false) {
-         $colorClass = 'green';
-    }
-
-    if (is_category() && strpos($singleTerm, 'Research') !== false) {
-         $colorClass = 'blue';
-    }
-
-    if (is_category() && strpos($singleTerm, 'Campus') !== false) {
-         $colorClass = 'orange';
-    }
-
 ?>
-                
-					
-<section class="archive-page sec-pad" id="content">
+
+<section class="archive-page search-results-page sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="<?php if (is_category()) {echo 'col-md-12';} else {echo 'col-md-7';} ?>">
                 <header>
-                   <h1 class="page-title <?php echo $colorClass;?>"><?php single_term_title(); ?></h1>
+                   <p>Showing <?php echo $resultsCount; ?> <?php echo $resultsWord; ?> for:</p>
+                   <h1 class="page-title"><?php echo get_search_query(); ?></h1>
                 </header><!-- .page-header -->
             </div>
         </div>
         <div class="row">
-           
-           
-
+        
+        
+        
            
             <?php
-    
-    $args = array(
-        'category_name'  => 'the_name_of_the_category',
-        'posts_per_page' => 3,
-    );
-            // Start the loop.
+            
             while ( have_posts() ) {
                 the_post();
                 ?>
@@ -62,7 +46,7 @@ if ( have_posts() ) {
 
                 <div class="col-md-4 alm-item" id="post-<?php the_ID(); ?>">
                     <div class="single-archive-post-wrap">
-
+    
                        <?php 
                         $taxImgRatio = get_field('taxonomy_image_ratio'); 
                         $taxThumbOptionalID = get_field(('taxonomy_thumbnail_optional'));
@@ -80,7 +64,7 @@ if ( have_posts() ) {
                         ?>
                         
                         <span class="taxonomy-thumb">
-                          <a href="<?php echo get_the_permalink();?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                           <a href="<?php echo get_the_permalink();?>" class="lead-img-wrap <?php echo $postColorClass;?>">
                            <?php if ($taxImgRatio == 'Horizontal') { ?>
                               
                                 <?php 
@@ -123,7 +107,7 @@ if ( have_posts() ) {
                                 
                             <?php } ?>
                             
-                        </a>
+                            </a>
                         </span>
 
                         <?php 
@@ -145,19 +129,34 @@ if ( have_posts() ) {
                 <?php
             }
             ?>
-        </div>
         
-        <?php echo do_shortcode('[ajax_load_more id="alm-archive" archive="true" container_type="div" post_type="post" pause="true" scroll="false" posts_per_page="6" offset="3" no_results_text="<div class=\'no-results\'>Sorry, there are no more results</div>" transition_container_classes="row"]');?>
-        
-        
-    </div>
-</section>
+    
 
 <?php
 } else {
-    get_template_part( 'loop-templates/content', 'none' );
+    ?>
+    
+    <section class="archive-page search-results-page no-results sec-pad">
+        <div class="container">
+            <div class="row">
+                <div class="<?php if (is_category()) {echo 'col-md-12';} else {echo 'col-md-7';} ?>">
+                    <header>
+                       <p>No results for</p>
+                       <h1 class="page-title"><?php echo get_search_query(); ?></h1>
+                    </header><!-- .page-header -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <?php
 }
 ?>
+
+        
+        </div>
+        
+    </div>
+</section>
 
 <?php
 get_footer();

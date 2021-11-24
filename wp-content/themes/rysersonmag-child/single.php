@@ -14,6 +14,8 @@ get_header();
 
 <!--Post Headers-->
 
+<div id="content">
+
 <?php $featuredImagePosition = get_field('featured_image_position'); ?>
 <?php if ($featuredImagePosition == "Small Centred") { ?>
     
@@ -130,6 +132,8 @@ get_header();
 
 <?php } ?>
 
+</div><!--closes content-->
+
 <!--Post Content-->
 
 
@@ -208,12 +212,123 @@ if ($blocks) {
 </section>
 
 
-<section class="related-articles sec-pad-half">
+<section class="related-articles archive-page">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h2>3 related articles go here</h2>
+                <h2 class="related-articles-heading">More Posts</h2>
             </div>
+        </div>
+        <div class="row">
+            
+            <?php 
+            
+                $related = get_posts( 
+                    array( 
+                        'category__in' => wp_get_post_categories( $post->ID ), 
+                        'numberposts'  => 3, 
+                        'orderby'      => 'rand',
+                        'post__not_in' => array( $post->ID ) 
+                    ) 
+                );
+
+                if( $related ) { 
+                    foreach( $related as $relatedPost ) {
+                        setup_postdata($relatedPost);
+                        $relatedPostID = $relatedPost->ID;
+                        
+                        ?>
+                        
+                <div class="col-md-4" id="post-<?php echo $relatedPostID; ?>">
+                    <div class="single-archive-post-wrap">
+
+                       <?php 
+                        $taxImgRatio = get_field('taxonomy_image_ratio', $relatedPostID); 
+                        $taxThumbOptionalID = get_field('taxonomy_thumbnail_optional', $relatedPostID);
+                
+                        $postColorClass = '';
+                        $thePostCat = get_the_category($relatedPostID);
+                        $thePostCatSlug = $thePostCat[0]->slug;
+                        if ($thePostCatSlug == 'people') {
+                            $postColorClass = 'green';
+                        } else if ($thePostCatSlug == 'research-ideas') {
+                            $postColorClass = 'blue';
+                        } else if ($thePostCatSlug == 'campus') { 
+                            $postColorClass = 'orange';
+                        }
+                        ?>
+                        
+                        <span class="taxonomy-thumb">
+                           <a href="<?php echo get_the_permalink($relatedPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                           <?php if ($taxImgRatio == 'Horizontal') { ?>
+                              
+                                <?php 
+                                if ($taxThumbOptionalID) {
+                                    echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
+                                } else {
+                                    echo get_the_post_thumbnail( $relatedPostID, 'archive-hor' ); 
+                                }
+                                ?>
+                               
+                           <?php } else if ($taxImgRatio == 'Vertical') { ?>
+                               
+                                <?php 
+                                if ($taxThumbOptionalID) {
+                                    echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
+                                } else {
+                                    echo get_the_post_thumbnail( $relatedPostID, 'archive-ver' ); 
+                                }
+                                ?>
+                                
+                            <?php }  else if ($taxImgRatio == 'Square') { ?>
+                               
+                                <?php 
+                                if ($taxThumbOptionalID) {
+                                    echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
+                                } else {
+                                    echo get_the_post_thumbnail( $relatedPostID, 'archive-square' ); 
+                                }
+                                ?>
+                                
+                            <?php } else { ?>
+                               
+                                <?php 
+                                if ($taxThumbOptionalID) {
+                                    echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
+                                } else {
+                                    echo get_the_post_thumbnail( $relatedPostID, 'archive-square' ); 
+                                }
+                                ?>
+                                
+                            <?php } ?>
+                            </a>
+                        </span>
+
+                        <?php 
+
+                        $topics = wp_get_post_terms($relatedPostID, 'topic');
+                        $topicName = $topics[0]->name;
+                        $topicSlug = $topics[0]->slug;
+
+                        ?>
+                        <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+
+                        <a href="<?php echo get_the_permalink($relatedPostID);?>">
+                            <h2 class="entry-title"><?php echo get_the_title($relatedPostID); ?></h2>
+                            <h3 class="subheading"><?php echo get_field('subheading', $relatedPostID);?></h3>
+                        </a>
+                    </div>
+                </div>
+                       
+                         
+                        <?php
+
+                    }
+                    wp_reset_postdata();
+                }
+            
+            ?>
+            
         </div>
     </div>
 </section>

@@ -13,26 +13,46 @@
             </div>
             <div class="offset-md-1 col-md-2">
                 <div class="related-articles-sec">
+                
                 <?php 
-                    if ($block_data['related_articles']) {
-                        echo "<h3>Related Articles</h3><div class='dotted-line'></div>";
-                        foreach($block_data['related_articles'] as $relatedArticle) {
-                            ?>
-                            <?php
-                                $category = get_the_category($relatedArticle);
-                                $topics = wp_get_post_terms($relatedArticle, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-                            ?>
-                            <div class="single-related-article">
-                                <p class="mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
-    <!--                            <p><a href="<?php echo get_category_link($category[0]->term_id); ?>"><?php echo $category[0]->cat_name; ?></a></p>-->
-                                <h4><a href="<?php echo get_the_permalink($relatedArticle);?>"><?php echo get_the_title($relatedArticle);?></a></h4>
-                            </div>
-                            <?php
-                        } 
+                    $editorsPicksOn = $block_data['show_editors_picks'];
+                    $editorsPicksArray = get_field('editors_picks', 7);
+
+                    if ($editorsPicksOn) {
+
+                            echo "<h3>Editor's Picks</h3><div class='dotted-line'></div>";
+                            foreach(array_slice($editorsPicksArray, 0, 3)  as $editorsPick) {
+                                
+                                $postColorClass = '';
+                                $thePostCat = get_the_category($editorsPick);
+                                $thePostCatSlug = $thePostCat[0]->slug;
+                                if ($thePostCatSlug == 'people') {
+                                    $postColorClass = 'green';
+                                } else if ($thePostCatSlug == 'research-ideas') {
+                                    $postColorClass = 'blue';
+                                } else if ($thePostCatSlug == 'campus') { 
+                                    $postColorClass = 'orange';
+                                }
+                               
+                                ?>
+                                <?php
+                                    $category = get_the_category($editorsPick);
+                                    $topics = wp_get_post_terms($editorsPick, 'topic');
+                                    $topicName = $topics[0]->name;
+                                    $topicSlug = $topics[0]->slug;
+                                ?>
+                                <div class="single-related-article">
+                                   <a href="<?php echo get_the_permalink($editorsPick);?>" class="<?php echo $postColorClass; ?>">
+                                        <p class="mb-0 primary-category"><?php echo $topicName; ?></p>
+                                        <h4><?php echo get_the_title($editorsPick);?></h4>
+                                    </a>
+                                </div>
+                                <?php
+                            } 
+
                     }
                 ?>
+
                 </div>
             </div>
         </div>

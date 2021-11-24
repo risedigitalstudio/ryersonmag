@@ -18,6 +18,7 @@ defined( 'ABSPATH' ) || exit;
         <div class="row">
             <div class="col-md-2">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+                <p><a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming in process</a></p>
                 <p>350 Victoria Street,<br>Toronto, ON M5B 2K3<br>P: 416-979-5000</p>
             </div>
             <div class="col-md-2">
@@ -39,6 +40,55 @@ defined( 'ABSPATH' ) || exit;
             </div>
         </div>
     </div>
+    
+    
+    
+	
+	<div class="container-fluid footer-bottom">
+	    <div class="row footer-bottom-inner">
+	        <div class="col-md-8">
+	            <ul class="drawer-footer-links">
+                    <li>
+                        &copy; 2021 Ryerson University
+                    </li>
+	                <li><a href="#">Ryerson Alumni</a></li>
+	                <li><a href="#">About Us</a></li>
+	                <li><a href="#">Contact Us</a></li>
+	                <li><a href="#">Privacy Policy</a></li>
+	                <li><a href="#">Accessibility</a></li>
+	            </ul>
+	        </div>
+	        <div class="col-md-4">
+	            <ul class="drawer-footer-social">
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
+                        </a>
+	                </li>
+	                <li>
+                        <a href="#">
+                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
+                        </a>
+	                </li>
+	            </ul>
+	        </div>
+	    </div>
+	</div>
 </section>
 
 <?php wp_footer(); ?>

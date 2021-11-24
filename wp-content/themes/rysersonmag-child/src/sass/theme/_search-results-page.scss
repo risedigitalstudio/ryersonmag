@@ -1,0 +1,14 @@
+.search-results-page {
+    header {
+        p {
+            font-size: 16px;
+            line-height: 32px;
+            font-family: 'Suisse Reg', sans-serif;
+        }
+    }
+}
+
+
+.no-results {
+    height: calc(100vh - 348px);
+}

@@ -1,5 +1,5 @@
 .header-drawer {
-//    display: none;
+    display: none;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -119,6 +119,9 @@ input[type="search"]:-webkit-autofill::first-line {
         line-height: 60px;
         font-family: 'Lynon Reg', sans-serif;
         color: $white;
+        &:hover, &:focus {
+            text-decoration: underline;
+        }
     }
 }
 

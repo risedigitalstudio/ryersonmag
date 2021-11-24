@@ -10,7 +10,7 @@ $theCurrentIssueArray = get_field('current_magazine_issue');
 $theCurrentIssueID = $theCurrentIssueArray[0];
 ?>
 
-<section class="archive-page current-issue-page sec-pad">
+<section class="archive-page current-issue-page sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -23,7 +23,11 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                         <?php echo get_field("issue_description", $theCurrentIssueID); ?>
                     </div>
                     <div class="file-link">
-                        <?php var_dump(get_field("pdf_file", $theCurrentIssueID)); ?>
+                        <?php 
+                        $pdfFile = get_field("pdf_file", $theCurrentIssueID); 
+                        $pdfUrl = $pdfFile['url'];
+                        ?>
+                        <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf">Download PDF</a>
                     </div>
                 </div>
                 
@@ -72,7 +76,8 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                 }
                                 ?>
 
-                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="taxonomy-thumb <?php echo $postColorClass;?>">
+                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="taxonomy-thumb">
+                                  <span class="lead-img-wrap <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -114,6 +119,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                         ?>
 
                                     <?php } ?>
+                                    </span>
                                 </a>
 
                                 <?php 
@@ -149,42 +155,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
 </section>
 
 
-<section class="past-issues sec-pad">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="dotted-heading">Past Issues</h2>
-            </div>
-        </div>
-        <div class="row">
-                <?php
-                $args = array (
-                'post_type' => array ('magazine'),
-                'orderby' => array( 'menu_order' => 'ASC'),
-                'posts_per_page' => 9
-                );
-                //$args['search_filter_id'] = 84;
-                $pastIssues = new WP_Query($args);                           
-                $counter = 0;
-                ?>
-
-                    <?php while ( $pastIssues->have_posts() ) : $pastIssues->the_post();?>
-
-                    <div class="col-md-3">
-                       <div class="past-issue">
-                            <a href="<?php the_permalink();?>"><?php echo get_the_post_thumbnail(); ?></a>
-                            <h2><?php the_title();?></h2>
-                       </div>
-                    </div>
-
-                    <?php                                      
-                    $counter++;        
-                    ?>
-                <?php endwhile; ?>
-                <?php wp_reset_postdata(); ?>
-        </div>
-    </div>
-</section>
+<?php get_template_part( 'global-templates/past-issues' ); ?>
 
 <?php
 get_footer();

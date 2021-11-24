@@ -19,10 +19,10 @@
 }
 //overwriting post styles from archive.scss
 .home {
-    a.taxonomy-thumb {
+    .taxonomy-thumb {
         img {
-            width: 100%;
-            float: left;
+//            width: 100%;
+//            float: left;
         }
     }
     .single-archive-post-wrap {
@@ -58,12 +58,20 @@
     border-bottom: 2px dotted $black;
     .pick {
         position: relative;
-        &:hover {
-//            @include box-color-hovers;
-        }
         width: 22%;
-        h3 {
-            @include archive-title-font;
+        a {
+            text-decoration: none;
+            display: block;
+            transition: 0.2s all;
+            position: relative;
+            @include box-color-hovers;
+            p.primary-category {
+                border-bottom: none;
+            }
+            h3 {
+                @include archive-title-font;
+                margin-bottom: 0;
+            }
         }
     }
 }

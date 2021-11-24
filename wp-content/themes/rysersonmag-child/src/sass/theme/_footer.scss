@@ -1,6 +1,6 @@
 .main-footer {
     background: $black;
-    padding: 40px;
+    padding: 40px 40px 0 40px;
     @include footer-font;
     img.white-ryerson-logo {
         margin-bottom: $space * 1.5;
@@ -29,5 +29,51 @@
         text-align: center;
         border-radius: 4px;
         display: inline-block;
+    }
+}
+
+
+
+
+.footer-bottom {
+
+}
+
+.footer-bottom-inner {
+    border-top: 2px dotted $white;
+    margin-top: 45px;
+    ul {
+        list-style-type: none;
+        padding: 23px 0;
+        li {
+            margin-bottom: 0;
+            float: left;
+            margin-right: 45px;
+            font-size: 16px;
+            line-height: 20px;
+            font-family: 'Suisse Reg', sans-serif;
+            color: $white;
+            a {
+                font-size: 16px;
+                line-height: 20px;
+                font-family: 'Suisse Reg', sans-serif;
+                color: $white;
+                text-decoration: underline;
+            }
+        }
+    }
+    ul.drawer-footer-social {
+        display: flex;
+        justify-content: end;
+        li {
+            margin-left: $space;
+            margin-right: 0;
+            margin-bottom: 0;
+            a {
+                img {
+                    width: 24px;
+                }
+            }
+        }
     }
 }

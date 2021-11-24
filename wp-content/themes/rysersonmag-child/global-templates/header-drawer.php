@@ -33,7 +33,7 @@
 	</div><!-- #wrapper-navbar end -->
 	
 	
-	<div class="container-fluid full mt-5">
+	<div class="container-fluid full mt-4">
 	    <div class="row full">
 	        <div class="col-md-12">
 	            <?php get_search_form();?>

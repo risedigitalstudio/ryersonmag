@@ -31,5 +31,17 @@
             border-bottom: none;
             margin-bottom: 0;
         }
+        a {
+            text-decoration: none;
+            display: block;
+            transition: 0.2s all;
+            position: relative;
+            @include box-color-hovers;
+            p.primary-category {
+                border-bottom: none;
+            }
+            h4 {}
+        
+        }
     }
 }
