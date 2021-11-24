@@ -110,7 +110,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-hor' ); 
                                         }
@@ -120,7 +120,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-ver' ); 
                                         }
@@ -130,7 +130,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-square' ); 
                                         }
@@ -140,7 +140,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-square' ); 
                                         }
@@ -282,7 +282,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($peopleArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $peopleArticle, 'archive-hor' ); 
                                         }
@@ -292,7 +292,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($peopleArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail( $peopleArticle, 'archive-ver' ); 
                                         }
@@ -302,7 +302,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($peopleArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $peopleArticle, 'archive-square' ); 
                                         }
@@ -312,7 +312,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($peopleArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $peopleArticle, 'archive-square' ); 
                                         }
@@ -404,7 +404,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($researchArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $researchArticle, 'archive-hor' ); 
                                         }
@@ -414,7 +414,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($researchArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail( $researchArticle, 'archive-ver' ); 
                                         }
@@ -424,7 +424,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($researchArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $researchArticle, 'archive-square' ); 
                                         }
@@ -434,7 +434,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($researchArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail($researchArticle, 'archive-square' ); 
                                         }
@@ -537,7 +537,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($campusArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $campusArticle, 'archive-hor' ); 
                                         }
@@ -547,7 +547,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($campusArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail($campusArticle, 'archive-ver' ); 
                                         }
@@ -557,7 +557,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($campusArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $campusArticle, 'archive-square' ); 
                                         }
@@ -567,7 +567,7 @@ get_header('home');
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($campusArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail($campusArticle, 'archive-square' ); 
                                         }

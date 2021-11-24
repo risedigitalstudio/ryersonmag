@@ -82,7 +82,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-hor' ); 
                                         }
@@ -92,7 +92,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-ver' ); 
                                         }
@@ -102,7 +102,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-square' ); 
                                         }
@@ -112,7 +112,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($featuredArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $featuredArticle, 'archive-square' ); 
                                         }
