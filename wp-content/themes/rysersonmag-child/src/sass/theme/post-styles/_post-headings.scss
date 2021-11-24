@@ -48,6 +48,9 @@ figcaption {
 //}
 figcaption {
     left: 40px;
+    @include media-breakpoint-down(sm) {
+        left: 0;
+    }
 }
 
 

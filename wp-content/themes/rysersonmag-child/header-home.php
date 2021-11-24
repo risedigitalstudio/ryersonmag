@@ -26,7 +26,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="site" id="page">
 
 	<!-- ******************* The Navbar Area ******************* -->
-	<div id="wrapper-navbar">
+	<div id="wrapper-navbar" class="desktop-nav">
 
 		<a class="skip-link sr-only sr-only-focusable" href="#content"><?php esc_html_e( 'Skip to content', 'understrap' ); ?></a>
 

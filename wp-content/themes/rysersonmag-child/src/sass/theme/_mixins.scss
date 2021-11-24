@@ -161,6 +161,11 @@
     letter-spacing: -4px;
     font-family: 'Suisse Bold', sans-serif;
     text-transform: lowercase;
+    @include media-breakpoint-down(md) {
+        font-size: 80px;
+        line-height: 90px;
+        display: inline;
+    }
 }
 
 @mixin archive-title-font {

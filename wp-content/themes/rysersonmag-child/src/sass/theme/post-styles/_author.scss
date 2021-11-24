@@ -56,3 +56,15 @@
         padding-top: 0;
     }
 }
+
+
+@include media-breakpoint-down(md) {
+    .author-img {
+        width: 20%;
+        margin-right: 3%;
+    }
+    .author-info {
+        width: 77%;
+        float: right;
+    }
+}

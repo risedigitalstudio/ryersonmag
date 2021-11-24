@@ -156,7 +156,7 @@ if ($blocks) {
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
-                <div class="row">
+<!--                <div class="row">-->
                 <?php $authorID = get_the_author_meta('ID'); ?>
                 <?php if (get_avatar($authorID)) { ?>
                     <div class="author-img">
@@ -190,21 +190,23 @@ if ($blocks) {
                             ?>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="post-tags full">
-                        <?php 
-                            $postTagsArray = get_the_tags(get_the_ID());
-                            if($postTagsArray && sizeof($postTagsArray) > 0) {
-                                echo 'Read More ';
-                                foreach($postTagsArray as $tagObj) {
-                                    ?>
-                                    <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
-                                    <?php
-                                }
+<!--                </div>-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="post-tags full">
+                    <?php 
+                        $postTagsArray = get_the_tags(get_the_ID());
+                        if($postTagsArray && sizeof($postTagsArray) > 0) {
+                            echo 'Read More ';
+                            foreach($postTagsArray as $tagObj) {
+                                ?>
+                                <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
+                                <?php
                             }
-                        ?>
-                    </div>
+                        }
+                    ?>
                 </div>
             </div>
         </div>

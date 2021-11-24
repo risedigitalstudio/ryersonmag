@@ -15010,6 +15010,13 @@ body strong {
   float: left;
 }
 
+.skip-link {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: "Suisse Bold", sans-serif;
+  padding: 5px;
+}
+
 .container-fluid, .container-sm, .container-md, .container-lg, .container-xl {
   padding-left: 35px;
   padding-right: 35px;
@@ -15149,6 +15156,15 @@ body strong {
   margin-left: 20px;
 }
 
+@media (max-width: 767.98px) {
+  .hamburgerMenu {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: none;
+  }
+}
 .header-drawer {
   display: none;
   position: fixed;
@@ -15281,6 +15297,13 @@ input[type=search]:-webkit-autofill::first-line {
   line-height: 60px;
   font-family: "Lynon Reg", sans-serif;
   color: #fff;
+  white-space: nowrap;
+}
+@media (max-width: 991.98px) {
+  .drawer-tags-row a {
+    font-size: 26px;
+    line-height: 48px;
+  }
 }
 .drawer-tags-row a:hover, .drawer-tags-row a:focus {
   text-decoration: underline;
@@ -15383,6 +15406,11 @@ figcaption .caption-arrow {
 
 figcaption {
   left: 40px;
+}
+@media (max-width: 767.98px) {
+  figcaption {
+    left: 0;
+  }
 }
 
 .author-date-sep {
@@ -15742,6 +15770,17 @@ blockquote {
   padding-top: 0;
 }
 
+@media (max-width: 991.98px) {
+  .author-img {
+    width: 20%;
+    margin-right: 3%;
+  }
+
+  .author-info {
+    width: 77%;
+    float: right;
+  }
+}
 .related-articles {
   padding-top: 100px;
   padding-bottom: 100px;
@@ -15792,6 +15831,13 @@ blockquote {
   background-position: 0 70px;
   background-size: 100% 30px;
   padding-bottom: 30px;
+}
+@media (max-width: 991.98px) {
+  .archive-page h1.page-title, .home h1.page-title {
+    font-size: 80px;
+    line-height: 90px;
+    display: inline;
+  }
 }
 .archive-page h1.page-title.green, .home h1.page-title.green {
   background-image: linear-gradient(180deg, #00DA2B, #00DA2B);
@@ -16035,7 +16081,14 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   padding-bottom: 30px;
   margin-bottom: 75px;
   position: relative;
-  left: -100px;
+  left: 0;
+}
+@media (max-width: 991.98px) {
+  .featured-cat-heading {
+    font-size: 80px;
+    line-height: 90px;
+    display: inline;
+  }
 }
 .featured-cat-heading a.see-all {
   font-size: 15px;
@@ -16076,6 +16129,25 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   background-image: linear-gradient(180deg, #FF891D, #FF891D);
 }
 
+@media (min-width: 1400px) {
+  .featured-cat-heading {
+    left: -100px;
+  }
+}
+@media (max-width: 991.98px) {
+  .sticky-home-intro .sticky-low-p {
+    width: 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  .sticky-home-intro {
+    display: none;
+  }
+
+  .home .left-border {
+    border-left: none;
+  }
+}
 .current-issue-page .single-archive-post-wrap {
   margin-top: 0;
   margin-bottom: 75px;

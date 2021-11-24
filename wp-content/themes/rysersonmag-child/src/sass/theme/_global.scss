@@ -62,6 +62,13 @@ body {
     float: left;
 }
 
+.skip-link {
+    font-size: 16px;
+    line-height: 18px;
+    font-family: 'Suisse Bold', sans-serif;
+    padding: 5px;
+}
+
 .container-fluid {
     padding-left: 35px;
     padding-right: 35px;
@@ -84,4 +91,14 @@ body {
 .sec-pad-bot {
     padding-bottom: 55px;
 }
+
+
+
+//@media (min-width: 576px) { ... }
+//
+//@media (min-width: 768px) { ... }
+//
+//@media (min-width: 992px) { ... }
+//
+//@media (min-width: 1200px) { ... }
 

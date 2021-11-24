@@ -50,7 +50,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
             
             <div class="col-md-6 offset-md-1 current-issue-articles">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-md-12">
                 <?php 
                     $featuredArticleArray = get_field("feature_articles", $theCurrentIssueID);
                     $featuredArticleArraySize = ceil(sizeof($featuredArticleArray) / 2);
@@ -141,7 +141,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                         <?php
                         $articleArrayCounter++;
                         if ($featuredArticleArraySize == $articleArrayCounter) {
-                            echo '</div><div class="col-md-6">';
+                            echo '</div><div class="col-lg-6 col-md-12">';
                         }
                     }
                 ?>

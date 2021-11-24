@@ -128,3 +128,14 @@
 .hamburgerMenu {
     margin-left: 20px;
 }
+
+
+
+@include media-breakpoint-down(sm) {
+  .hamburgerMenu {
+    display: none;
+  }
+  .desktop-nav {
+    display: none;
+  }
+}
