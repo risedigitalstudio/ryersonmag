@@ -230,7 +230,7 @@ get_header('home');
 
 <section class="category-featured sec-pad-bot">
     <div class="container">
-       <div class="row">
+       <div class="row desktop">
            <div classs="col-md-12">
                <h2 class="featured-cat-heading green">People
                    <a href="<?php echo site_url();?>/category/people" class="see-all">
@@ -241,6 +241,17 @@ get_header('home');
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
                     </span>
                </h2>
+           </div>
+       </div>
+       
+       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
+           <div classs="col-9">
+               <h2 class="featured-cat-heading green">People</h2>
+           </div>
+           <div class="col-3">
+               <a href="<?php echo site_url();?>/category/people" class="see-all">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+               </a>
            </div>
        </div>
         <div class="row">
@@ -277,7 +288,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($peopleArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($peopleArticle);?>" class="lead-img-wrap <?php if ($peopleCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -352,7 +363,7 @@ get_header('home');
 
 <section class="category-featured sec-pad-bot">
     <div class="container">
-       <div class="row">
+       <div class="row desktop">
            <div classs="col-md-12">
                <h2 class="featured-cat-heading blue">Research &amp; Ideas
                    <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
@@ -363,6 +374,16 @@ get_header('home');
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
                     </span>
                </h2>
+           </div>
+       </div>
+       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
+           <div classs="col-9">
+               <h2 class="featured-cat-heading blue">Research &amp;<br class="mobile"> Ideas</h2>
+           </div>
+           <div class="col-3">
+               <a href="<?php echo site_url();?>/category/research-ideas" class="see-all">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+               </a>
            </div>
        </div>
         <div class="row">
@@ -399,7 +420,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($researchArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($researchArticle);?>" class="lead-img-wrap <?php if ($researchCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -484,7 +505,7 @@ get_header('home');
 
 <section class="category-featured sec-pad">
     <div class="container">
-       <div class="row">
+       <div class="row desktop">
            <div classs="col-md-12">
                <h2 class="featured-cat-heading orange">Campus
                    <a href="<?php echo site_url();?>/category/campus/" class="see-all">
@@ -495,6 +516,17 @@ get_header('home');
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
                     </span>
                </h2>
+           </div>
+       </div>
+       
+       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
+           <div classs="col-9">
+               <h2 class="featured-cat-heading orange">Campus</h2>
+           </div>
+           <div class="col-3">
+               <a href="<?php echo site_url();?>/category/campus" class="see-all">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+               </a>
            </div>
        </div>
         <div class="row">
@@ -532,7 +564,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($campusArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($campusArticle);?>" class="lead-img-wrap <?php if ($campusCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 

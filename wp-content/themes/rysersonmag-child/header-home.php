@@ -75,3 +75,28 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</nav><!-- .site-navigation -->
 
 	</div><!-- #wrapper-navbar end -->
+
+
+
+
+		
+<div class="mobile-nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <?php the_custom_logo(); ?>
+            </div>
+            <div class="col-4">
+				<a href="#" class="mobileHamburgerMenu" id="mobileHamburgerMenu">
+				    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.5 1.5H26" stroke="black" stroke-width="2"/>
+                    <path d="M0.5 12H26" stroke="black" stroke-width="2"/>
+                    <path d="M0.5 22H26" stroke="black" stroke-width="2"/>
+                    </svg>
+				</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php get_template_part( 'global-templates/header-mobile-drawer' ); ?>

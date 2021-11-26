@@ -32,10 +32,12 @@
                 <?php endwhile; ?>
                 <?php wp_reset_postdata(); ?>
         </div>
+<!--
         <div class="row sec-pad-top">
             <div class="col-md-12 flex">
                 <a href="<?php echo site_url();?>/past-issues" class="default-btn">View all</a>
             </div>
         </div>
+-->
     </div>
 </section>

@@ -12,6 +12,15 @@ $(document).ready(function() {
     $('#drawerClose').on('click', function () {
         $('#headerDrawer').hide();
     })
+    
+    
+    $('#mobileHamburgerMenu').on('click', function () {
+        $('#mobileHeaderDrawer').show();
+    })    
+    
+    $('#mobileDrawerClose').on('click', function () {
+        $('#mobileHeaderDrawer').hide();
+    })
         
 //    $('.search-submit').on('click', function () {
 //        $('#headerDrawer').hide();

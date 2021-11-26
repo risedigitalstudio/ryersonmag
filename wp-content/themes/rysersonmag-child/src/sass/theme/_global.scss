@@ -72,6 +72,10 @@ body {
 .container-fluid {
     padding-left: 35px;
     padding-right: 35px;
+    @include media-breakpoint-down(md) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 }
 
 .sec-pad {
@@ -92,7 +96,45 @@ body {
     padding-bottom: 55px;
 }
 
+.flex-between {
+    justify-content: space-between;
+}
 
+@include media-breakpoint-up(sm) {
+    .desktop {
+        display: block;
+    }
+    .desktop-flex {
+        display: flex;
+    }
+    
+    .mobile {
+        display: none;
+    }
+    .mobile-flex {
+        display: none;
+    }
+}
+
+@include media-breakpoint-down(sm) {
+    .container-padding {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .desktop {
+        display: none;
+    }
+    .desktop-flex {
+        display: none;
+    }
+    
+    .mobile {
+        display: block;
+    }
+    .mobile-flex {
+        display: flex;
+    }
+}
 
 //@media (min-width: 576px) { ... }
 //

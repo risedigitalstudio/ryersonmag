@@ -48,10 +48,10 @@ get_header();
     <section class="vertical-post-header vertical-white">
         <div class="container-fluid px-0">
             <div class="row">
-                <div class="col-md-6 px-0">
+                <div class="col-lg-6 px-0">
                     <?php get_template_part( 'global-templates/post-header' ); ?>
                 </div>
-                <div class="col-md-6 px-0">
+                <div class="col-lg-6 px-0">
                     <?php the_post_thumbnail('vertical-header'); ?>
                 </div>
             </div>
@@ -76,10 +76,10 @@ get_header();
     <section class="vertical-post-header vertical-black">
         <div class="container-fluid px-0">
             <div class="row">
-                <div class="col-md-6 info-side px-0">
+                <div class="col-lg-6 info-side px-0">
                     <?php get_template_part( 'global-templates/post-header' ); ?>
                 </div>
-                <div class="col-md-6 px-0">
+                <div class="col-lg-6 px-0">
                     <?php the_post_thumbnail('vertical-header'); ?>
                 </div>
             </div>

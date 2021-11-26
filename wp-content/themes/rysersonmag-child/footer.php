@@ -30,12 +30,12 @@ defined( 'ABSPATH' ) || exit;
                     <li><a href="#" target="_blank">Contact Us</a></li>
                 </ul>
             </div>
-            <div class="col-md-2 offset-md-5">
+            <div class="col-lg-2 offset-lg-4 col-md-3 offset-md-3">
                 <h2 class="footer-heading">Campus News &amp; Events</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="#" target="
                 ">ryerson.ca/news-events/events</a></p>
             </div>
-            <div class="col-md-1">
+            <div class="col-md-2">
                 <a href="#" target="_blank" class="give-btn">Give</a>
             </div>
         </div>
@@ -46,7 +46,7 @@ defined( 'ABSPATH' ) || exit;
 	
 	<div class="container-fluid footer-bottom">
 	    <div class="row footer-bottom-inner">
-	        <div class="col-md-8">
+	        <div class="col-lg-8">
 	            <ul class="drawer-footer-links">
                     <li>
                         &copy; 2021 Ryerson University
@@ -58,7 +58,7 @@ defined( 'ABSPATH' ) || exit;
 	                <li><a href="#">Accessibility</a></li>
 	            </ul>
 	        </div>
-	        <div class="col-md-4">
+	        <div class="col-lg-4">
 	            <ul class="drawer-footer-social">
 	                <li>
                         <a href="#">

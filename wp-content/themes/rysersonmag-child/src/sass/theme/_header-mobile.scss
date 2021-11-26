@@ -1,0 +1,15 @@
+@include media-breakpoint-up(md) {
+    .mobile-nav {
+        display: none;
+    }
+}
+
+.mobile-nav {
+    padding: 12px 0;
+}
+
+.mobileHamburgerMenu {
+    float: right;
+    position: relative;
+    top: 11px; 
+}

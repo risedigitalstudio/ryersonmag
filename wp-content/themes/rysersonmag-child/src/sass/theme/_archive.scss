@@ -17,6 +17,9 @@
         background-position: 0 70px;
         background-size: 100% 30px;
         padding-bottom: 30px;
+        @include media-breakpoint-down(sm) {
+            display: inline;
+        }
         &.green {
             background-image: linear-gradient(180deg, $green, $green);
         }
