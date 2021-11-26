@@ -15248,6 +15248,10 @@ body strong {
   height: 100vh;
 }
 
+#drawerClose {
+  margin: 0 0 !important;
+}
+
 input.search-submit {
   background-image: url("../img/search-submit.png");
   background-repeat: no-repeat;
