@@ -15982,6 +15982,7 @@ blockquote {
   background-position: 0 70px;
   background-size: 100% 30px;
   padding-bottom: 30px;
+  background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
 }
 @media (max-width: 991.98px) {
   .archive-page h1.page-title, .home h1.page-title {
@@ -16440,8 +16441,24 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
 }
 
 .past-issues {
-  background: #004C9B;
-  color: #fff;
+  background: #e8e8e8;
+  color: #000;
+}
+.past-issues .past-issues-heading {
+  border-bottom: 2px dotted #000;
+  display: flex;
+  justify-content: space-between;
+}
+.past-issues .slick-track {
+  float: left;
+}
+.past-issues .past-issue {
+  text-align: center;
+  margin-top: 75px;
+}
+.past-issues .past-issue img {
+  width: 255px;
+  margin: 0 auto 40px auto;
 }
 .past-issues .dotted-heading {
   font-family: "Suisse Bold", sans-serif;
@@ -16449,9 +16466,8 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   font-size: 48px;
   line-height: 52px;
   padding-bottom: 25px;
-  color: #fff;
-  border-bottom: 2px dotted #fff;
-  width: 100%;
+  color: #000;
+  margin-bottom: 0;
 }
 @media (max-width: 991.98px) {
   .past-issues .dotted-heading {
@@ -16460,13 +16476,12 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
     padding-bottom: 20px;
   }
 }
-
-.past-issue {
-  text-align: center;
-  margin-top: 75px;
+.past-issues .arrows-inner {
+  position: relative;
+  top: 5px;
 }
-.past-issue img {
-  margin-bottom: 40px;
+.past-issues .arrows-inner .prev {
+  margin-right: 40px;
 }
 
 .search-results-page header p {

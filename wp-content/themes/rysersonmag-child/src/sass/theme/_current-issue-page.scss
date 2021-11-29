@@ -50,17 +50,43 @@
 }
 
 .past-issues {
-    background: $ryersonBlue;
-    color: $white;
-    .dotted-heading {
-        @include dotted-heading;
+    background: $lightGrey;
+    color: $black;
+    .past-issues-heading {
+        border-bottom: 2px dotted $black;
+        display: flex;
+        justify-content: space-between;
     }
-}
-
-.past-issue {
-    text-align: center;
-    margin-top: 75px;
-    img {
-        margin-bottom: 40px;
+    .slick-track {
+        float: left;
+    }
+    .past-issue {
+        text-align: center;
+        margin-top: 75px;
+        img {
+            width: 255px;
+            margin: 0 auto 40px auto;
+        }
+    }
+    .dotted-heading {
+        font-family: 'Suisse Bold', sans-serif;
+        text-transform: lowercase;
+        font-size: 48px;
+        line-height: 52px;
+        padding-bottom: 25px;
+        color: $black;
+        margin-bottom: 0;
+        @include media-breakpoint-down(md) {
+            font-size: 36px;
+            line-height: 36px;
+            padding-bottom: 20px;
+        }
+    }
+    .arrows-inner {
+        position: relative;
+        top: 5px;
+        .prev {
+            margin-right: 40px;
+        }
     }
 }

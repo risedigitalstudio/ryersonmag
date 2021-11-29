@@ -155,6 +155,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
     </div>
 </section>
 
+<?php wp_reset_postdata(); ?>
 
 <?php get_template_part( 'global-templates/past-issues' ); ?>
 

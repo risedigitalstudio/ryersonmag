@@ -20,12 +20,15 @@ if ( ! function_exists( 'understrap_scripts' ) ) {
 		$css_version = $theme_version . '.' . filemtime( get_template_directory() . '/css/theme.min.css' );
 		wp_enqueue_style( 'understrap-styles', get_template_directory_uri() . '/css/theme.min.css', array(), $css_version );
         wp_enqueue_style( 'aos-styles', get_stylesheet_directory_uri() . '/aos/aos.css', array(), $css_version );
+        wp_enqueue_style( 'slick-styles', get_stylesheet_directory_uri() . '/slick/slick.css', array(), $css_version );
+		wp_enqueue_style( 'slick-theme', get_stylesheet_directory_uri() . '/slick/slick-theme.css', array(), $css_version );
 
 		wp_enqueue_script( 'jquery' );
 
 		$js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
 		wp_enqueue_script( 'understrap-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
         wp_enqueue_script( 'aos-scripts', get_stylesheet_directory_uri() . '/aos/aos.js', array(), $js_version, true );
+        wp_enqueue_script( 'slick-scripts', get_stylesheet_directory_uri() . '/slick/slick.min.js', array(), $js_version, true );
         wp_enqueue_script( 'custom-scripts', get_stylesheet_directory_uri() . '/js/custom.js', array(), $js_version, true );
         wp_enqueue_script( 'gsap-scripts', get_stylesheet_directory_uri() . '/js/gsap.min.js', array(), $js_version, true );
 		wp_enqueue_script( 'gsap-scroll', get_stylesheet_directory_uri() . '/js/ScrollTrigger.min.js', array(), $js_version, true );

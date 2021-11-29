@@ -17,6 +17,7 @@
         background-position: 0 70px;
         background-size: 100% 30px;
         padding-bottom: 30px;
+        background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
         @include media-breakpoint-down(sm) {
             display: inline;
         }
