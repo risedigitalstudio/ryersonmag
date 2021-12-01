@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
                 <ul>
                     <li><a href="#" target="_blank">Update your subscription</a></li>
                     <li><a href="#" target="_blank">Issue archive</a></li>
-                    <li><a href="#" target="_blank">Advertising</a></li>
+                    <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
                     <li><a href="#" target="_blank">Contact Us</a></li>
                 </ul>
             </div>

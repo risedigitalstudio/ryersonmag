@@ -16147,7 +16147,106 @@ blockquote {
 
 div#comments {
   background: #e8e8e8;
-  padding: 18px;
+  padding: 24px;
+}
+div#comments h2.comments-title {
+  font-size: 28px;
+  line-height: 36px;
+  font-family: "Suisse Bold", sans-serif;
+  margin-bottom: 28px;
+}
+@media (max-width: 767.98px) {
+  div#comments h2.comments-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+div#comments ol.comment-list {
+  list-style-type: none;
+  padding: 0 0 18px;
+  margin-bottom: 24px;
+  border-bottom: 2px dotted;
+}
+div#comments ol.comment-list article {
+  margin-bottom: 16px;
+}
+div#comments .comment-body {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+}
+div#comments b.fn a {
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: uppercase;
+}
+div#comments .comment-author img {
+  display: none;
+}
+div#comments .comment-metadata {
+  font-style: italic;
+  font-size: 13px;
+}
+div#comments .comment-metadata .comment-edit-link {
+  font-style: normal;
+  text-decoration: underline;
+}
+div#comments .comment-content {
+  padding-left: 20px;
+  margin: 10px 0 0 0;
+}
+div#comments .comment-content p {
+  margin: 0;
+}
+div#comments .reply {
+  padding-left: 20px;
+  margin-top: 5px;
+  text-align: right;
+}
+div#comments .reply a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+div#comments .btn-secondary {
+  color: #fff;
+  background-color: #000;
+  border-color: #000;
+  font-size: 14px;
+  font-family: "Suisse Reg", sans-serif;
+}
+
+#respond h3.comment-reply-title {
+  font-size: 20px;
+  line-height: 28px;
+  font-family: "Suisse Bold", sans-serif;
+  margin: 0;
+}
+#respond .logged-in-as, #respond .comment-notes, #respond .form-check {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+}
+
+.comment-form-comment label {
+  font-size: 14px;
+  line-height: 20px;
+  margin: 10px 0 0 0;
+  font-family: "Suisse Reg", sans-serif;
+}
+
+.comment-form-url {
+  display: none;
+}
+
+.comment-form .form-group label, .comment-form .wpcf7 .wpcf7-form p label, .wpcf7 .wpcf7-form .comment-form p label {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: "Suisse Reg", sans-serif;
+  margin: 0;
+}
+
+p.form-submit {
+  display: flex;
+  justify-content: end;
 }
 
 .archive-page .single-archive-post-wrap, .home .single-archive-post-wrap {
@@ -16715,6 +16814,17 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
 
 .no-results {
   height: calc(100vh - 348px);
+}
+
+.page-template h1 {
+  margin-bottom: 60px;
+}
+.page-template h2, .page-template h3, .page-template h4, .page-template h5 {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .main-footer {

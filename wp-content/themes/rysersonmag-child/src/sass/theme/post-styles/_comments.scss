@@ -1,4 +1,103 @@
 div#comments {
     background: $lightGrey;
-    padding: 18px;
+    padding: 24px;
+    h2.comments-title {
+        @include post-body-subheading;
+        margin-bottom: 28px;
+    }
+    ol.comment-list {
+        list-style-type: none;
+        padding: 0 0 18px;
+        margin-bottom: 24px;
+        border-bottom: 2px dotted;
+        article {
+            margin-bottom: 16px;
+        }
+    }
+    .comment-body {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: 'Suisse Reg', sans-serif;
+    }
+    b.fn a {
+        font-family: 'Suisse Bold', sans-serif;
+        text-transform: uppercase;
+    }
+    .comment-author {
+        img {
+            display: none;
+        }
+    }
+    .comment-metadata {
+        font-style: italic;
+        font-size: 13px;
+        .comment-edit-link {
+            font-style: normal;
+            text-decoration: underline;
+        }
+    }
+    .comment-content {
+        padding-left: 20px;
+        margin: 10px 0 0 0;
+        p {
+            margin: 0;
+        }
+    }
+    .reply {
+        padding-left: 20px;
+        margin-top: 5px;
+        text-align: right;
+        a {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    }
+    .btn-secondary {
+        color: $white;
+        background-color: $black;
+        border-color: $black;
+        font-size: 14px;
+        font-family: 'Suisse Reg', sans-serif;
+    }
+}
+
+#respond {
+    h3.comment-reply-title {
+        font-size: 20px;
+        line-height: 28px;
+        font-family: 'Suisse Bold', sans-serif;
+        margin: 0;
+    }
+    .logged-in-as, .comment-notes, .form-check {
+        font-size: 14px;
+        line-height: 20px;
+        font-family: 'Suisse Reg', sans-serif;
+    }
+}
+
+.comment-form-comment label {
+        font-size: 14px;
+        line-height: 20px;
+        margin: 10px 0 0 0;
+        font-family: 'Suisse Reg', sans-serif;
+}
+
+.comment-form-url {
+    display: none;
+}
+
+.comment-form {
+    .form-group {
+        label {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Suisse Reg', sans-serif;
+            margin: 0;
+        }
+    }
+}
+
+p.form-submit {
+    display: flex;
+    justify-content: end;
 }
