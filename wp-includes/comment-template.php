@@ -552,7 +552,7 @@ function get_comment_class( $class = '', $comment_id = null, $post_id = null ) {
 function get_comment_date( $format = '', $comment_ID = 0 ) {
 	$comment = get_comment( $comment_ID );
 
-	$_format = ! empty( $format ) ? $format : get_option( 'date_format' );
+	$_format = 'F j, Y';
 
 	$date = mysql2date( $_format, $comment->comment_date );
 
@@ -2407,7 +2407,7 @@ function comment_form( $args = array(), $post_id = null ) {
 			),
 			sprintf(
 				'<label for="wp-comment-cookies-consent">%s</label>',
-				__( 'Save my name, email, and website in this browser for the next time I comment.' )
+				__( 'Save my name and email in this browser for the next time I comment.' )
 			)
 		);
 
