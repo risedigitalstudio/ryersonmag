@@ -98,6 +98,13 @@
     font-size: 48px;
 }
 
+
+@mixin search-font-mobile {
+    font-family: 'Suisse Reg', sans-serif;
+    color: $black !important;
+    font-size: 24px;
+}
+
 @mixin large-title {
     font-size: 48px;
     line-height: 50px;
@@ -185,6 +192,21 @@
         font-size: 80px;
         line-height: 90px;
     } 
+    @include media-breakpoint-down(sm) {
+        font-size: 60px;
+        line-height: 70px;
+        background-position: 0 53px;
+        background-size: 100% 16px;
+        padding-bottom: 30px;
+        letter-spacing: -2px;
+    } 
+}
+
+@mixin mobile-drawer-term-font {
+    font-size: 32px;
+    line-height: 20px;
+    font-family: 'Suisse Bold', sans-serif;
+    text-transform: lowercase;
 }
 
 @mixin archive-title-font {

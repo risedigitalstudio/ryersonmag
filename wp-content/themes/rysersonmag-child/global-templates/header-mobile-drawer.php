@@ -13,9 +13,78 @@
                 </a>
             </div>
         </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <?php get_search_form();?>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="mobile-drawer-cat-list">
+                    <li><a href="<?php echo site_url();?>/category/people" class="green">People</a></li>
+                    <li><a href="<?php echo site_url();?>/category/campus" class="orange">Campus</a></li>
+                    <li><a href="<?php echo site_url();?>/category/research-ideas" class="blue">Research &amp; Ideas</a></li>
+                    <li><a href="<?php echo site_url();?>/current-issue/" class="yellow">Magazine</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
    
 
+    <div class="row">
+        <div class="col-md-12">
+            <ul class="drawer-footer-social">
+                <li>
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-fb.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-insta.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-twitter.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-linkedin.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-tiktok.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class="col-md-12">
+            <div class="mobile-drawer-link-wrapper">
+                <div class="half">
+                    <ul class="mobile-drawer-links">
+                        <li><a href="#">Ryerson Alumni</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="half">
+                    <ul class="mobile-drawer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="mob-drawer-copy">&copy; 2021 Ryerson University</p>
+        </div>
+    </div>
 
 </section>
 

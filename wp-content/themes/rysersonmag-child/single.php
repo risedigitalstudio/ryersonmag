@@ -214,6 +214,27 @@ if ($blocks) {
 </section>
 
 
+
+<?php if (get_field('turn_commenting_on') == true) {
+    ?>
+<section class="author sec-pad-half">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                    <?php
+                    if ( comments_open() || get_comments_number() ) {
+                        comments_template();
+                    }
+                    ?>
+                </div>
+            </div>
+        </div>
+</section>
+    <?php
+}?>
+
+
+
 <section class="related-articles archive-page">
     <div class="container">
         <div class="row">

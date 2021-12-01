@@ -1,0 +1,29 @@
+.btnums-wrap {
+    @include flex-height;
+    @include post-aside-font;
+    text-align: center;
+//    max-width: 148px;
+    h3 {
+        font-family: 'Suisse Bold', sans-serif;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 16px;
+    }
+    .btnums-sub {
+        font-style: italic;
+        padding-bottom: 16px;
+        border-bottom: 2px dotted $black;
+    }
+    .btnum-num {
+        font-family: 'Suisse Bold', sans-serif;
+        font-size: 28px;
+        line-height: 28px;
+        display: block;
+        text-align: left;
+        margin: 16px 0 8px 0;
+    }
+    .btnum-content p {
+        text-align: left;
+        margin: 0;
+    }
+}

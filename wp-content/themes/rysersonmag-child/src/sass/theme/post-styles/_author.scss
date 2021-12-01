@@ -3,7 +3,8 @@
     float: left;
 }
 .author-info {
-    width: 440px;
+    width: 420px;
+    float: right;
     .author-desc {
         @include author-font;
         color: $black;
