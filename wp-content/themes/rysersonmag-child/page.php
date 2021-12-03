@@ -17,7 +17,7 @@ get_header();
 
 ?>
 
-<section class="archive-page page-template sec-pad" id="content">
+<section class="archive-page page-template page-single sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-7">

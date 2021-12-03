@@ -1,4 +1,11 @@
 .page-contact {
+    h2, h3, h4, h5 {
+        font-size: 14px;
+        line-height: 26px;
+        font-family: 'Suisse Bold', sans-serif;
+        text-transform: uppercase;
+        margin: 0;
+    }
     a {
         text-decoration: underline !important;
     }

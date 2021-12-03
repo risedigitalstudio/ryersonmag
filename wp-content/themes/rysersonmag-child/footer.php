@@ -27,7 +27,7 @@ defined( 'ABSPATH' ) || exit;
                     <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/" target="_blank">Update your subscription</a></li>
                     <li><a href="#" target="_blank">Issue archive</a></li>
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
-                    <li><a href="#" target="_blank">Contact Us</a></li>
+                    <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 offset-lg-4 col-md-3 offset-md-3">

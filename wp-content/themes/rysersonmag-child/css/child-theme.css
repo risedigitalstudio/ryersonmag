@@ -16827,10 +16827,10 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   height: calc(100vh - 348px);
 }
 
-.page-template h1 {
+.page-single h1 {
   margin-bottom: 60px;
 }
-.page-template h2, .page-template h3, .page-template h4, .page-template h5 {
+.page-single h2, .page-single h3, .page-single h4, .page-single h5 {
   font-size: 14px;
   line-height: 26px;
   font-family: "Suisse Bold", sans-serif;
@@ -16838,6 +16838,13 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   margin: 0;
 }
 
+.page-contact h2, .page-contact h3, .page-contact h4, .page-contact h5 {
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: uppercase;
+  margin: 0;
+}
 .page-contact a {
   text-decoration: underline !important;
 }
