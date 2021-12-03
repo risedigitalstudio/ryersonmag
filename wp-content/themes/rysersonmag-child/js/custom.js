@@ -43,6 +43,10 @@ $(document).ready(function() {
     
     $('#hamburgerMenu').on('click', function () {
         $('#headerDrawer').show();
+    })        
+    
+    $('#viewAllTopics').on('click', function () {
+        $('#headerDrawer').show();
     })    
     
     $('#drawerClose').on('click', function () {

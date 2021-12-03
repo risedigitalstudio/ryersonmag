@@ -12,6 +12,13 @@
         font-size: 16px;
         line-height: 20px;
         font-family: 'Suisse Reg', sans-serif;
+        #viewAllTopics {
+            text-decoration: none;
+            border-bottom: 1px solid $black;
+            &:hover { 
+                text-decoration: none;
+            }
+        }
     }
     img.home-logo {
         width: 440px;
@@ -196,6 +203,11 @@
             padding-bottom: 25px;
             margin-bottom: 25px;
             border-bottom: 1.5px solid #D9D9D9;
+        }
+    }
+    .home-editors-picks {
+        .pick:last-of-type {
+            display: none;
         }
     }
 }

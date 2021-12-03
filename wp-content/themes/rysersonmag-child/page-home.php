@@ -25,7 +25,7 @@ get_header('home');
                     <a href="https://www.ryerson.ca/next-chapter/" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo">
                     </a>
-                    <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. View all topics.</p>
+                    <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics">View all topics.</a></p>
                 </div>
             </div>
             <div class="col-md-8 left-border" id="timeline">

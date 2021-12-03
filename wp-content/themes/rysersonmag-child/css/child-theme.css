@@ -16439,6 +16439,13 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
 }
+.sticky-home-intro .sticky-low-p #viewAllTopics {
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+.sticky-home-intro .sticky-low-p #viewAllTopics:hover {
+  text-decoration: none;
+}
 .sticky-home-intro img.home-logo {
   width: 440px;
 }
@@ -16702,6 +16709,10 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
     margin-bottom: 25px;
     border-bottom: 1.5px solid #D9D9D9;
   }
+
+  .home-editors-picks .pick:last-of-type {
+    display: none;
+  }
 }
 .current-issue-page .single-archive-post-wrap {
   margin-top: 0;
@@ -16827,6 +16838,34 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   margin: 0;
 }
 
+.masthead-contact-sec {
+  padding-top: 55px;
+  margin-top: 55px;
+  border-top: 2px dotted #000;
+}
+
+h2.contact-masthead-title {
+  font-size: 32px;
+  line-height: 20px;
+  font-family: "Suisse Bold", sans-serif;
+  text-transform: lowercase;
+  margin-bottom: 18px;
+}
+
+.contact-chunk {
+  font-size: 18px;
+  line-height: 26px;
+  margin-top: 45px;
+}
+.contact-chunk .contact-person-title {
+  font-style: italic;
+  margin: 0;
+}
+.contact-chunk .contact-person-name {
+  font-family: "Lynon Bold", sans-serif;
+  margin: 0;
+}
+
 .main-footer {
   background: #000;
   padding: 40px 40px 0 40px;
@@ -16834,6 +16873,12 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
   color: #fff;
+}
+@media (max-width: 767.98px) {
+  .main-footer {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
 }
 .main-footer img.white-ryerson-logo {
   margin-bottom: 27px;
@@ -16845,6 +16890,12 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   color: #fff;
   text-decoration: underline;
 }
+@media (max-width: 767.98px) {
+  .main-footer a {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
+}
 .main-footer h2.footer-heading {
   font-size: 14px;
   line-height: 20px;
@@ -16852,6 +16903,12 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 13px;
+}
+@media (max-width: 767.98px) {
+  .main-footer h2.footer-heading {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
 }
 .main-footer ul {
   padding: 0;
@@ -16915,6 +16972,135 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
 }
 .footer-bottom-inner ul.drawer-footer-social li a img {
   width: 24px;
+}
+
+.main-footer-mob {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .main-footer {
+    display: none;
+  }
+
+  .main-footer-mob {
+    display: block;
+  }
+
+  .main-footer-mob {
+    background: #000;
+    padding: 40px 40px 0 40px;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Suisse Reg", sans-serif;
+    color: #fff;
+  }
+}
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+  .main-footer-mob {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob img.white-ryerson-logo {
+    margin-bottom: 27px;
+    width: 155px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob a {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Suisse Reg", sans-serif;
+    color: #fff;
+    text-decoration: underline;
+  }
+}
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+  .main-footer-mob a {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob h2.footer-heading {
+    font-size: 14px;
+    line-height: 20px;
+    font-family: "Suisse Reg", sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+}
+@media (max-width: 767.98px) and (max-width: 767.98px) {
+  .main-footer-mob h2.footer-heading {
+    font-size: 16px !important;
+    line-height: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob ul {
+    padding: 0;
+    list-style-type: none;
+  }
+  .main-footer-mob ul li {
+    margin-bottom: 16px;
+  }
+  .main-footer-mob ul li a {
+    font-size: 20px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob .give-btn {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    padding: 7px 15px;
+    text-align: center;
+    border-radius: 4px;
+    display: inline-block;
+  }
+}
+@media (max-width: 767.98px) and (max-width: 991.98px) {
+  .main-footer-mob {
+    padding: 40px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob .flex-row-between {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob .renaming-p {
+    font-size: 16px;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob ul.drawer-footer-social {
+    justify-content: start !important;
+    margin: 25px 0;
+  }
+  .main-footer-mob ul.drawer-footer-social li:first-child {
+    margin-left: 0;
+  }
+  .main-footer-mob ul.drawer-footer-social li a img {
+    width: 36px;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob .drawer-footer-links {
+    width: 100%;
+    float: left;
+  }
+}
+@media (max-width: 767.98px) {
+  .main-footer-mob .address {
+    margin-top: 12px;
+  }
 }
 
 /*# sourceMappingURL=child-theme.css.map */

@@ -70,9 +70,9 @@
 	    <div class="row full drawer-footer-inner">
 	        <div class="col-md-8">
 	            <ul class="drawer-footer-links">
-	                <li><a href="#">Ryerson Alumni</a></li>
+	                <li><a href="https://www.ryerson.ca/alumni/" target="_blank">Ryerson Alumni</a></li>
 	                <li><a href="#">About Us</a></li>
-	                <li><a href="#">Contact Us</a></li>
+	                <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
 	                <li><a href="#">Privacy Policy</a></li>
 	                <li><a href="#">Accessibility</a></li>
 	            </ul>
@@ -80,27 +80,27 @@
 	        <div class="col-md-4">
 	            <ul class="drawer-footer-social">
 	                <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
                         </a>
 	                </li>
 	                <li>
-                        <a href="#">
+                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
                         </a>
 	                </li>
 	                <li>
-                        <a href="#">
+                        <a href="https://twitter.com/RyersonU" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
                         </a>
 	                </li>
 	                <li>
-                        <a href="#">
+                        <a href="https://linkedin.com/school/ryerson-university" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
                         </a>
 	                </li>
 	                <li>
-                        <a href="#">
+                        <a href="https://www.tiktok.com/@ryersonu" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
                         </a>
 	                </li>

@@ -37,27 +37,27 @@
         <div class="col-md-12">
             <ul class="drawer-footer-social">
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/ryersonu/" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-fb.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.facebook.com/ryersonu/" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-insta.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://twitter.com/RyersonU" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-twitter.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://linkedin.com/school/ryerson-university" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-linkedin.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="https://www.tiktok.com/@ryersonu" target="_blank">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/mob-drawer-tiktok.png">
                     </a>
                 </li>
@@ -70,15 +70,15 @@
             <div class="mobile-drawer-link-wrapper">
                 <div class="half">
                     <ul class="mobile-drawer-links">
-                        <li><a href="#">Ryerson Alumni</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
+	                <li><a href="https://www.ryerson.ca/alumni/" target="_blank">Ryerson Alumni</a></li>
+	                <li><a href="#">About Us</a></li>
+	                <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="half">
                     <ul class="mobile-drawer-links">
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Accessibility</a></li>
+	                <li><a href="#">Privacy Policy</a></li>
+	                <li><a href="#">Accessibility</a></li>
                     </ul>
                 </div>
             </div>

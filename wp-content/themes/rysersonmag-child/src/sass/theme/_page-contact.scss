@@ -1,0 +1,27 @@
+.masthead-contact-sec {
+    padding-top: 55px;
+    margin-top: 55px;
+    border-top: 2px dotted $black;
+}
+
+h2.contact-masthead-title {
+    font-size: 32px;
+    line-height: 20px;
+    font-family: 'Suisse Bold', sans-serif;
+    text-transform: lowercase;
+    margin-bottom: 18px;
+}
+
+.contact-chunk {
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 45px;
+    .contact-person-title {
+        font-style: italic;
+        margin: 0;
+    }
+    .contact-person-name {
+        font-family: 'Lynon Bold', sans-serif;
+        margin: 0;
+    }
+}
