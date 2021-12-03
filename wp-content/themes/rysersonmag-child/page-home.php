@@ -491,6 +491,7 @@ get_header('home');
     </div>
 </section>
 
+<!--
 
 <section class="what-do-you-think sec-pad">
     <div class="container">
@@ -501,6 +502,7 @@ get_header('home');
         </div>
     </div>
 </section>
+-->
 
 
 <section class="category-featured sec-pad">

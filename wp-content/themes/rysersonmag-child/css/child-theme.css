@@ -16838,6 +16838,10 @@ span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   margin: 0;
 }
 
+.page-contact a {
+  text-decoration: underline !important;
+}
+
 .masthead-contact-sec {
   padding-top: 55px;
   margin-top: 55px;
