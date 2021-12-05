@@ -85,7 +85,7 @@
                         </a>
 	                </li>
 	                <li>
-                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
+                        <a href="https://www.instagram.com/ryerson_u/" target="_blank">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
                         </a>
 	                </li>

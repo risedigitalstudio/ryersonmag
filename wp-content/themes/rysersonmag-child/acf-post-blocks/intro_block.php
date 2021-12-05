@@ -7,7 +7,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="post-body intro-block-body">
+                <div class="post-body intro-block-body <?php if($block_data['drop_cap']) {echo 'intro-block-body-drop-cap';}?>">
                     <?php echo $block_data['intro_content'];?>
                 </div>
             </div>
