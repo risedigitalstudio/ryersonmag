@@ -17,10 +17,11 @@
         display: inline-block;
         background-image: none;
         background-repeat: no-repeat;
-        background-position: 0 70px;
+        background-position: 0 95px;
         background-size: 100% 30px;
-        padding-bottom: 30px;
+        padding-bottom: 35px;
         background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
+        display: inline;
         @include media-breakpoint-down(sm) {
             display: inline;
         }

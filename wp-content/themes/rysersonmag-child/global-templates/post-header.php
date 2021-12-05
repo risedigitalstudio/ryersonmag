@@ -18,6 +18,6 @@
         <?php echo the_author_meta('first_name'); ?>
         <?php echo the_author_meta('last_name'); ?>,</span>
         <?php echo get_the_author_meta('title'); ?>&#32;<span class="author-date-sep">|</span>&#32;
-        <?php echo get_the_date('F j, Y'); ?>
+        <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
     </p>
 </div>

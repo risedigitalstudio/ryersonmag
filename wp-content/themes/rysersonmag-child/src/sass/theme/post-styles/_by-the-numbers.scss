@@ -27,3 +27,27 @@
         margin: 0;
     }
 }
+
+@include media-breakpoint-down(sm) {
+    .btnums-wrap {
+        display: block;
+        margin-bottom: 55px;
+        h3 {
+            font-size: 24px;
+            text-align: left;
+        }
+        .btnums-sub {
+            font-size: 20px;
+            line-height: 26px;
+            text-align: left;
+        }
+        .btnum-num {
+            font-size: 36px;
+            line-height: 36px;
+        }
+        .btnum-content p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+}

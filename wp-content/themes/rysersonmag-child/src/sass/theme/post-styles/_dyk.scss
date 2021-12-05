@@ -29,3 +29,11 @@
         margin: 0;
     }
 }
+
+
+@include media-breakpoint-down(sm) {
+    .dyk-content {
+        max-width: 90%;
+        margin: 0 auto 55px auto;
+    }
+}

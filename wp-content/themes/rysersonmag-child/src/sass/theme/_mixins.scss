@@ -141,8 +141,8 @@
     line-height: 36px;
     font-family: 'Suisse Bold', sans-serif;
     @include media-breakpoint-down(sm) {
-        font-size: 20px;
-        line-height: 20px;
+        font-size: 24px;
+        line-height: 30px;
     }
 }
 
@@ -188,9 +188,9 @@
 
 @mixin archive-term-font {
     font-size: 112px;
-    line-height: 90px;
+    line-height: 100px;
     letter-spacing: -4px;
-    font-family: 'Suisse Bold', sans-serif;
+    font-family: "Suisse Bold",sans-serif;
     text-transform: lowercase;
     @include media-breakpoint-down(md) {
         font-size: 80px;
@@ -198,7 +198,7 @@
     } 
     @include media-breakpoint-down(sm) {
         font-size: 60px;
-        line-height: 70px;
+        line-height: 60px;
         background-position: 0 53px;
         background-size: 100% 16px;
         padding-bottom: 30px;

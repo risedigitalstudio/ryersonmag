@@ -48,8 +48,12 @@
 
 @include media-breakpoint-down(sm) {
     .social-share-icons  {
+        margin-bottom: 15px;
         #left-sidebar {
             padding-left: 0;
         }
+    }
+    .related-articles-sec {
+        margin-top: 55px;
     }
 }

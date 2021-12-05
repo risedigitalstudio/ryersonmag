@@ -45,3 +45,31 @@
         }
     }
 }
+
+
+@include media-breakpoint-down(sm) {
+    .watn-wrap {
+        margin-bottom: 75px;
+        float: left;
+        width: 100%;
+        display: block;
+        p {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+    .watn-wrap h3 {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 16px;
+        br {display: none;}
+    }
+    .watn-sub {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    .name-class {
+        font-size: 20px;
+        line-height: 26px;
+    }
+}

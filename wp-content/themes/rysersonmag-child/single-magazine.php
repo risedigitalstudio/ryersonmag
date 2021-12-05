@@ -153,5 +153,50 @@ $thisIssue = get_the_ID();
     </div>
 </section>
 
+
+
+
+<?php 
+
+$the_query = new WP_Query( array('posts_per_page'=>30,
+     'post_type'=>'magazine',
+      'post__not_in' => array(get_the_ID()),
+     'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
+); 
+?>
+<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
+
+<section class="mag-pagination sec-pad-xl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 flex-row-end">
+                <a href="<?php the_permalink(); ?>" class="mag-pagination-next">
+                    <?php echo get_the_title(); ?>
+                    <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.31372 22.981L12.5668 12.7279L13.6274 11.6672L13.981 11.3137L2.66727 -1.2964e-05L1.25306 1.4142L11.1526 11.3137L0.899507 21.5667L2.31372 22.981Z" fill="black"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<?php
+endwhile;
+
+$big = 999999999; // need an unlikely integer
+ echo paginate_links( array(
+    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
+    'format' => '?paged=%#%',
+    'current' => max( 1, get_query_var('paged') ),
+    'total' => $the_query->max_num_pages
+) );
+
+wp_reset_postdata();
+
+?>
+
 <?php
 get_footer();

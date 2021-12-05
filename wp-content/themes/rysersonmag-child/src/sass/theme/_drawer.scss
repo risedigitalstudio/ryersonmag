@@ -6,7 +6,7 @@
     right: 0;
     top: 0;
     z-index: 999;
-    background: $ryersonBlue;
+    background: $medGrey;
     width: 100vw;
     height: 100vh;
 }
@@ -19,7 +19,7 @@ input.search-submit{
     background-image: url('../img/search-submit.png');
     background-repeat: no-repeat;
     background-size: 66%;
-    background-color: #004c9b;
+    background-color: $medGrey;
     width: 50px;
     height: 60px;
     position: relative;
@@ -88,10 +88,10 @@ input[type="search"]::-webkit-search-results-decoration { display: none; }
 input[type="search"]:-webkit-autofill,
 input[type="search"]:-webkit-autofill:hover, 
 input[type="search"]:-webkit-autofill:focus {
-    border: 1px solid $ryersonBlue;
+    border: 1px solid $medGrey;;
     -webkit-text-fill-color: $white;
     border-bottom: 2px solid $white;
-    -webkit-box-shadow: 0 0 0px 80px $ryersonBlue inset;
+    -webkit-box-shadow: 0 0 0px 80px $medGrey inset;
     transition: none;
     @include search-font;
 }

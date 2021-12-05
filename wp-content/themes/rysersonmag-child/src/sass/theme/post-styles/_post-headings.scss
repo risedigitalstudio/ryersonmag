@@ -98,3 +98,13 @@ figcaption {
         color: $white;
     }
 }
+
+
+@include media-breakpoint-down(sm) {
+    .author-date-sep {
+        display: none;
+    }
+    .post-date {
+        display: block;
+    }
+}

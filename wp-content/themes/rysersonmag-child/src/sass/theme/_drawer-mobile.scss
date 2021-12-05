@@ -18,7 +18,7 @@
     right: 0;
     top: 0;
     z-index: 999;
-    background: #e2e2e2;
+    background: $white;
     width: 100vw;
     height: 100vh;
     
@@ -38,6 +38,7 @@
         background-position: top right;
         border: none;
         border-bottom: 2px solid $black;
+        border-radius: 0;
     }
 
     input[type=search] {
@@ -118,7 +119,8 @@
 .mobile-drawer-cat-list {
     padding: 0;
     list-style-type: none;
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 10px;
     border-bottom: 2px dotted $black;
     li {
         a {
@@ -128,7 +130,7 @@
             background-repeat: no-repeat;
             background-position: 0 20px;
             background-size: 100% 10px;
-            padding-bottom: 40px;
+            padding-bottom: 32px;
             background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
             &.green {
                 background-image: linear-gradient(180deg, $green, $green);
@@ -163,6 +165,7 @@
 ul.mobile-drawer-links {
     padding: 0;
     list-style-type: none;
+    margin-bottom: 14px;
     li {
         margin-bottom: 6px;
         a {
