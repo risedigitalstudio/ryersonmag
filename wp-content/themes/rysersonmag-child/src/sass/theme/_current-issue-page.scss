@@ -32,26 +32,33 @@
     }
 }
 
+.current-issue-articles {
+    .default-btn {
+        @include alm-btn-font;
+        text-align: center;
+        background: $white;
+        border: 1.25px solid $black;
+        border-radius: 5px;
+        box-shadow: 2px 2px 0;
+        margin: 25px 0 55px 0;
+        &:disabled {
+            display: none;
+        }
+    }
+}
+
 .flex {
     display: flex;
     justify-content: center;
 }
 
-.default-btn {
-    @include alm-btn-font;
-    text-align: center;
-    background: $white;
-    border: 1.25px solid $black;
-    border-radius: 5px;
-    box-shadow: 2px 2px 0;
-    &:disabled {
-        display: none;
-    }
-}
 
 .past-issues {
     background: $lightGrey;
-    color: $black;
+    color: $black; 
+    @include media-breakpoint-up(sm) {
+        padding-bottom: 100px;
+    }
     .past-issues-heading {
         border-bottom: 2px dotted $black;
         display: flex;

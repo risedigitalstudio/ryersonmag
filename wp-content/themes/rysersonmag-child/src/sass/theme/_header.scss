@@ -26,53 +26,61 @@
     position: relative;
     &.green {
         .nav-link {
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
+            position: relative;
             &:hover, &:focus {
-                color: $black;
-                background-image: -webkit-linear-gradient($green, $green);
+                &::before {
+                    height: 8px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(0, 218, 43, 0.7);
+                    position: absolute;
+                    bottom: 2px;
+                }
             }
         }
     }
     &.blue {
         .nav-link {
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
+            position: relative;
             &:hover, &:focus {
-                color: $black;
-                background-image: -webkit-linear-gradient($blue, $blue);
+                &::before {
+                    height: 8px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(4, 210, 255, 0.7);
+                    position: absolute;
+                    bottom: 2px;
+                }
             }
         }
     }
     &.orange {
         .nav-link {
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
+            position: relative;
             &:hover, &:focus {
-                color: $black;
-                background-image: -webkit-linear-gradient($orange, $orange);
+                &::before {
+                    height: 8px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(255, 137, 29, 0.7);
+                    position: absolute;
+                    bottom: 2px;
+                }
             }
         }
     }
     &.yellow {
         .nav-link {
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
+            position: relative;
             &:hover, &:focus {
-                color: $black;
-                background-image: -webkit-linear-gradient($yellow, $yellow);
+                &::before {
+                    height: 8px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(252, 246, 97, 0.7);
+                    position: absolute;
+                    bottom: 2px;
+                }
             }
         }
     }
@@ -81,46 +89,50 @@
 .navbar-light .navbar-nav .active {
     &.green {
         >.nav-link {
-            color: $black;
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
-            background-image: -webkit-linear-gradient($green, $green);
+            &::before {
+                height: 8px;
+                width: 100%;
+                content: "";
+                background-color: rgba(0, 218, 43, 0.7);
+                position: absolute;
+                bottom: 2px;
+            }
         }
     }
     &.blue {
         >.nav-link {
-            color: $black;
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
-            background-image: -webkit-linear-gradient($blue, $blue);
+            &::before {
+                height: 8px;
+                width: 100%;
+                content: "";
+                background-color: rgba(4, 210, 255, 0.7);
+                position: absolute;
+                bottom: 2px;
+            }
         }
     }
     &.orange {
         >.nav-link {
-            color: $black;
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
-            background-image: -webkit-linear-gradient($orange, $orange);
+            &::before {
+                height: 8px;
+                width: 100%;
+                content: "";
+                background-color: rgba(255, 137, 29, 0.7);
+                position: absolute;
+                bottom: 2px;
+            }
         }
     }
     &.yellow {
         >.nav-link {
-            color: $black;
-            display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 19px;
-            background-size: 100% 30px;
-            background-image: -webkit-linear-gradient($yellow, $yellow);
+            &::before {
+                height: 8px;
+                width: 100%;
+                content: "";
+                background-color: rgba(252, 246, 97, 0.7);
+                position: absolute;
+                bottom: 2px;
+            }
         }
     }    
 }

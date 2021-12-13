@@ -117,7 +117,7 @@ if ( have_posts() ) {
                         $topicSlug = $topics[0]->slug;
 
                         ?>
-                        <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                        <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                         <a href="<?php echo get_the_permalink();?>">
                             <h2 class="entry-title"><?php echo get_the_title(); ?></h2>

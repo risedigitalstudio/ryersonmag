@@ -22,10 +22,11 @@ get_header('home');
         <div class="row">
             <div class="col-md-4">
                 <div class="sticky-home-intro" id="timelinepin">
-                    <a href="https://www.ryerson.ca/next-chapter/" target="_blank">
+                    <a href="https://www.ryerson.ca/next-chapter/" target="_blank" class="home-logo-rel-wrapper">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo">
+                        <p>Renaming <br>in process<br><span>Learn More</span></p>
                     </a>
-                    <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics">View all topics.</a></p>
+                    <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>
                 </div>
             </div>
             <div class="col-md-8 left-border" id="timeline">
@@ -65,7 +66,7 @@ get_header('home');
                                 $topicSlug = $topics[0]->slug;
 
                                 ?>
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings">
                                     <h2 class="entry-title"><?php echo get_the_title($featuredPostID); ?></h2>
@@ -157,7 +158,7 @@ get_header('home');
                                 $topicSlug = $topics[0]->slug;
 
                                 ?>
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredArticle);?>">
                                     <h2 class="entry-title"><?php echo get_the_title($featuredArticle); ?></h2>
@@ -181,54 +182,7 @@ get_header('home');
 </section>
 
 
-<section class="home-editors-picks">
-    <div class="container">
-       <div class="row">
-           <div class="col-md-12">
-               <h2>Editor's Picks</h2>
-           </div>
-       </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div class="editors-picks-flex sec-pad-half">
-                    <?php $editorsPicksArray = get_field('editors_picks');?>
-                    <?php 
-                        foreach ($editorsPicksArray as $editorsPick) {
-
-                                $pickTopics = wp_get_post_terms($editorsPick, 'topic');
-                                $pickTopicName = $pickTopics[0]->name;
-                                $pickTopicSlug = $pickTopics[0]->slug;
-
-                                $pickPostColorClass = '';
-                                $pickPostCat = get_the_category($editorsPick);
-                                $pickPostCatSlug = $pickPostCat[0]->slug;
-                                if ($pickPostCatSlug == 'people') {
-                                    $pickPostColorClass = 'green';
-                                } else if ($pickPostCatSlug == 'research-ideas') {
-                                    $pickPostColorClass = 'blue';
-                                } else if ($pickPostCatSlug == 'campus') { 
-                                    $pickPostColorClass = 'orange';
-                                }
-
-                                ?>
-
-                            <div class="pick">
-                                <a href="<?php echo get_the_permalink($editorsPick);?>" class="full <?php echo $pickPostColorClass;?>">
-                                    <p class="pb-0 mb-0 primary-category"><?php echo $pickTopicName; ?></p>
-                                    <h3><?php echo get_the_title($editorsPick);?></h3>
-                                </a>
-                            </div>
-                            <?php 
-                        }
-                    ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="category-featured sec-pad-bot">
+<section class="category-featured sec-pad home-people">
     <div class="container">
        <div class="row desktop">
            <div classs="col-md-12">
@@ -341,7 +295,7 @@ get_header('home');
                                 $topicSlug = $topics[0]->slug;
 
                                 ?>
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($peopleArticle);?>">
                                     <h2 class="entry-title"><?php echo get_the_title($peopleArticle); ?></h2>
@@ -358,6 +312,55 @@ get_header('home');
         </div>
     </div>
 </section>
+
+
+
+<section class="home-editors-picks sec-pad-lg">
+    <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <h2>Editor&apos;s Picks</h2>
+           </div>
+       </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="editors-picks-flex sec-pad-half">
+                    <?php $editorsPicksArray = get_field('editors_picks');?>
+                    <?php 
+                        foreach ($editorsPicksArray as $editorsPick) {
+
+                                $pickTopics = wp_get_post_terms($editorsPick, 'topic');
+                                $pickTopicName = $pickTopics[0]->name;
+                                $pickTopicSlug = $pickTopics[0]->slug;
+
+                                $pickPostColorClass = '';
+                                $pickPostCat = get_the_category($editorsPick);
+                                $pickPostCatSlug = $pickPostCat[0]->slug;
+                                if ($pickPostCatSlug == 'people') {
+                                    $pickPostColorClass = 'green';
+                                } else if ($pickPostCatSlug == 'research-ideas') {
+                                    $pickPostColorClass = 'blue';
+                                } else if ($pickPostCatSlug == 'campus') { 
+                                    $pickPostColorClass = 'orange';
+                                }
+
+                                ?>
+
+                            <div class="pick">
+                                <a href="<?php echo get_the_permalink($editorsPick);?>" class="full <?php echo $pickPostColorClass;?>">
+                                    <p class="pb-0 mb-0 primary-category drawUnderline"><?php echo $pickTopicName; ?></p>
+                                    <h3><?php echo get_the_title($editorsPick);?></h3>
+                                </a>
+                            </div>
+                            <?php 
+                        }
+                    ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 
 
@@ -473,7 +476,7 @@ get_header('home');
                                 $topicSlug = $topics[0]->slug;
 
                                 ?>
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($researchArticle);?>">
                                     <h2 class="entry-title"><?php echo get_the_title($researchArticle); ?></h2>
@@ -619,7 +622,7 @@ get_header('home');
                                 $topicSlug = $topics[0]->slug;
 
                                 ?>
-                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+                                <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($campusArticle);?>">
                                     <h2 class="entry-title"><?php echo get_the_title($campusArticle); ?></h2>

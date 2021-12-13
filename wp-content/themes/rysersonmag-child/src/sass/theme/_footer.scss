@@ -4,6 +4,7 @@
     @include footer-font;
     img.white-ryerson-logo {
         margin-bottom: $space * 1.5;
+        max-width: 135px;
     }
     a {
         @include footer-font;
@@ -29,6 +30,9 @@
         text-align: center;
         border-radius: 4px;
         display: inline-block;
+        &:hover {
+            background: #D9D9D9;
+        }
     }
     @include media-breakpoint-down(md) {
         padding: 40px 0;

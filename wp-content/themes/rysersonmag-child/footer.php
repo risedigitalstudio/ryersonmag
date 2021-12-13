@@ -17,7 +17,9 @@ defined( 'ABSPATH' ) || exit;
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+               <a href="https://www.ryerson.ca/" target="_blank">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+                </a>
                 <p><a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming in process</a></p>
                 <p>350 Victoria Street,<br>Toronto, ON M5B 2K3<br>P: 416-979-5000</p>
             </div>
@@ -25,9 +27,8 @@ defined( 'ABSPATH' ) || exit;
                 <h2 class="footer-heading">Magazine</h2>
                 <ul>
                     <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/" target="_blank">Update your subscription</a></li>
-                    <li><a href="#" target="_blank">Issue archive</a></li>
+                    <li><a href="<?php echo site_url();?>/current-issue/">Issue archive</a></li>
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
-                    <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 offset-lg-4 col-md-3 offset-md-3">
@@ -98,7 +99,9 @@ defined( 'ABSPATH' ) || exit;
         <div class="row">
         <div class="col-md-12 flex-row-between">
             <div class="footer-row-half">
-                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+               <a href="https://www.ryerson.ca/" target="_blank">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+                </a>
                 <p class="renaming-p"><a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming in process</a></p>
             </div>
             <div class="footer-row-half">
@@ -111,9 +114,8 @@ defined( 'ABSPATH' ) || exit;
             <div class="col-md-2">
                 <ul>
                     <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/" target="_blank">Update your subscription</a></li>
-                    <li><a href="#" target="_blank">Issue archive</a></li>
+                    <li><a href="<?php echo site_url();?>/current-issue/">Issue archive</a></li>
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
-                    <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
                 </ul>
             </div>
         </div>

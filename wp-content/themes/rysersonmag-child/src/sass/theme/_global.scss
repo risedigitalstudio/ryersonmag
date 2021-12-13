@@ -49,6 +49,13 @@ $space: 18px;
     font-style: normal;
 } 
 
+@font-face {
+    font-family: "Suisse Black";
+    src: url("../fonts/suisse-black/SuisseIntl-Black.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+} 
+
 
 body {
     font-family: 'Lynon Reg', sans-serif;
@@ -84,6 +91,16 @@ body {
     padding-top: 55px;
     padding-bottom: 55px;
 }
+
+.sec-pad-lg {
+    padding-top: 75px;
+    padding-bottom: 150px;
+    @include media-breakpoint-down(sm) {
+        padding-top: 10px;
+        padding-bottom: 55px;
+    }
+}
+
 
 .sec-pad-half {
     padding-top: 26px;

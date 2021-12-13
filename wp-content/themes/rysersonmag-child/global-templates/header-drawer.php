@@ -54,9 +54,11 @@
                     $drawerTagsArray = get_field('drawer_tags', 7);
                     foreach($drawerTagsArray as $drawerTag) {
                         ?>
-                        <a href="<?php echo site_url();?>/topic/<?php echo $drawerTag->slug; ?>">
-                            <?php echo $drawerTag->name; ?>
-                        </a>
+                        <div class="full">
+                            <a href="<?php echo site_url();?>/topic/<?php echo $drawerTag->slug; ?>" class="drawUnderline">
+                                <?php echo $drawerTag->name; ?>
+                            </a>
+                        </div>
                         <?php
                     }
                 ?>

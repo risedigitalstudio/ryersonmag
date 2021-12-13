@@ -118,7 +118,7 @@ input[type="search"]:-webkit-autofill::first-line {
 
 .drawer-tags-row {
     a {
-        display: block;
+        display: inline;
         font-size: 36px;
         line-height: 60px;
         font-family: 'Lynon Reg', sans-serif;
@@ -129,9 +129,14 @@ input[type="search"]:-webkit-autofill::first-line {
             line-height: 48px;
         }
         &:hover, &:focus {
-            text-decoration: underline;
+            text-decoration: none;
+//            text-decoration: underline;
+        }
+        &::after {
+            background-color: $white !important;
         }
     }
+      
 }
 
 

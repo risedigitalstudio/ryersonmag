@@ -126,23 +126,47 @@
         a {
             @include mobile-drawer-term-font;
             display: inline-block;
-            background-image: none;
-            background-repeat: no-repeat;
-            background-position: 0 20px;
-            background-size: 100% 10px;
-            padding-bottom: 32px;
-            background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
+            position: relative;
+            margin-bottom: 32px;
             &.green {
-                background-image: linear-gradient(180deg, $green, $green);
+                &::before {
+                    height: 11px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(0, 218, 43, 0.7);
+                    position: absolute;
+                    bottom: -8px;
+                }
             }
             &.blue {
-                background-image: linear-gradient(180deg, $blue, $blue);
+                &::before {
+                    height: 11px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(4, 210, 255, 0.7);
+                    position: absolute;
+                    bottom: -8px;
+                }
             }
             &.orange {
-                background-image: linear-gradient(180deg, $orange, $orange);
+                &::before {
+                    height: 11px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(255, 137, 29, 0.7);
+                    position: absolute;
+                    bottom: -8px;
+                }
             }
             &.yellow {
-                background-image: linear-gradient(180deg, $yellow, $yellow);
+                &::before {
+                    height: 11px;
+                    width: 100%;
+                    content: "";
+                    background-color: rgba(252, 246, 97, 0.7);
+                    position: absolute;
+                    bottom: -8px;
+                }
             }
             &:hover {
                 text-decoration: none;

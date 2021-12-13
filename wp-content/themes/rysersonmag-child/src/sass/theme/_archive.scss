@@ -12,30 +12,69 @@
         text-decoration: none;
         text-align: left;
     } 
+//    h1.page-title {
+//        @include archive-term-font;
+//        display: inline-block;
+//        background-image: none;
+//        background-repeat: no-repeat;
+//        background-position: 0 95px;
+//        background-size: 100% 30px;
+//        padding-bottom: 35px;
+//        background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
+//        display: inline;
+//        @include media-breakpoint-down(sm) {
+//            display: inline;
+//        }
+//        &.green {
+//            background-image: linear-gradient(180deg, $green, $green);
+//        }
+//        &.blue {
+//            background-image: linear-gradient(180deg, $blue, $blue);
+//        }
+//        &.orange {
+//            background-image: linear-gradient(180deg, $orange, $orange);
+//        }
+//        &.yellow {
+//            background-image: linear-gradient(180deg, $yellow, $yellow);
+//        }
+//    }    
+    
+    
     h1.page-title {
         @include archive-term-font;
         display: inline-block;
-        background-image: none;
-        background-repeat: no-repeat;
-        background-position: 0 95px;
-        background-size: 100% 30px;
-        padding-bottom: 35px;
-        background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
-        display: inline;
-        @include media-breakpoint-down(sm) {
-            display: inline;
+        position: relative;
+        &::before {
+            height: 30px;
+            width: 100%;
+            content: "";
+            background-color: rgba(196, 196, 196, 0.7);
+            position: absolute;
+            bottom: -7px;
+            @include media-breakpoint-down(sm) {
+                height: 20px;
+                bottom: 26px;
+            }
         }
         &.green {
-            background-image: linear-gradient(180deg, $green, $green);
+            &::before {
+                background-color: rgba(0, 218, 43, 0.7);
+            }
         }
         &.blue {
-            background-image: linear-gradient(180deg, $blue, $blue);
+            &::before {
+                background-color: rgba(4, 210, 255, 0.7);
+            }
         }
         &.orange {
-            background-image: linear-gradient(180deg, $orange, $orange);
-        }
+            &::before {
+                background-color: rgba(255, 137, 29, 0.7);
+            }
+        }        
         &.yellow {
-            background-image: linear-gradient(180deg, $yellow, $yellow);
+            &::before {
+                background-color: rgba(252, 246, 97, 0.7);
+            }
         }
     }
     
@@ -54,7 +93,7 @@
     span.taxonomy-thumb {
         display: block;
         position: relative;
-        margin-bottom: $space;
+        margin-bottom: 10px;
         a.lead-img-wrap {
             display: block;
             @include box-color-hovers;
