@@ -10,18 +10,18 @@
 
 
 			<div class="container-fluid">
-            <a href="<?php echo site_url();?>" class="navbar-brand custom-logo-link">
-                <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-logo.png">
+            <a href="<?php echo site_url();?>" class="navbar-brand custom-logo-link" id="focusDrawerStart">
+                <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-logo.png" alt="Logo">
             </a>
 
             <div id="navbarNavDropdown" class="collapse navbar-collapse">
                 <ul id="main-menu" class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a title="Close" href="#" class="nav-link" aria-current="page" id="drawerClose">
+                        <button title="Close" class="nav-link" aria-label="close" id="drawerClose" data-toggle="collapse" data-target="#headerDrawer" aria-expanded="true">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M12 9.91304L21.913 0L24 2.08696L14.087 12L24 21.913L21.913 24L12 14.087L2.08696 24L0 21.913L9.91304 12L0 2.08696L2.08696 0L12 9.91304Z" fill="white"/>
                             </svg>
-                        </a>
+                        </button>
                     </li>
                 </ul>
             </div>	
@@ -102,7 +102,7 @@
                         </a>
 	                </li>
 	                <li>
-                        <a href="https://www.tiktok.com/@ryersonu" target="_blank">
+                        <a href="https://www.tiktok.com/@ryersonu" target="_blank" id="focusDrawerStop">
                             <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
                         </a>
 	                </li>

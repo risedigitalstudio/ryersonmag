@@ -43,11 +43,26 @@ $(document).ready(function() {
     
     $('#hamburgerMenu').on('click', function () {
         $('#headerDrawer').show();
+        $('#focusDrawerStart').focus();
     })        
     
     $('#viewAllTopics').on('click', function () {
         $('#headerDrawer').show();
-    })    
+        $('#focusDrawerStart').focus();
+    })
+    
+//    start for keyboard users
+    $('#focusDrawerStop').on('focus', function() {
+      $(this).on('keydown', function () {
+        $('#focusDrawerStart').focus();
+      })
+    });
+//    end for keyboard users
+    
+    $(document).on('keyup', function(e) {
+      if (e.key == "Escape") $('#drawerClose').click();
+    });
+    
     
     $('#drawerClose').on('click', function () {
         $('#headerDrawer').hide();

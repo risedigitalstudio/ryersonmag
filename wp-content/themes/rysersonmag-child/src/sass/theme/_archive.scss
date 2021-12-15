@@ -79,12 +79,12 @@
     }
     
     
-    h2.entry-title {
+    h2.entry-title, h3.entry-title {
         @include archive-title-font;
         margin-bottom: 3px;
         text-align: left;
     }
-    h3.subheading {
+    .subheading {
         @include archive-subhading-font;
         text-align: left;
     }

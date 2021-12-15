@@ -12,13 +12,16 @@ defined( 'ABSPATH' ) || exit;
 
 ?>
 
+</main>
+
+<footer>
 
 <section class="main-footer">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
                <a href="https://www.ryerson.ca/" target="_blank">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo">
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/ryerson-white.png" class="white-ryerson-logo" alt="Ryerson University Logo">
                 </a>
                 <p><a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming in process</a></p>
                 <p>350 Victoria Street,<br>Toronto, ON M5B 2K3<br>P: 416-979-5000</p>
@@ -174,6 +177,11 @@ defined( 'ABSPATH' ) || exit;
 	    </div>
 	</div>
 </section>
+
+
+
+</footer>
+
 
 
 <?php wp_footer(); ?>

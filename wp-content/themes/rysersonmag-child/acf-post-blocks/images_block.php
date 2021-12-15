@@ -23,7 +23,7 @@
                             ?>
                             <div class="full">
                                <figcaption>
-                                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow">
+                                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                                    <?php echo $imgObj['image_caption']; ?>
                                 </figcaption>
                             </div>

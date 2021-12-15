@@ -23,7 +23,8 @@ get_header('home');
             <div class="col-md-4">
                 <div class="sticky-home-intro" id="timelinepin">
                     <a href="https://www.ryerson.ca/next-chapter/" target="_blank" class="home-logo-rel-wrapper">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo">
+                       <h1 class="sr-only">Ryerson University Magazine</h1>
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo"  alt="Logo">
                         <p>Renaming <br>in process<br><span>Learn More</span></p>
                     </a>
                     <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>
@@ -31,6 +32,7 @@ get_header('home');
             </div>
             <div class="col-md-8 left-border" id="timeline">
                 <div class="row">
+                       <h2 class="sr-only">Featured</h2>
                         <div class="col-md-12" id="post-<?php the_ID(); ?>">
                             <div class="single-archive-post-wrap">
 
@@ -54,7 +56,7 @@ get_header('home');
 
 
                                 <span class="taxonomy-thumb full">
-                                   <a href="<?php echo get_the_permalink($featuredPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($featuredPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                                         <?php echo get_the_post_thumbnail( $featuredPostID, 'home-hor', ['class'=>'full'] ); ?>
                                     </a>
                                 </span>
@@ -69,8 +71,8 @@ get_header('home');
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings">
-                                    <h2 class="entry-title"><?php echo get_the_title($featuredPostID); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $featuredPostID);?></h3>
+                                    <h3 class="entry-title"><?php echo get_the_title($featuredPostID); ?></h3>
+                                    <p class="subheading"><?php echo get_field('subheading', $featuredPostID);?></p>
                                 </a>
                             </div>
                         </div>
@@ -106,7 +108,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($featuredArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($featuredArticle);?>" class="lead-img-wrap <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -161,8 +163,8 @@ get_header('home');
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredArticle);?>">
-                                    <h2 class="entry-title"><?php echo get_the_title($featuredArticle); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $featuredArticle);?></h3>
+                                    <h3 class="entry-title"><?php echo get_the_title($featuredArticle); ?></h3>
+                                    <p class="subheading"><?php echo get_field('subheading', $featuredArticle);?></p>
                                 </a>
                             </div>
                         
@@ -188,11 +190,11 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading green">People
                    <a href="<?php echo site_url();?>/category/people" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                    </a>
                     <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
                </h2>
            </div>
@@ -204,7 +206,7 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/people" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                </a>
            </div>
        </div>
@@ -242,7 +244,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($peopleArticle);?>" class="lead-img-wrap <?php if ($peopleCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($peopleArticle);?>" class="lead-img-wrap <?php if ($peopleCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -298,8 +300,8 @@ get_header('home');
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($peopleArticle);?>">
-                                    <h2 class="entry-title"><?php echo get_the_title($peopleArticle); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $peopleArticle);?></h3>
+                                    <h3 class="entry-title"><?php echo get_the_title($peopleArticle); ?></h3>
+                                    <p class="subheading"><?php echo get_field('subheading', $peopleArticle);?></p>
                                 </a>
                             </div>
                             </div>
@@ -370,11 +372,11 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading blue">Research &amp; Ideas
                    <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                    </a>
                     <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
                </h2>
            </div>
@@ -385,7 +387,7 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/research-ideas" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                </a>
            </div>
        </div>
@@ -423,7 +425,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($researchArticle);?>" class="lead-img-wrap <?php if ($researchCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($researchArticle);?>" class="lead-img-wrap <?php if ($researchCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -479,8 +481,8 @@ get_header('home');
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($researchArticle);?>">
-                                    <h2 class="entry-title"><?php echo get_the_title($researchArticle); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $researchArticle);?></h3>
+                                    <h3 class="entry-title"><?php echo get_the_title($researchArticle); ?></h3>
+                                    <p class="subheading"><?php echo get_field('subheading', $researchArticle);?></p>
                                 </a>
                             </div>
                             </div>
@@ -514,11 +516,11 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading orange">Campus
                    <a href="<?php echo site_url();?>/category/campus/" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all"> 
                    </a>
                     <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
+                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
                </h2>
            </div>
@@ -530,7 +532,7 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/campus" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                </a>
            </div>
        </div>
@@ -569,7 +571,7 @@ get_header('home');
                                 ?>
 
                                 <span class="taxonomy-thumb">
-                                   <a href="<?php echo get_the_permalink($campusArticle);?>" class="lead-img-wrap <?php if ($campusCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>">
+                                   <a href="<?php echo get_the_permalink($campusArticle);?>" class="lead-img-wrap <?php if ($campusCounter !== 0) {echo 'no-mob-img';}?> <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                                    <?php if ($taxImgRatio == 'Horizontal') { ?>
 
                                         <?php 
@@ -625,8 +627,8 @@ get_header('home');
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($campusArticle);?>">
-                                    <h2 class="entry-title"><?php echo get_the_title($campusArticle); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $campusArticle);?></h3>
+                                    <h3 class="entry-title"><?php echo get_the_title($campusArticle); ?></h3>
+                                    <p class="subheading"><?php echo get_field('subheading', $campusArticle);?></p>
                                 </a>
                             </div>
                             </div>

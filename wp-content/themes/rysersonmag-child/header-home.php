@@ -25,6 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
+<header>
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="desktop-nav">
 
@@ -60,13 +61,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 				);
 				?>
 				
-				<a href="#" class="hamburgerMenu" id="hamburgerMenu">
+				<button aria-label="open" data-toggle="collapse" data-target="#headerDrawer" aria-expanded="false" class="hamburgerMenu" id="hamburgerMenu">
 				    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.5 1.5H26" stroke="black" stroke-width="2"/>
                     <path d="M0.5 12H26" stroke="black" stroke-width="2"/>
                     <path d="M0.5 22H26" stroke="black" stroke-width="2"/>
                     </svg>
-				</a>
+				</button>
 				
 				<?php get_template_part( 'global-templates/header-drawer' ); ?>
 
@@ -76,9 +77,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 	</div><!-- #wrapper-navbar end -->
 
-
-
-
 		
 <div class="mobile-nav">
     <div class="container">
@@ -87,16 +85,22 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <?php the_custom_logo(); ?>
             </div>
             <div class="col-4">
-				<a href="#" class="mobileHamburgerMenu" id="mobileHamburgerMenu">
+				<button aria-label="open" class="mobileHamburgerMenu" id="mobileHamburgerMenu">
 				    <svg width="26" height="23" viewBox="0 0 26 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0.5 1.5H26" stroke="black" stroke-width="2"/>
                     <path d="M0.5 12H26" stroke="black" stroke-width="2"/>
                     <path d="M0.5 22H26" stroke="black" stroke-width="2"/>
                     </svg>
-				</a>
+				</button>
             </div>
         </div>
     </div>
 </div>
+
+</header>
+
+
+
+<main>
 
 <?php get_template_part( 'global-templates/header-mobile-drawer' ); ?>

@@ -14,6 +14,8 @@ get_header();
 
 <!--Post Headers-->
 
+<article>
+
 <div id="content">
 
 <?php $featuredImagePosition = get_field('featured_image_position'); ?>
@@ -35,7 +37,7 @@ get_header();
                 <div class="col-md-8 offset-md-2">
                     <?php echo get_the_post_thumbnail(); ?>
                     <figcaption>
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
                 </div>
@@ -62,7 +64,7 @@ get_header();
             <div class="row">
                 <div class="col-md-6 offset-md-6 px-0">
                     <figcaption>
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
                 </div>
@@ -90,7 +92,7 @@ get_header();
             <div class="row">
                 <div class="col-md-6 offset-md-6 px-0">
                     <figcaption>
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow">
+                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
                 </div>
@@ -123,7 +125,7 @@ get_header();
         <div class="container">
             <div class="col-md-8 offset-md-2">
                 <figcaption>
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow">
+                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                     <?php echo get_the_post_thumbnail_caption(); ?>
                 </figcaption>
             </div>
@@ -172,7 +174,7 @@ if ($blocks) {
                                 if (get_field('twitter_handle', 'user_'.$authorID) && get_field('twitter_link', 'user_'.$authorID)) {
                                     ?>
                                     <a href="<?php echo get_field('twitter_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-twitter">
-                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-twitter.png">
+                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-twitter.png" alt="Twitter">
                                         <span><?php echo get_field('twitter_handle', 'user_'.$authorID); ?></span>
                                     </a>
                                     <?php
@@ -182,7 +184,7 @@ if ($blocks) {
                                 if (get_field('instagram_handle', 'user_'.$authorID) && get_field('instagram_link', 'user_'.$authorID)) {
                                     ?>
                                     <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">
-                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-instagram.png">
+                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-instagram.png" alt="Instagram">
                                         <span><?php echo get_field('instagram_handle', 'user_'.$authorID); ?></span>
                                     </a>
                                     <?php
@@ -282,7 +284,7 @@ if ($blocks) {
                         ?>
                         
                         <span class="taxonomy-thumb">
-                           <a href="<?php echo get_the_permalink($relatedPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                           <a href="<?php echo get_the_permalink($relatedPostID);?>" class="lead-img-wrap <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                            <?php if ($taxImgRatio == 'Horizontal') { ?>
                               
                                 <?php 
@@ -355,6 +357,8 @@ if ($blocks) {
         </div>
     </div>
 </section>
+
+</article>
 
 <?php
 get_footer();

@@ -15243,9 +15243,12 @@ body strong {
 
 .hamburgerMenu {
   margin-left: 20px;
+  background: 0 0;
+  border: none;
+  box-shadow: none;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 767.98px) {
   .hamburgerMenu {
     display: none;
   }
@@ -15267,6 +15270,9 @@ body strong {
   float: right;
   position: relative;
   top: 11px;
+  background: 0 0;
+  border: none;
+  box-shadow: none;
 }
 
 .header-drawer {
@@ -15284,6 +15290,9 @@ body strong {
 
 #drawerClose {
   margin: 0 0 !important;
+  background: 0 0;
+  border: none;
+  box-shadow: none;
 }
 
 input.search-submit {
@@ -15689,14 +15698,14 @@ ul.mobile-drawer-links li a {
     line-height: 36px;
   }
 }
-.post-header-info-wrap h2.single-post-subheading {
+.post-header-info-wrap .single-post-subheading {
   font-size: 28px;
   line-height: 36px;
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 18px;
 }
 @media (max-width: 767.98px) {
-  .post-header-info-wrap h2.single-post-subheading {
+  .post-header-info-wrap .single-post-subheading {
     font-size: 18px;
     line-height: 24px;
   }
@@ -16463,14 +16472,14 @@ p.form-submit {
 .archive-page h1.page-title.yellow::before, .home h1.page-title.yellow::before {
   background-color: rgba(252, 246, 97, 0.7);
 }
-.archive-page h2.entry-title, .home h2.entry-title {
+.archive-page h2.entry-title, .archive-page h3.entry-title, .home h2.entry-title, .home h3.entry-title {
   font-size: 26px;
   line-height: 32px;
   font-family: "Lynon Bold", sans-serif;
   margin-bottom: 3px;
   text-align: left;
 }
-.archive-page h3.subheading, .home h3.subheading {
+.archive-page .subheading, .home .subheading {
   font-size: 26px;
   line-height: 32px;
   font-family: "Lynon Reg", sans-serif;
@@ -16646,24 +16655,24 @@ a.home-logo-rel-wrapper:hover span::after {
   margin-bottom: 0;
 }
 
-.featured-post-headings h2.entry-title {
+.featured-post-headings h2.entry-title, .featured-post-headings h3.entry-title {
   font-size: 44px;
   line-height: 50px;
   font-family: "Lynon Bold", sans-serif;
 }
 @media (max-width: 991.98px) {
-  .featured-post-headings h2.entry-title {
+  .featured-post-headings h2.entry-title, .featured-post-headings h3.entry-title {
     font-size: 26px;
     line-height: 32px;
   }
 }
-.featured-post-headings h3.subheading {
+.featured-post-headings .subheading {
   font-size: 44px;
   line-height: 50px;
   font-family: "Lynon Reg", sans-serif;
 }
 @media (max-width: 991.98px) {
-  .featured-post-headings h3.subheading {
+  .featured-post-headings .subheading {
     font-size: 26px;
     line-height: 32px;
   }

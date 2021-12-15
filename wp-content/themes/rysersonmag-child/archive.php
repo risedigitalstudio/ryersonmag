@@ -80,7 +80,7 @@ if ( have_posts() ) {
                         ?>
                         
                         <span class="taxonomy-thumb">
-                          <a href="<?php echo get_the_permalink();?>" class="lead-img-wrap <?php echo $postColorClass;?>">
+                          <a href="<?php echo get_the_permalink();?>" class="lead-img-wrap <?php echo $postColorClass;?>" tabindex="-1" aria-hidden="true">
                            <?php if ($taxImgRatio == 'Horizontal') { ?>
                               
                                 <?php 

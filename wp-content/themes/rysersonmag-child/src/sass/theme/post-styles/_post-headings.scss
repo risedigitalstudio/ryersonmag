@@ -9,7 +9,7 @@
         @include large-title;
         margin-bottom: $space;
     }
-    h2.single-post-subheading {
+    .single-post-subheading {
         @include single-subheading;
         margin-bottom: $space;
     }
