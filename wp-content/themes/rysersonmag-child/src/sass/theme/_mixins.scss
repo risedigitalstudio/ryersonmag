@@ -90,6 +90,60 @@
 } 
 
 
+
+@mixin box-color-sibling {
+    transition: 0.2s all;
+    &:hover {
+//        filter: grayscale(100%);
+    }
+    &.green {
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 16px solid rgba(0,218,43,.67);
+            mix-blend-mode: normal;
+            z-index: 9;
+            border-radius: 4px;
+        }
+    }
+    &.blue {
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 16px solid rgba(91,210,255,.67);
+            mix-blend-mode: normal;
+            z-index: 9;
+            border-radius: 4px;
+        }
+    }
+    &.orange {
+        &::before {
+            display: block;
+            content: '';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            bottom: -8px;
+            left: -8px;
+            border: 16px solid rgba(255, 137, 29, .67);
+            mix-blend-mode: normal;
+            z-index: 9;
+            border-radius: 4px;
+        }
+    }
+} 
+
+
 @mixin nav-items {
     font-size: 16px;
     line-height: 20px;

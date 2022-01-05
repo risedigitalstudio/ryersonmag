@@ -15311,6 +15311,7 @@ input.search-submit {
   background-position: top right;
   border: none;
   border-bottom: 2px solid #fff;
+  font-size: 0;
 }
 
 input[type=search] {
@@ -16580,6 +16581,52 @@ span.taxonomy-thumb a.lead-img-wrap.orange:hover::before, span.taxonomy-thumb a.
 span.taxonomy-thumb:hover img, span.taxonomy-thumb:focus img {
   filter: grayscale(1);
 }
+span.taxonomy-thumb.hovered a.lead-img-wrap {
+  display: block;
+  transition: 0.2s all;
+}
+span.taxonomy-thumb.hovered a.lead-img-wrap.green::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(0, 218, 43, 0.67);
+  mix-blend-mode: normal;
+  z-index: 9;
+  border-radius: 4px;
+}
+span.taxonomy-thumb.hovered a.lead-img-wrap.blue::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(91, 210, 255, 0.67);
+  mix-blend-mode: normal;
+  z-index: 9;
+  border-radius: 4px;
+}
+span.taxonomy-thumb.hovered a.lead-img-wrap.orange::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  border: 16px solid rgba(255, 137, 29, 0.67);
+  mix-blend-mode: normal;
+  z-index: 9;
+  border-radius: 4px;
+}
+span.taxonomy-thumb.hovered img {
+  filter: grayscale(1);
+}
 
 #ajax-load-more {
   display: flex;
@@ -17028,6 +17075,10 @@ a.home-logo-rel-wrapper:hover span::after {
 }
 .current-issue-info .downloadPdf {
   text-decoration: underline;
+}
+
+.read-about-tags-label {
+  margin-right: 18px;
 }
 
 .current-issue-articles .default-btn {

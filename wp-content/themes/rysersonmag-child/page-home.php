@@ -70,9 +70,11 @@ get_header('home');
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings">
+                                <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings post-title-subtitle">
                                     <h3 class="entry-title"><?php echo get_the_title($featuredPostID); ?></h3>
+                                    <?php if (get_field('subheading', $featuredPostID)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $featuredPostID);?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                         </div>
@@ -162,9 +164,11 @@ get_header('home');
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($featuredArticle);?>">
+                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="post-title-subtitle">
                                     <h3 class="entry-title"><?php echo get_the_title($featuredArticle); ?></h3>
+                                    <?php if (get_field('subheading', $featuredArticle)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $featuredArticle);?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                         
@@ -299,9 +303,11 @@ get_header('home');
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($peopleArticle);?>">
+                                <a href="<?php echo get_the_permalink($peopleArticle);?>" class="post-title-subtitle">
                                     <h3 class="entry-title"><?php echo get_the_title($peopleArticle); ?></h3>
+                                    <?php if (get_field('subheading', $peopleArticle)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $peopleArticle);?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                             </div>
@@ -480,9 +486,11 @@ get_header('home');
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($researchArticle);?>">
+                                <a href="<?php echo get_the_permalink($researchArticle);?>" class="post-title-subtitle">
                                     <h3 class="entry-title"><?php echo get_the_title($researchArticle); ?></h3>
+                                    <?php if (get_field('subheading', $researchArticle)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $researchArticle);?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                             </div>
@@ -626,9 +634,11 @@ get_header('home');
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($campusArticle);?>">
+                                <a href="<?php echo get_the_permalink($campusArticle);?>" class="post-title-subtitle">
                                     <h3 class="entry-title"><?php echo get_the_title($campusArticle); ?></h3>
+                                    <?php if (get_field('subheading', $campusArticle)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $campusArticle);?></p>
+                                    <?php } ?>
                                 </a>
                             </div>
                             </div>

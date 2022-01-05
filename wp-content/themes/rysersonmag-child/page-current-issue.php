@@ -36,7 +36,7 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                     <?php 
                         $tagArray = get_field("tags_in_this_issue", $theCurrentIssueID);
                         if($tagArray && sizeof($tagArray) > 0) {
-                            echo 'Read About ';
+                            echo '<span class="read-about-tags-label">Read About</span>';
                             foreach($tagArray as $tagObj) {
                                 ?>
                                 <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
@@ -132,9 +132,11 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                 ?>
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($featuredArticle);?>">
+                                <a href="<?php echo get_the_permalink($featuredArticle);?>" class="post-title-subtitle">
                                     <h2 class="entry-title"><?php echo get_the_title($featuredArticle); ?></h2>
-                                    <h3 class="subheading"><?php echo get_field('subheading', $featuredArticle);?></h3>
+                                    <?php if (get_field('subheading', $featuredArticle)) { ?>
+                                        <h3 class="subheading"><?php echo get_field('subheading', $featuredArticle);?></h3>
+                                    <?php } ?>
                                 </a>
                             </div>
                         

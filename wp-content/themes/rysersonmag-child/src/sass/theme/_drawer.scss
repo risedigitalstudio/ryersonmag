@@ -30,6 +30,7 @@ input.search-submit{
     background-position: top right;
     border: none;
     border-bottom: 2px solid #fff;
+    font-size: 0; //this is to hide the search value
 }
 
 input[type=search] {

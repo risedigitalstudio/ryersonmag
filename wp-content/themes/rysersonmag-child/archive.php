@@ -135,9 +135,11 @@ if ( have_posts() ) {
                         ?>
                         <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                        <a href="<?php echo get_the_permalink();?>">
+                        <a href="<?php echo get_the_permalink();?>" class="post-title-subtitle">
                             <h2 class="entry-title"><?php echo get_the_title(); ?></h2>
-                            <h3 class="subheading"><?php echo get_field('subheading');?></h3>
+                            <?php if (get_field('subheading')) { ?>
+                                <h3 class="subheading"><?php echo get_field('subheading');?></h3>
+                            <?php } ?>
                         </a>
                     </div>
                 </div>
@@ -147,7 +149,7 @@ if ( have_posts() ) {
             ?>
         </div>
         
-        <?php echo do_shortcode('[ajax_load_more id="alm-archive" archive="true" container_type="div" post_type="post" pause="true" scroll="false" posts_per_page="6" offset="3" no_results_text="<div class=\'no-results\'>Sorry, there are no more results</div>" transition_container_classes="row"]');?>
+        <?php echo do_shortcode('[ajax_load_more id="alm-archive" archive="true" container_type="div" post_type="post" pause="true" scroll="false" posts_per_page="6" offset="12" no_results_text="<div class=\'no-results\'>Sorry, there are no more results</div>" transition_container_classes="row"]');?>
         
         
     </div>
@@ -159,5 +161,15 @@ if ( have_posts() ) {
 }
 ?>
 
+<?php $totalpost = $wp_the_query->post_count;  ?>
+
 <?php
 get_footer();
+
+?>
+
+<script>
+    if (<?php echo $totalpost; ?> < 13) {
+        $('.alm-load-more-btn').hide();
+    }
+</script>

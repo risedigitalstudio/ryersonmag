@@ -342,9 +342,11 @@ if ($blocks) {
                         ?>
                         <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
 
-                        <a href="<?php echo get_the_permalink($relatedPostID);?>">
+                        <a href="<?php echo get_the_permalink($relatedPostID);?>" class="post-title-subtitle">
                             <h2 class="entry-title"><?php echo get_the_title($relatedPostID); ?></h2>
+                            <?php if (get_field('subheading', $relatedPostID)) { ?>
                             <h3 class="subheading"><?php echo get_field('subheading', $relatedPostID);?></h3>
+                            <?php } ?>
                         </a>
                     </div>
                 </div>

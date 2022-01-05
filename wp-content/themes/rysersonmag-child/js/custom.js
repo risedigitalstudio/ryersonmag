@@ -5,6 +5,17 @@ $(document).ready(function() {
     });
     
     
+$( ".post-title-subtitle" ).each(function( index ) {
+  $(this).on('mouseover', function () {
+    $(this).siblings('.taxonomy-thumb').addClass('hovered');
+  })
+    
+  $(this).on('mouseout', function () {
+    $(this).siblings('.taxonomy-thumb').removeClass('hovered');
+  })
+});
+
+    
   $('.past-issue-slider').slick({
       slidesToShow: 4,
       slidesToScroll: 4,    

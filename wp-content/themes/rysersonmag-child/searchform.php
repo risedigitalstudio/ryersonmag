@@ -21,7 +21,7 @@ if ( isset( $args['aria_label'] ) && ! empty( $args['aria_label'] ) ) {
 	<div class="input-group">
 		<input type="search" class="field search-field form-control" id="<?php echo $uid; ?>" name="s" value="<?php the_search_query(); ?>" placeholder="What are you looking for?">
 		<span class="input-group-append">
-			<input type="submit" class="submit search-submit" name="submit" value="">
+			<input type="submit" class="submit search-submit" name="submit" value="Search">
 		</span>
 	</div>
 </form>

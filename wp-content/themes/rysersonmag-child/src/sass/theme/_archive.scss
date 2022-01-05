@@ -98,7 +98,16 @@
             display: block;
             @include box-color-hovers;
         }
-        &:hover, &:focus{
+        &:hover, &:focus {
+            img {
+                filter: grayscale(1);
+            }
+        }
+        &.hovered {
+            a.lead-img-wrap {
+                display: block;
+                @include box-color-sibling;
+            }
             img {
                 filter: grayscale(1);
             }
