@@ -15,13 +15,14 @@ a.home-logo-rel-wrapper {
     span {
       display: inline-block;
       position: relative;
+      border-bottom: 1px solid $black;
         &::after {
           content: '';
           position: absolute;
           width: 100%;
           transform: scaleX(0);
-          height: 1.25px;
-          bottom: 0;
+          height: 1px;
+          bottom: -1px;
           left: 0;
           background-color: $black;
           transform-origin: bottom right;
@@ -32,6 +33,7 @@ a.home-logo-rel-wrapper {
     
     &:hover {
         span {
+            border-bottom: none;
             &::after {
               transform: scaleX(1);
               transform-origin: bottom left;
@@ -56,7 +58,6 @@ a.home-logo-rel-wrapper {
         font-family: 'Suisse Reg', sans-serif;
         #viewAllTopics {
 //            text-decoration: none;
-//            border-bottom: 1px solid $black;
             &:hover { 
                 text-decoration: none;
             }
@@ -122,6 +123,8 @@ a.home-logo-rel-wrapper {
     display: flex;
     justify-content: space-between;
     border-top: 2px dotted $black;
+    padding: 15px 0 0 0;
+    list-style-type: none;
 //    border-bottom: 2px dotted $black;
     .pick {
         position: relative;
@@ -141,7 +144,7 @@ a.home-logo-rel-wrapper {
             p.primary-category {
                 border-bottom: none;
             }
-            h3 {
+            .editors-pick-title {
                 @include archive-title-font;
                 margin-bottom: 0;
                 font-size: 26px;

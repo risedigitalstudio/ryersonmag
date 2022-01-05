@@ -40,7 +40,7 @@ defined( 'ABSPATH' ) || exit;
                 ">ryerson.ca/news-events/events</a></p>
             </div>
             <div class="col-md-2">
-                <a href="ryerson.ca/giving/" target="_blank" class="give-btn">Give</a>
+                <a href="https://ryerson.ca/giving/" target="_blank" class="give-btn">Give</a>
             </div>
         </div>
     </div>
@@ -63,33 +63,7 @@ defined( 'ABSPATH' ) || exit;
 	            </ul>
 	        </div>
 	        <div class="col-lg-3">
-	            <ul class="drawer-footer-social">
-	                <li>
-                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.instagram.com/ryerson_u/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://twitter.com/RyersonU" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://linkedin.com/school/ryerson-university" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.tiktok.com/@ryersonu" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
-                        </a>
-	                </li>
-	            </ul>
+                <?php get_template_part( 'global-templates/social-icons' ); ?>
 	        </div>
 	    </div>
 	</div>
@@ -130,33 +104,7 @@ defined( 'ABSPATH' ) || exit;
 	<div class="container-fluid footer-bottom">
 	    <div class="row footer-bottom-inner">
 	        <div class="col-lg-12">
-	            <ul class="drawer-footer-social">
-	                <li>
-                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.instagram.com/ryerson_u/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://twitter.com/RyersonU" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://linkedin.com/school/ryerson-university" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.tiktok.com/@ryersonu" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
-                        </a>
-	                </li>
-	            </ul>
+                <?php get_template_part( 'global-templates/social-icons' ); ?>
 	        </div>
 	        <div class="col-lg-8">
 	            <ul class="drawer-footer-links flex-row-between">

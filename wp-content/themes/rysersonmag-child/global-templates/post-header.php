@@ -11,7 +11,7 @@
 ?>
 
 <div class="post-header-info-wrap sec-pad-top">
-    <p class="pb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
+    <p class="pb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
     <h1 class="single-post-title"><?php the_title();?></h1>
     <p class="single-post-subheading" role="doc-subtitle"><?php echo get_field('subheading');?></p>
     <p class="author-meta"><span class="bold">By 

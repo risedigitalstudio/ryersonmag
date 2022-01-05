@@ -18,13 +18,13 @@
     .watn-arrow, .watn-sep {
         display: flex;
         justify-content: center;
-        margin: $space 0 0 0;
+        margin: $space 0;
     }
     .watn-sep {
         margin: $space 0;
     }
     .watn-img {
-        margin: $space auto;
+        margin: 0 auto $space;
         display: block;
         width: 95px;
         height: 95px;

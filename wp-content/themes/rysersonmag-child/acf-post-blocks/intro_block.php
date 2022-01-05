@@ -20,7 +20,9 @@
 
                     if ($editorsPicksOn) {
 
-                            echo "<h3>Editor's Picks</h3><div class='dotted-line'></div>";
+                            echo "<h2>Editor's Picks</h2><div class='dotted-line'></div>";
+                        
+                            ?><ul class="editors-picks-list"><?php
                             foreach(array_slice($editorsPicksArray, 0, 3)  as $editorsPick) {
                                 
                                 $postColorClass = '';
@@ -41,14 +43,15 @@
                                     $topicName = $topics[0]->name;
                                     $topicSlug = $topics[0]->slug;
                                 ?>
-                                <div class="single-related-article">
+                                <li class="single-related-article">
                                    <a href="<?php echo get_the_permalink($editorsPick);?>" class="<?php echo $postColorClass; ?>">
                                         <p class="mb-0 primary-category"><?php echo $topicName; ?></p>
-                                        <h4><?php echo get_the_title($editorsPick);?></h4>
+                                        <p class="editors-pick-title"><?php echo get_the_title($editorsPick);?></p>
                                     </a>
-                                </div>
+                                </li>
                                 <?php
                             } 
+                        ?></ul><?php
 
                     }
                 ?>

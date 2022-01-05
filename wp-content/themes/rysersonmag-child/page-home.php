@@ -326,7 +326,7 @@ get_header('home');
        </div>
         <div class="row">
             <div class="col-md-12">
-                <div class="editors-picks-flex sec-pad-half">
+                <ul class="editors-picks-flex sec-pad-half">
                     <?php $editorsPicksArray = get_field('editors_picks');?>
                     <?php 
                         foreach ($editorsPicksArray as $editorsPick) {
@@ -348,16 +348,16 @@ get_header('home');
 
                                 ?>
 
-                            <div class="pick">
+                            <li class="pick">
                                 <a href="<?php echo get_the_permalink($editorsPick);?>" class="full <?php echo $pickPostColorClass;?>">
                                     <p class="pb-0 mb-0 primary-category drawUnderline"><?php echo $pickTopicName; ?></p>
-                                    <h3><?php echo get_the_title($editorsPick);?></h3>
+                                    <p class="editors-pick-title"><?php echo get_the_title($editorsPick);?></p>
                                 </a>
-                            </div>
+                            </li>
                             <?php 
                         }
                     ?>
-                </div>
+                </ul>
             </div>
         </div>
     </div>

@@ -1,15 +1,16 @@
 //Header
 
 @mixin drawUnderline {
-      display: inline-block;
-      position: relative;
+    display: inline-block;
+    position: relative;
+    border-bottom: 1px solid $black;
     &::after {
       content: '';
       position: absolute;
       width: 100%;
       transform: scaleX(0);
-      height: 1.25px;
-      bottom: 0;
+      height: 1px;
+      bottom: -1px;
       left: 0;
       background-color: $black;
       transform-origin: bottom right;
@@ -17,6 +18,7 @@
     }
 
     &:hover {
+        border-bottom: none;
         &::after {
           transform: scaleX(1);
           transform-origin: bottom left;

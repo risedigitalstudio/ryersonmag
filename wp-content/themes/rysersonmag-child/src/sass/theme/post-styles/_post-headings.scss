@@ -27,6 +27,12 @@
     .post-header-info-wrap {
         .primary-category {
             border-bottom: 1px solid $white;
+            &::after {
+              background-color: $white;
+            }
+            &:hover {
+                border-bottom: none;
+            }
         }
     }
     @include media-breakpoint-down(sm) {

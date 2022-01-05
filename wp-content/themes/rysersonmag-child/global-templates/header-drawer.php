@@ -80,33 +80,7 @@
 	            </ul>
 	        </div>
 	        <div class="col-md-4">
-	            <ul class="drawer-footer-social">
-	                <li>
-                        <a href="https://www.facebook.com/ryersonu/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-fb.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.instagram.com/ryerson_u/" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-insta.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://twitter.com/RyersonU" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-twitter.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://linkedin.com/school/ryerson-university" target="_blank">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-linkedin.png">
-                        </a>
-	                </li>
-	                <li>
-                        <a href="https://www.tiktok.com/@ryersonu" target="_blank" id="focusDrawerStop">
-                            <img src="<?php echo get_stylesheet_directory_uri();?>/img/drawer-social-tiktok.png">
-                        </a>
-	                </li>
-	            </ul>
+                <?php get_template_part( 'global-templates/social-icons' ); ?>
 	        </div>
 	    </div>
 	</div>

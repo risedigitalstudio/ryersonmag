@@ -153,6 +153,7 @@ if ($blocks) {
 ?>
 </div>
 
+<?php if(get_field('show_author'))  { ?>
 
 <section class="author sec-pad-half">
     <div class="container">
@@ -174,7 +175,7 @@ if ($blocks) {
                                 if (get_field('twitter_handle', 'user_'.$authorID) && get_field('twitter_link', 'user_'.$authorID)) {
                                     ?>
                                     <a href="<?php echo get_field('twitter_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-twitter">
-                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-twitter.png" alt="Twitter">
+                                        <i class="fa fa-twitter"></i>
                                         <span><?php echo get_field('twitter_handle', 'user_'.$authorID); ?></span>
                                     </a>
                                     <?php
@@ -183,8 +184,8 @@ if ($blocks) {
                             <?php 
                                 if (get_field('instagram_handle', 'user_'.$authorID) && get_field('instagram_link', 'user_'.$authorID)) {
                                     ?>
-                                    <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">
-                                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/author-instagram.png" alt="Instagram">
+                                    <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">                 
+                                        <i class="fa fa-instagram"></i>
                                         <span><?php echo get_field('instagram_handle', 'user_'.$authorID); ?></span>
                                     </a>
                                     <?php
@@ -214,6 +215,9 @@ if ($blocks) {
         </div>
     </div>
 </section>
+
+
+<?php } ?>
 
 
 

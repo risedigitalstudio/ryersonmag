@@ -37,6 +37,7 @@ add_image_size( 'vertical-header', 1030, 1000, true );
 add_image_size( 'horizontal-full-header', 1440, 960, true );
 add_image_size( 'small-square', 150, 150, true );
 add_image_size( 'post-body-image', 533, 355, true );
+add_image_size( 'post-body-vertical', 530, 700, true );
 add_image_size( 'archive-square', 600, 600, true );
 add_image_size( 'archive-hor', 650, 450, true );
 add_image_size( 'home-hor', 873, 582, true );

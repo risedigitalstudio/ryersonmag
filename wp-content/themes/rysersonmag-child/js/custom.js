@@ -38,8 +38,7 @@ $(document).ready(function() {
           }
         ]   
   });    
-    
-    
+
     
     $('#hamburgerMenu').on('click', function () {
         $('#headerDrawer').show();

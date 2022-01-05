@@ -20,11 +20,24 @@
         margin-right: 8px;
     }
     display: inline-block;
-    img {
+    i {
         float: left;
         display: block;
         margin-right:5px;
+        color: $black;
+        width: 24px;
+        height: 24px;
+        border-radius: 100%;
+        display: block;
+        background: $lightGrey;
+        text-align: center;
+        line-height: 24px;
     }
+//    img {
+//        float: left;
+//        display: block;
+//        margin-right:5px;
+//    }
     span {
         display: block;
         float: left;

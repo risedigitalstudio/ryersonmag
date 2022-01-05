@@ -4,7 +4,7 @@
 }
 
 .related-articles-sec {
-    h3 {
+    h2 {
         font-family: 'Suisse Bold', sans-serif;
         font-size: 20px;
         line-height: 20px;
@@ -40,9 +40,17 @@
             p.primary-category {
                 border-bottom: none;
             }
-            h4 {}
+            .editors-pick-title {
+                font-family: 'Lynon Reg', sans-serif;
+                font-size: 1.5rem;
+            }
         }
     }
+}
+
+.editors-picks-list {
+    padding: 0;
+    list-style-type: none;
 }
 
 @include media-breakpoint-down(sm) {

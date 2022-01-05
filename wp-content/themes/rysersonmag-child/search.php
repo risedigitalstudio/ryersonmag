@@ -7,7 +7,24 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
+    
 
+// Get the query string
+$query = get_search_query();
+// if the first & last char is space, rip them
+$query = trim($query);
+// if there are more than one space, rip to one space
+$query = preg_replace('/\s\s+/', ' ',$query);
+// if chars count is less than  3, redirect them to homepage
+if (strlen($query)<3){
+wp_redirect( home_url() ); 
+exit; 
+}
+?>
+
+
+<?php
+    
 get_header();
 
 
