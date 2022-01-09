@@ -1,7 +1,10 @@
 .btnums-wrap {
-    @include flex-height;
+//    @include flex-height;
     @include post-aside-font;
-    text-align: center;
+    
+    display: block;
+    margin-top: 55px;
+    margin-bottom: 55px;
 //    max-width: 148px;
     h3 {
         font-family: 'Suisse Bold', sans-serif;
@@ -13,6 +16,7 @@
         font-style: italic;
         padding-bottom: 16px;
         border-bottom: 2px dotted $black;
+        text-align: left;
     }
     .btnum-num {
         font-family: 'Suisse Bold', sans-serif;
@@ -31,7 +35,8 @@
 @include media-breakpoint-down(sm) {
     .btnums-wrap {
         display: block;
-        margin-bottom: 55px;
+        margin-bottom: 45px;
+        margin-top: 45px;
         h3 {
             font-size: 24px;
             text-align: left;

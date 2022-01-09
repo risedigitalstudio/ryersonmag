@@ -1,7 +1,10 @@
 .watn-wrap {
-    @include flex-height;
+//    @include flex-height;
     @include post-aside-font;
     text-align: center;
+    display: block;
+    margin-top: 55px;
+//    margin-bottom: 55px;
 //    max-width: 148px;
     p {
         margin: 0;
@@ -49,7 +52,8 @@
 
 @include media-breakpoint-down(sm) {
     .watn-wrap {
-        margin-bottom: 75px;
+        margin-top: 45px;
+        margin-bottom: 45px;
         float: left;
         width: 100%;
         display: block;

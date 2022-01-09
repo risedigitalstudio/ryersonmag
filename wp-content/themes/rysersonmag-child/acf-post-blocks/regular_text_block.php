@@ -1,4 +1,8 @@
-<section class="reg_text_block sec-pad-half">
+<?php 
+    $rmTopPaddingTxt = $block_data['remove_top_padding'];
+    $rmBotPaddingTxt = $block_data['remove_bottom_padding'];
+?>   
+<section class="reg_text_block sec-pad-half" style="<?php if ($rmTopPaddingTxt) {echo 'padding-top: 0 !important;';} ?> <?php if ($rmBotPaddingTxt) {echo 'padding-bottom: 0 !important;';}?>">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">

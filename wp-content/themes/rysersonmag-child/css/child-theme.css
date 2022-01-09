@@ -15957,13 +15957,6 @@ figcaption {
   font-family: "Lynon Bold", sans-serif;
 }
 
-.sidebar-citations {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 cite.aside {
   font-style: normal;
 }
@@ -16077,14 +16070,12 @@ blockquote {
   }
 }
 .watn-wrap {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-size: 14px;
   line-height: 19px;
   font-family: "Suisse Reg", sans-serif;
   text-align: center;
+  display: block;
+  margin-top: 55px;
 }
 .watn-wrap p {
   margin: 0;
@@ -16128,7 +16119,8 @@ blockquote {
 
 @media (max-width: 767.98px) {
   .watn-wrap {
-    margin-bottom: 75px;
+    margin-top: 45px;
+    margin-bottom: 45px;
     float: left;
     width: 100%;
     display: block;
@@ -16158,14 +16150,12 @@ blockquote {
   }
 }
 .btnums-wrap {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   font-size: 14px;
   line-height: 19px;
   font-family: "Suisse Reg", sans-serif;
-  text-align: center;
+  display: block;
+  margin-top: 55px;
+  margin-bottom: 55px;
 }
 .btnums-wrap h3 {
   font-family: "Suisse Bold", sans-serif;
@@ -16177,6 +16167,7 @@ blockquote {
   font-style: italic;
   padding-bottom: 16px;
   border-bottom: 2px dotted #000;
+  text-align: left;
 }
 .btnums-wrap .btnum-num {
   font-family: "Suisse Bold", sans-serif;
@@ -16194,7 +16185,8 @@ blockquote {
 @media (max-width: 767.98px) {
   .btnums-wrap {
     display: block;
-    margin-bottom: 55px;
+    margin-bottom: 45px;
+    margin-top: 45px;
   }
   .btnums-wrap h3 {
     font-size: 24px;

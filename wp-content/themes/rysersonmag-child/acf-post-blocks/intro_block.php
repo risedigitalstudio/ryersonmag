@@ -1,4 +1,8 @@
-<section class="intro_block sec-pad-half">
+<?php 
+//    $rmTopPaddingIntro = $block_data['remove_top_padding'];
+    $rmBotPaddingIntro = $block_data['remove_bottom_padding'];
+?>              
+<section class="intro_block sec-pad-half" style="<?php if ($rmBotPaddingIntro) {echo 'padding-bottom: 0 !important;';}?>">
     <div class="container">
         <div class="row">
             <div class="offset-md-1 col-md-2">
