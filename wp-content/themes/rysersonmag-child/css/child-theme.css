@@ -15125,6 +15125,7 @@ body strong {
 }
 .drawUnderline:hover {
   border-bottom: none;
+  text-decoration: none;
 }
 .drawUnderline:hover::after {
   transform: scaleX(1);
@@ -15983,6 +15984,41 @@ cite.aside .desc {
   .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
     font-size: 24px;
     line-height: 30px;
+  }
+}
+
+.inset-image {
+  float: left;
+  margin-right: 30px;
+  max-width: 270px;
+}
+.inset-image.img-margin-bot {
+  margin-bottom: 30px;
+}
+.inset-image.float-img-right {
+  float: right;
+  margin-right: 0;
+  margin-left: 30px;
+}
+.inset-image figcaption {
+  max-width: 230px;
+}
+@media (max-width: 991.98px) {
+  .inset-image {
+    width: 100%;
+    max-width: 100%;
+    margin-right: 0;
+  }
+  .inset-image.float-img-right {
+    float: left;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .inset-image img.inset-img {
+    width: 100%;
+  }
+  .inset-image figcaption {
+    max-width: 100%;
   }
 }
 
@@ -17231,6 +17267,68 @@ h2.contact-masthead-title {
 .contact-chunk .contact-person-name {
   font-family: "Lynon Bold", sans-serif;
   margin: 0;
+}
+
+#error-404-wrapper h1.page-title {
+  font-size: 112px;
+  line-height: 100px;
+  letter-spacing: -4px;
+  font-family: "Suisse Black", sans-serif;
+  text-transform: lowercase;
+  display: inline-block;
+  position: relative;
+}
+@media (max-width: 991.98px) {
+  #error-404-wrapper h1.page-title {
+    font-size: 80px;
+    line-height: 90px;
+  }
+}
+@media (max-width: 767.98px) {
+  #error-404-wrapper h1.page-title {
+    display: inline;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: -2px;
+    padding-bottom: 20px;
+  }
+}
+#error-404-wrapper h1.page-title::before {
+  height: 30px;
+  width: 100%;
+  content: "";
+  background-color: rgba(196, 196, 196, 0.7);
+  position: absolute;
+  bottom: -7px;
+}
+@media (max-width: 767.98px) {
+  #error-404-wrapper h1.page-title::before {
+    height: 20px;
+    bottom: 26px;
+  }
+}
+#error-404-wrapper .four04 {
+  font-family: "Suisse Black", sans-serif;
+  font-size: 264px;
+  line-height: 264px;
+  text-align: center;
+  margin-top: 45px;
+}
+@media (max-width: 767.98px) {
+  #error-404-wrapper .four04 {
+    font-size: 36vw;
+    line-height: 36vw;
+  }
+}
+#error-404-wrapper .unfortunately {
+  font-family: "Lynon Reg", sans-serif;
+  font-size: 26px;
+  line-height: 32px;
+}
+#error-404-wrapper .return-home {
+  font-family: "Suisse Reg", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
 }
 
 .main-footer {

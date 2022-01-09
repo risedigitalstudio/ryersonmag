@@ -36,10 +36,12 @@ get_header();
             <div class="row">
                 <div class="col-md-8 offset-md-2">
                     <?php echo get_the_post_thumbnail(); ?>
+                    <?php if (get_the_post_thumbnail_caption()) { ?>
                     <figcaption>
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -63,10 +65,12 @@ get_header();
         <div class="container px-0">
             <div class="row">
                 <div class="col-md-6 offset-md-6 px-0">
+                   <?php if (get_the_post_thumbnail_caption()) { ?>
                     <figcaption>
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -91,10 +95,12 @@ get_header();
         <div class="container px-0">
             <div class="row">
                 <div class="col-md-6 offset-md-6 px-0">
+                   <?php if (get_the_post_thumbnail_caption()) { ?>
                     <figcaption>
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
+                    <?php } ?>
                 </div>
             </div>
         </div>
@@ -124,10 +130,12 @@ get_header();
         </div>
         <div class="container">
             <div class="col-md-8 offset-md-2">
+               <?php if (get_the_post_thumbnail_caption()) { ?>
                 <figcaption>
                    <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
                     <?php echo get_the_post_thumbnail_caption(); ?>
                 </figcaption>
+                <?php } ?>
             </div>
         </div>
     </section>

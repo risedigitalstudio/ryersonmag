@@ -1,0 +1,41 @@
+#error-404-wrapper {
+    h1.page-title {
+        @include archive-term-font;
+        display: inline-block;
+        position: relative;
+        &::before {
+            height: 30px;
+            width: 100%;
+            content: "";
+            background-color: rgba(196, 196, 196, 0.7);
+            position: absolute;
+            bottom: -7px;
+            @include media-breakpoint-down(sm) {
+                height: 20px;
+                bottom: 26px;
+            }
+        }
+    }
+    
+    .four04 {
+        font-family: 'Suisse Black', sans-serif;
+        font-size: 264px;
+        line-height: 264px;
+        text-align: center;
+        margin-top: 45px;
+        @include media-breakpoint-down(sm) {
+            font-size: 36vw;
+            line-height: 36vw;
+        } 
+    }
+    .unfortunately {
+        font-family: 'Lynon Reg', sans-serif;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .return-home {
+        font-family: 'Suisse Reg', sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+    }
+}

@@ -19,6 +19,7 @@
 
     &:hover {
         border-bottom: none;
+        text-decoration: none;
         &::after {
           transform: scaleX(1);
           transform-origin: bottom left;
