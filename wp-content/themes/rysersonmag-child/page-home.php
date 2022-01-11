@@ -196,10 +196,12 @@ get_header('home');
                    <a href="<?php echo site_url();?>/category/people" class="see-all">
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                    </a>
+<!--
                     <span class="stars">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
+-->
                </h2>
            </div>
        </div>
@@ -380,10 +382,12 @@ get_header('home');
                    <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
                    </a>
+<!--
                     <span class="stars">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
+-->
                </h2>
            </div>
        </div>
@@ -526,10 +530,12 @@ get_header('home');
                    <a href="<?php echo site_url();?>/category/campus/" class="see-all">
                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all"> 
                    </a>
+<!--
                     <span class="stars">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
                         <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
                     </span>
+-->
                </h2>
            </div>
        </div>

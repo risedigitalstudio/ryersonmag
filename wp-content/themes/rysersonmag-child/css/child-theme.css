@@ -14996,12 +14996,6 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
   font-weight: normal;
   font-style: normal;
 }
-@font-face {
-  font-family: "Suisse Black";
-  src: url("../fonts/suisse-black/SuisseIntl-Black.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-}
 body {
   font-family: "Lynon Reg", sans-serif;
   font-size: 20px;
@@ -15106,6 +15100,11 @@ body strong {
     display: flex;
   }
 }
+.col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
 .drawUnderline {
   display: inline-block;
   position: relative;
@@ -15140,7 +15139,7 @@ body strong {
   color: #000;
   font-size: 16px;
   line-height: 20px;
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
   padding: 4px 0 !important;
   margin: 0 12px !important;
@@ -15298,6 +15297,8 @@ body strong {
   background: 0 0;
   border: none;
   box-shadow: none;
+  right: 7px;
+  position: relative;
 }
 
 input.search-submit {
@@ -15612,7 +15613,7 @@ input[type=search]:-webkit-autofill::first-line {
 .mobile-drawer-cat-list li a {
   font-size: 32px;
   line-height: 20px;
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
   display: inline-block;
   position: relative;
@@ -16254,12 +16255,15 @@ blockquote {
 }
 
 .author-img {
-  width: 120px;
+  width: 100px;
   float: left;
+}
+.author-img img {
+  border-radius: 100%;
 }
 
 .author-info {
-  width: 420px;
+  width: 400px;
   float: right;
 }
 .author-info .author-desc {
@@ -16498,7 +16502,7 @@ p.form-submit {
   font-size: 112px;
   line-height: 100px;
   letter-spacing: -4px;
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
   display: inline-block;
   position: relative;
@@ -16771,6 +16775,9 @@ a.home-logo-rel-wrapper:hover span::after {
   .home .left-border {
     padding-left: 30px;
   }
+  .home .left-border .col-md-6 {
+    margin-bottom: -50px;
+  }
 }
 
 .category-featured .single-archive-post-wrap {
@@ -16778,8 +16785,8 @@ a.home-logo-rel-wrapper:hover span::after {
 }
 
 .featured-post-headings h2.entry-title, .featured-post-headings h3.entry-title {
-  font-size: 44px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 48px;
   font-family: "Lynon Bold", sans-serif;
 }
 @media (max-width: 991.98px) {
@@ -16789,8 +16796,8 @@ a.home-logo-rel-wrapper:hover span::after {
   }
 }
 .featured-post-headings .subheading {
-  font-size: 44px;
-  line-height: 50px;
+  font-size: 40px;
+  line-height: 48px;
   font-family: "Lynon Reg", sans-serif;
 }
 @media (max-width: 991.98px) {
@@ -16923,7 +16930,7 @@ a.home-logo-rel-wrapper:hover span::after {
   font-size: 112px;
   line-height: 100px;
   letter-spacing: -4px;
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
   margin-bottom: 55px;
   display: inline-block;
@@ -17273,7 +17280,7 @@ h2.contact-masthead-title {
   font-size: 112px;
   line-height: 100px;
   letter-spacing: -4px;
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
   display: inline-block;
   position: relative;
@@ -17308,7 +17315,7 @@ h2.contact-masthead-title {
   }
 }
 #error-404-wrapper .four04 {
-  font-family: "Suisse Black", sans-serif;
+  font-family: "Suisse Bold", sans-serif;
   font-size: 264px;
   line-height: 264px;
   text-align: center;

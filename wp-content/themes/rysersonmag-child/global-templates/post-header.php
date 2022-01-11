@@ -15,8 +15,14 @@
     <h1 class="single-post-title"><?php the_title();?></h1>
     <p class="single-post-subheading" role="doc-subtitle"><?php echo get_field('subheading');?></p>
     <p class="author-meta"><span class="bold">By 
-        <?php echo the_author_meta('first_name'); ?>
-        <?php echo the_author_meta('last_name'); ?>,</span>
+        <?php echo the_author_meta('first_name');?>
+        <?php echo the_author_meta('last_name');?><?php if (get_the_author_meta('title') !== "") { 
+            echo ', </span>'; 
+        } else {
+            echo '</span>'; 
+        }
+        ?>
+
         <?php echo get_the_author_meta('title'); ?>&#32;<span class="author-date-sep">|</span>&#32;
         <span class="post-date"><?php echo get_the_date('F j, Y'); ?></span>
     </p>

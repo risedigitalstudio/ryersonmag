@@ -1,9 +1,12 @@
 .author-img {
-    width: 120px;
+    width: 100px;
     float: left;
+    img {
+        border-radius: 100%;
+    }
 }
 .author-info {
-    width: 420px;
+    width: 400px;
     float: right;
     .author-desc {
         @include author-font;

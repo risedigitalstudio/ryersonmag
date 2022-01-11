@@ -83,6 +83,9 @@ a.home-logo-rel-wrapper {
         border-left: 1.25px solid $black;
         @include media-breakpoint-up(sm) {
             padding-left: 30px;
+            .col-md-6 {
+                margin-bottom: -50px;
+            }
         }
     }
 }

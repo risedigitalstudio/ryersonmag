@@ -52,6 +52,7 @@
 	        <div class="col-md-3">
 	            <?php 
                     $drawerTagsArray = get_field('drawer_tags', 7);
+                    $drawerCounter = 0;
                     foreach($drawerTagsArray as $drawerTag) {
                         ?>
                         <div class="full">
@@ -60,6 +61,8 @@
                             </a>
                         </div>
                         <?php
+                        $drawerCounter++;
+                        if ($drawerCounter % 7 == 0) {echo '</div><div class="col-md-3">';}
                     }
                 ?>
 	        </div>

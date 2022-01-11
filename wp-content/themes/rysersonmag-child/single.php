@@ -161,49 +161,108 @@ if ($blocks) {
 ?>
 </div>
 
+
 <?php if(get_field('show_author'))  { ?>
 
-<section class="author sec-pad-half">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 offset-md-3">
-<!--                <div class="row">-->
-                <?php $authorID = get_the_author_meta('ID'); ?>
-                <?php if (get_avatar($authorID)) { ?>
-                    <div class="author-img">
-                        <?php echo get_avatar($authorID, 'small-square'); ?>
-                    </div>
-                <?php } ?>
-                    <div class="author-info">
-                        <div class="author-desc">
-                            <?php echo get_the_author_meta('description'); ?>
-                        </div>
-                        <div class="author-social">
-                            <?php 
-                                if (get_field('twitter_handle', 'user_'.$authorID) && get_field('twitter_link', 'user_'.$authorID)) {
+
+    <?php if(get_field('overwrite_author') == true)  { ?>
+
+        <section class="author sec-pad-half">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+                        <?php if (get_field('author_photo')) { ?>
+                            <div class="author-img">
+                                <?php echo wp_get_attachment_image(get_field('author_photo'), 'small-square'); ?>
+                            </div>
+                        <?php } ?>
+                            <div class="author-info">
+                                <div class="author-desc">
+                                    <?php echo get_field('author_bio'); ?>
+                                </div>
+                                <div class="author-social">
+                                    <?php 
+                                        if (get_field('twitter_handle') && get_field('twitter_url')) {
+                                            ?>
+                                            <a href="<?php echo get_field('twitter_url'); ?>" target="_blank" class="author-social-item author-twitter">
+                                                <i class="fa fa-twitter"></i>
+                                                <span><?php echo get_field('twitter_handle'); ?></span>
+                                            </a>
+                                            <?php
+                                        }
                                     ?>
-                                    <a href="<?php echo get_field('twitter_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-twitter">
-                                        <i class="fa fa-twitter"></i>
-                                        <span><?php echo get_field('twitter_handle', 'user_'.$authorID); ?></span>
-                                    </a>
-                                    <?php
-                                }
-                            ?>
-                            <?php 
-                                if (get_field('instagram_handle', 'user_'.$authorID) && get_field('instagram_link', 'user_'.$authorID)) {
+                                    <?php 
+                                        if (get_field('instagram_handle') && get_field('instagram_url')) {
+                                            ?>
+                                            <a href="<?php echo get_field('instagram_url'); ?>" target="_blank" class="author-social-item author-insta">                 
+                                                <i class="fa fa-instagram"></i>
+                                                <span><?php echo get_field('instagram_handle'); ?></span>
+                                            </a>
+                                            <?php
+                                        }
                                     ?>
-                                    <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">                 
-                                        <i class="fa fa-instagram"></i>
-                                        <span><?php echo get_field('instagram_handle', 'user_'.$authorID); ?></span>
-                                    </a>
-                                    <?php
-                                }
-                            ?>
-                        </div>
+                                </div>
+                            </div>
                     </div>
-<!--                </div>-->
+                </div>
             </div>
-        </div>
+        </section>
+    
+
+    <?php } else { ?>
+
+        <section class="author sec-pad-half">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 offset-md-3">
+        <!--                <div class="row">-->
+                        <?php $authorID = get_the_author_meta('ID'); ?>
+                        <?php if (get_avatar($authorID)) { ?>
+                            <div class="author-img">
+                                <?php echo get_avatar($authorID, 'small-square'); ?>
+                            </div>
+                        <?php } ?>
+                            <div class="author-info">
+                                <div class="author-desc">
+                                    <?php echo get_the_author_meta('description'); ?>
+                                </div>
+                                <div class="author-social">
+                                    <?php 
+                                        if (get_field('twitter_handle', 'user_'.$authorID) && get_field('twitter_link', 'user_'.$authorID)) {
+                                            ?>
+                                            <a href="<?php echo get_field('twitter_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-twitter">
+                                                <i class="fa fa-twitter"></i>
+                                                <span><?php echo get_field('twitter_handle', 'user_'.$authorID); ?></span>
+                                            </a>
+                                            <?php
+                                        }
+                                    ?>
+                                    <?php 
+                                        if (get_field('instagram_handle', 'user_'.$authorID) && get_field('instagram_link', 'user_'.$authorID)) {
+                                            ?>
+                                            <a href="<?php echo get_field('instagram_link', 'user_'.$authorID); ?>" target="_blank" class="author-social-item author-insta">                 
+                                                <i class="fa fa-instagram"></i>
+                                                <span><?php echo get_field('instagram_handle', 'user_'.$authorID); ?></span>
+                                            </a>
+                                            <?php
+                                        }
+                                    ?>
+                                </div>
+                            </div>
+        <!--                </div>-->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+<?php 
+        }
+     }
+?>
+
+<section class="post-tag-wrap sec-pad-half">
+    <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="post-tags full">
@@ -223,10 +282,6 @@ if ($blocks) {
         </div>
     </div>
 </section>
-
-
-<?php } ?>
-
 
 
 <?php if (get_field('turn_commenting_on') == true) {
