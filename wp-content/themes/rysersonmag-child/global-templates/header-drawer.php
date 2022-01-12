@@ -4,7 +4,7 @@
 	
 		<nav id="main-nav" class="navbar navbar-expand-md navbar-light px-0" aria-labelledby="main-nav-label">
 
-			<h2 id="main-nav-label" class="sr-only">
+			<h2 id="main-nav-label-drawer" class="sr-only">
 				<?php esc_html_e( 'Main Navigation', 'understrap' ); ?>
 			</h2>
 
@@ -76,7 +76,6 @@
 	        <div class="col-md-8">
 	            <ul class="drawer-footer-links">
 	                <li><a href="https://www.ryerson.ca/alumni/" target="_blank">Ryerson Alumni</a></li>
-	                <li><a href="#">About Us</a></li>
 	                <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
 	                <li><a href="#">Privacy Policy</a></li>
 	                <li><a href="#">Accessibility</a></li>

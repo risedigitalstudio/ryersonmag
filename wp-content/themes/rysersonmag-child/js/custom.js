@@ -52,7 +52,7 @@ $( ".post-title-subtitle" ).each(function( index ) {
 
     
     $('#hamburgerMenu').on('click', function () {
-        $('#headerDrawer').show();
+        $('#headerDrawer').fadeIn(150);
         $('#focusDrawerStart').focus();
     })        
     
@@ -75,7 +75,7 @@ $( ".post-title-subtitle" ).each(function( index ) {
     
     
     $('#drawerClose').on('click', function () {
-        $('#headerDrawer').hide();
+        $('#headerDrawer').fadeOut(150);
     })
     
     
@@ -95,4 +95,5 @@ $( ".post-title-subtitle" ).each(function( index ) {
         return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="drop-cap">$1</span>');
     });
     
+
 })

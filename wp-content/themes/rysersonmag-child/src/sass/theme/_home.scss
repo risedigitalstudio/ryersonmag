@@ -17,16 +17,17 @@ a.home-logo-rel-wrapper {
       position: relative;
       border-bottom: 1px solid $black;
         &::after {
-          content: '';
-          position: absolute;
-          width: 100%;
-          transform: scaleX(0);
-          height: 1px;
-          bottom: -1px;
-          left: 0;
-          background-color: $black;
-          transform-origin: bottom right;
-          transition: transform 0.25s ease-out;
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: -1px;
+            left: 0;
+            background-color: $black;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+            transition-delay: 150ms;
         }
 
     }
@@ -136,6 +137,9 @@ a.home-logo-rel-wrapper {
             border-left: 1px solid #E8E8E8;
             padding-left: 23px;
             margin-top: 20px;
+            &:first-child {
+                border-left: none;
+            }
         }
 
         a {
@@ -274,7 +278,14 @@ a.home-logo-rel-wrapper {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1065px) {
+    .featured-cat-heading {
+        left: -50px;
+    }
+}
+
+
+@media (min-width: 768px) {
     .featured-cat-heading {
         left: -30px;
     }

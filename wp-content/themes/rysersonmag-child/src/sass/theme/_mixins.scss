@@ -5,16 +5,17 @@
     position: relative;
     border-bottom: 1px solid $black;
     &::after {
-      content: '';
-      position: absolute;
-      width: 100%;
-      transform: scaleX(0);
-      height: 1px;
-      bottom: -1px;
-      left: 0;
-      background-color: $black;
-      transform-origin: bottom right;
-      transition: transform 0.25s ease-out;
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -1px;
+        left: 0;
+        background-color: $black;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+        transition-delay: 150ms;
     }
 
     &:hover {

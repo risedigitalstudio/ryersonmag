@@ -40,6 +40,6 @@ add_image_size( 'post-body-image', 533, 355, true );
 add_image_size( 'post-body-vertical', 530, 700, true );
 add_image_size( 'archive-square', 600, 600, true );
 add_image_size( 'archive-hor', 650, 450, true );
-add_image_size( 'home-hor', 873, 480, true );
+add_image_size( 'home-hor', 873, 580, true );
 add_image_size( 'archive-ver', 490, 600, true );
 

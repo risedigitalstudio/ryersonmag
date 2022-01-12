@@ -47,6 +47,7 @@ figcaption {
     margin-top: $space;
     margin-bottom: 26px;
     position: relative;
+    left: 26px;
     p {
         margin: 0;
     }
@@ -55,15 +56,6 @@ figcaption {
         left: -25px;
         top: -7px;
     }
-}
-
-//.vertical-caption-sec {
-//    figcaption {
-//        left: 40px;
-//    }
-//}
-figcaption {
-    left: 40px;
     @include media-breakpoint-down(sm) {
         width: 90%;
     }

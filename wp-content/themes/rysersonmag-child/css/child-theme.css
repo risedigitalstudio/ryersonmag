@@ -15121,6 +15121,7 @@ body strong {
   background-color: #000;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  transition-delay: 150ms;
 }
 .drawUnderline:hover {
   border-bottom: none;
@@ -15773,6 +15774,7 @@ figcaption {
   margin-top: 18px;
   margin-bottom: 26px;
   position: relative;
+  left: 26px;
 }
 figcaption p {
   margin: 0;
@@ -15781,10 +15783,6 @@ figcaption .caption-arrow {
   position: absolute;
   left: -25px;
   top: -7px;
-}
-
-figcaption {
-  left: 40px;
 }
 @media (max-width: 767.98px) {
   figcaption {
@@ -16732,6 +16730,7 @@ a.home-logo-rel-wrapper span::after {
   background-color: #000;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+  transition-delay: 150ms;
 }
 a.home-logo-rel-wrapper:hover span {
   border-bottom: none;
@@ -16850,6 +16849,9 @@ a.home-logo-rel-wrapper:hover span::after {
     border-left: 1px solid #E8E8E8;
     padding-left: 23px;
     margin-top: 20px;
+  }
+  .editors-picks-flex .pick:first-child {
+    border-left: none;
   }
 }
 .editors-picks-flex .pick a {
@@ -17040,7 +17042,12 @@ a.home-logo-rel-wrapper:hover span::after {
     left: -100px;
   }
 }
-@media (min-width: 1200px) {
+@media (min-width: 1065px) {
+  .featured-cat-heading {
+    left: -50px;
+  }
+}
+@media (min-width: 768px) {
   .featured-cat-heading {
     left: -30px;
   }
@@ -17226,10 +17233,10 @@ a.home-logo-rel-wrapper:hover span::after {
   height: calc(100vh - 348px);
 }
 
-.page-single h1 {
+.page-single h1, .page-contact h1 {
   margin-bottom: 60px;
 }
-.page-single h2, .page-single h3, .page-single h4, .page-single h5 {
+.page-single h2, .page-single h3, .page-single h4, .page-single h5, .page-contact h2, .page-contact h3, .page-contact h4, .page-contact h5 {
   font-size: 14px;
   line-height: 26px;
   font-family: "Suisse Bold", sans-serif;
@@ -17265,7 +17272,7 @@ h2.contact-masthead-title {
 .contact-chunk {
   font-size: 18px;
   line-height: 26px;
-  margin-top: 45px;
+  margin-top: 30px;
 }
 .contact-chunk .contact-person-title {
   font-style: italic;
@@ -17420,7 +17427,7 @@ h2.contact-masthead-title {
   margin-bottom: 0;
   float: left;
   margin-right: 45px;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
   color: #fff;
@@ -17431,7 +17438,7 @@ h2.contact-masthead-title {
   }
 }
 .footer-bottom-inner ul li a {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
   color: #fff;
