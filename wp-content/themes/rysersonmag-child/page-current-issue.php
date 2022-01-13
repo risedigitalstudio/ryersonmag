@@ -17,38 +17,41 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                 <div class="current-issue-cover">
                     <?php echo get_the_post_thumbnail($theCurrentIssueID); ?>
                 </div>
-                <div class="current-issue-info">
-                    <h1><?php echo get_the_title($theCurrentIssueID); ?></h1>
-                    <div class="issue-description">
-                        <?php echo get_field("issue_description", $theCurrentIssueID); ?>
+                
+                <div id="currentIssuePin">
+                    <div class="current-issue-info">
+                        <h1><?php echo get_the_title($theCurrentIssueID); ?></h1>
+                        <div class="issue-description">
+                            <?php echo get_field("issue_description", $theCurrentIssueID); ?>
+                        </div>
+                        <div class="file-link">
+                            <?php 
+                            $pdfFile = get_field("pdf_file", $theCurrentIssueID); 
+                            $pdfUrl = $pdfFile['url'];
+                            ?>
+                            <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf drawUnderline">Download PDF</a>
+                        </div>
                     </div>
-                    <div class="file-link">
+
+
+                    <div class="post-tags full">
                         <?php 
-                        $pdfFile = get_field("pdf_file", $theCurrentIssueID); 
-                        $pdfUrl = $pdfFile['url'];
-                        ?>
-                        <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf">Download PDF</a>
-                    </div>
-                </div>
-                
-                
-                <div class="post-tags full">
-                    <?php 
-                        $tagArray = get_field("tags_in_this_issue", $theCurrentIssueID);
-                        if($tagArray && sizeof($tagArray) > 0) {
-                            echo '<span class="read-about-tags-label">Read About</span>';
-                            foreach($tagArray as $tagObj) {
-                                ?>
-                                <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
-                                <?php
+                            $tagArray = get_field("tags_in_this_issue", $theCurrentIssueID);
+                            if($tagArray && sizeof($tagArray) > 0) {
+                                echo '<span class="read-about-tags-label">Read About</span>';
+                                foreach($tagArray as $tagObj) {
+                                    ?>
+                                    <a href="<?php echo site_url();?>/tag/<?php echo $tagObj->slug;?>" class="post-tag-link"><?php echo $tagObj->name;?></a>
+                                    <?php
+                                }
                             }
-                        }
-                    ?>
+                        ?>
+                    </div>
                 </div>
 
             </div>
             
-            <div class="col-md-6 offset-md-1 current-issue-articles">
+            <div class="col-md-6 offset-md-1 current-issue-articles" id="currentIssue">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                 <?php 

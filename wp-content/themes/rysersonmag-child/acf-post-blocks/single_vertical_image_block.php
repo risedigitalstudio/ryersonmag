@@ -2,10 +2,15 @@
    <div class="container">
         <div class="row">
           
-             <div class="col-md-8 offset-md-2">
+             <div class="<?php if ($block_data['flush_with_article']) {echo 'col-md-6 offset-md-3';} else {echo 'col-md-8 offset-md-2';}?>">
             
+               
                 <?php
-                echo wp_get_attachment_image($block_data['image'], 'post-body-vertical', "", ['class'=>'full']);
+                 if ($block_data['flush_with_article']) {
+                     echo wp_get_attachment_image($block_data['image'], 'large', "", ['class'=>'full']);
+                 } else {
+                    echo wp_get_attachment_image($block_data['image'], 'post-body-vertical', "", ['class'=>'full']);
+                 }
                 ?>
                 <?php if ($block_data['image_caption']) { ?>
                 <div class="full">

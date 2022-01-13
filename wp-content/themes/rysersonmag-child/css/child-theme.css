@@ -15061,6 +15061,12 @@ body strong {
   justify-content: space-between;
 }
 
+.false-caption {
+  width: 100%;
+  display: block;
+  height: 50px;
+}
+
 @media (min-width: 576px) {
   .desktop {
     display: block;
@@ -15144,6 +15150,7 @@ body strong {
   text-transform: lowercase;
   padding: 4px 0 !important;
   margin: 0 12px !important;
+  letter-spacing: 0.1px;
 }
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
@@ -15161,7 +15168,7 @@ body strong {
 }
 
 .navbar-nav {
-  padding: 35px 0;
+  padding: 25px 0;
 }
 
 .nav-item {
@@ -15697,6 +15704,7 @@ ul.mobile-drawer-links li a {
   font-family: "Suisse Reg", sans-serif;
   text-transform: uppercase;
   padding-bottom: 1px;
+  letter-spacing: 0.1px;
   margin-bottom: 18px;
   display: inline;
 }
@@ -15849,7 +15857,7 @@ figcaption .caption-arrow {
   line-height: 20px;
   padding-bottom: 20px;
   margin-bottom: 20px;
-  border-bottom: 2px dotted #000;
+  border-bottom: 4px solid #000;
 }
 .related-articles-sec .primary-category {
   font-size: 14px;
@@ -15857,6 +15865,7 @@ figcaption .caption-arrow {
   font-family: "Suisse Reg", sans-serif;
   text-transform: uppercase;
   padding-bottom: 1px;
+  letter-spacing: 0.1px;
   margin-bottom: 4px;
 }
 .related-articles-sec .primary-category:hover {
@@ -15873,7 +15882,7 @@ figcaption .caption-arrow {
 .related-articles-sec .single-related-article {
   padding-bottom: 18px;
   margin-bottom: 18px;
-  border-bottom: 1.5px solid #D9D9D9;
+  border-bottom: 1.25px solid #000;
 }
 .related-articles-sec .single-related-article:last-of-type {
   border-bottom: none;
@@ -15927,10 +15936,13 @@ figcaption .caption-arrow {
 }
 .related-articles-sec .single-related-article a p.primary-category {
   border-bottom: none;
+  font-family: "Suisse Bold", sans-serif;
 }
 .related-articles-sec .single-related-article a .editors-pick-title {
   font-family: "Lynon Reg", sans-serif;
-  font-size: 1.5rem;
+  font-size: 20px;
+  line-height: 26px;
+  margin-bottom: 0;
 }
 
 .editors-picks-list {
@@ -15950,6 +15962,11 @@ figcaption .caption-arrow {
     margin-top: 55px;
   }
 }
+.post-body a {
+  color: #004C9B;
+  text-decoration: underline;
+}
+
 .post-body cite {
   font-style: normal;
   color: #234586;
@@ -16305,7 +16322,7 @@ blockquote {
 }
 
 .post-tags {
-  border-top: 2px dotted #000;
+  border-top: 1.25px solid #000;
   margin-top: 30px;
   padding-top: 18px;
   font-size: 14px;
@@ -16352,7 +16369,7 @@ blockquote {
   line-height: 52px;
   padding-bottom: 25px;
   color: #fff;
-  border-bottom: 2px dotted #fff;
+  border-bottom: 4px solid #fff;
   width: 100%;
   color: #000;
   border-color: #000;
@@ -16486,6 +16503,7 @@ p.form-submit {
   font-family: "Suisse Reg", sans-serif;
   text-transform: uppercase;
   padding-bottom: 1px;
+  letter-spacing: 0.1px;
   display: inline;
   text-align: left;
 }
@@ -16497,8 +16515,8 @@ p.form-submit {
   text-align: left;
 }
 .archive-page h1.page-title, .home h1.page-title {
-  font-size: 112px;
-  line-height: 100px;
+  font-size: 88px;
+  line-height: 88px;
   letter-spacing: -4px;
   font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
@@ -16521,17 +16539,17 @@ p.form-submit {
   }
 }
 .archive-page h1.page-title::before, .home h1.page-title::before {
-  height: 30px;
+  height: 26px;
   width: 100%;
   content: "";
   background-color: rgba(196, 196, 196, 0.7);
   position: absolute;
-  bottom: -7px;
+  bottom: -12px;
 }
 @media (max-width: 767.98px) {
   .archive-page h1.page-title::before, .home h1.page-title::before {
-    height: 20px;
-    bottom: 26px;
+    height: 17px;
+    bottom: -1px;
   }
 }
 .archive-page h1.page-title.green::before, .home h1.page-title.green::before {
@@ -16547,15 +16565,16 @@ p.form-submit {
   background-color: rgba(252, 246, 97, 0.7);
 }
 .archive-page h2.entry-title, .archive-page h3.entry-title, .home h2.entry-title, .home h3.entry-title {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 2px;
   font-family: "Lynon Bold", sans-serif;
   margin-bottom: 3px;
   text-align: left;
 }
 .archive-page .subheading, .home .subheading {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 30px;
   font-family: "Lynon Reg", sans-serif;
   text-align: left;
 }
@@ -16563,7 +16582,7 @@ p.form-submit {
 span.taxonomy-thumb {
   display: block;
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 span.taxonomy-thumb a.lead-img-wrap {
   display: block;
@@ -16712,7 +16731,7 @@ a.home-logo-rel-wrapper p {
   font-family: "Suisse Reg", sans-serif;
   text-align: center;
   position: absolute;
-  right: 28%;
+  left: 253px;
 }
 a.home-logo-rel-wrapper span {
   display: inline-block;
@@ -16836,7 +16855,7 @@ a.home-logo-rel-wrapper:hover span::after {
 .editors-picks-flex {
   display: flex;
   justify-content: space-between;
-  border-top: 2px dotted #000;
+  border-top: 4px solid #000;
   padding: 15px 0 0 0;
   list-style-type: none;
 }
@@ -16846,7 +16865,7 @@ a.home-logo-rel-wrapper:hover span::after {
 }
 @media (min-width: 768px) {
   .editors-picks-flex .pick {
-    border-left: 1px solid #E8E8E8;
+    border-left: 1px solid #000;
     padding-left: 23px;
     margin-top: 20px;
   }
@@ -16902,14 +16921,14 @@ a.home-logo-rel-wrapper:hover span::after {
 }
 .editors-picks-flex .pick a p.primary-category {
   border-bottom: none;
+  font-family: "Suisse Bold", sans-serif;
 }
 .editors-picks-flex .pick a .editors-pick-title {
-  font-size: 26px;
-  line-height: 32px;
+  font-size: 24px;
+  line-height: 30px;
+  margin-top: 2px;
   font-family: "Lynon Bold", sans-serif;
   margin-bottom: 0;
-  font-size: 26px;
-  line-height: 32px;
   font-family: "Lynon Reg", sans-serif;
 }
 @media (max-width: 767.98px) {
@@ -16929,8 +16948,8 @@ a.home-logo-rel-wrapper:hover span::after {
 }
 
 .featured-cat-heading {
-  font-size: 112px;
-  line-height: 100px;
+  font-size: 88px;
+  line-height: 88px;
   letter-spacing: -4px;
   font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
@@ -16954,17 +16973,17 @@ a.home-logo-rel-wrapper:hover span::after {
   }
 }
 .featured-cat-heading::before {
-  height: 30px;
+  height: 26px;
   width: 100%;
   content: "";
   background-color: rgba(196, 196, 196, 0.7);
   position: absolute;
-  bottom: -7px;
+  bottom: -12px;
 }
 @media (max-width: 767.98px) {
   .featured-cat-heading::before {
-    height: 16px;
-    bottom: 6px;
+    height: 17px;
+    bottom: -1px;
   }
 }
 @media (max-width: 767.98px) {
@@ -17037,9 +17056,9 @@ a.home-logo-rel-wrapper:hover span::after {
     margin-bottom: 45px;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 768px) {
   .featured-cat-heading {
-    left: -100px;
+    left: -30px;
   }
 }
 @media (min-width: 1065px) {
@@ -17047,9 +17066,9 @@ a.home-logo-rel-wrapper:hover span::after {
     left: -50px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1400px) {
   .featured-cat-heading {
-    left: -30px;
+    left: -100px;
   }
 }
 @media (max-width: 991.98px) {
@@ -17114,9 +17133,6 @@ a.home-logo-rel-wrapper:hover span::after {
   font-family: "Suisse Reg", sans-serif;
   margin-top: 10px;
   margin-bottom: 25px;
-}
-.current-issue-info .downloadPdf {
-  text-decoration: underline;
 }
 
 .read-about-tags-label {
@@ -17284,8 +17300,8 @@ h2.contact-masthead-title {
 }
 
 #error-404-wrapper h1.page-title {
-  font-size: 112px;
-  line-height: 100px;
+  font-size: 88px;
+  line-height: 88px;
   letter-spacing: -4px;
   font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;

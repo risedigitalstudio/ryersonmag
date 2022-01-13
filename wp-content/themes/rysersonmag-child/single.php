@@ -45,7 +45,7 @@ get_header();
 <!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">-->
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
-                    <?php } ?>
+                    <?php } else {echo '<div class="false-caption"></div>';} ?>
                 </div>
             </div>
         </div>
@@ -78,7 +78,7 @@ get_header();
 <!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">-->
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
-                    <?php } ?>
+                    <?php }else {echo '<div class="false-caption"></div>';} ?>
                 </div>
             </div>
         </div>
@@ -112,7 +112,7 @@ get_header();
 <!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">-->
                         <?php echo get_the_post_thumbnail_caption(); ?>
                     </figcaption>
-                    <?php } ?>
+                    <?php }else {echo '<div class="false-caption"></div>';} ?>
                 </div>
             </div>
         </div>
@@ -151,7 +151,7 @@ get_header();
 <!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">-->
                     <?php echo get_the_post_thumbnail_caption(); ?>
                 </figcaption>
-                <?php } ?>
+                <?php }else {echo '<div class="false-caption"></div>';} ?>
             </div>
         </div>
     </section>

@@ -51,7 +51,7 @@
 }
 
 .post-tags {
-    border-top: 2px dotted $black;
+    border-top: 1.25px solid $black;
     margin-top: 30px;
     padding-top: $space;
     @include post-aside-font;

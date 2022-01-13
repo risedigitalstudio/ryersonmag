@@ -119,6 +119,12 @@ body {
     justify-content: space-between;
 }
 
+.false-caption {
+    width: 100%;
+    display: block;
+    height: 50px;
+}
+
 @include media-breakpoint-up(sm) {
     .desktop {
         display: block;

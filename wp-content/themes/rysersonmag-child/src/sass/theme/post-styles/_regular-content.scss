@@ -1,11 +1,13 @@
+.post-body a {
+    color: $ryersonBlue;
+    text-decoration: underline;
+}
 .post-body cite {
     font-style: normal;
     color: #234586;
     font-size: 80%;
     font-family: 'Lynon Bold', sans-serif;
 }
-
-
 .sidebar-citations {
 //    @include flex-height;
 }

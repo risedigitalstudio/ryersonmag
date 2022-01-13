@@ -164,6 +164,7 @@
     font-family: 'Suisse Reg', sans-serif;
     text-transform: uppercase;
     padding-bottom: 1px;
+    letter-spacing: .1px;
 //    border-bottom: 1px solid $black;
     &:hover {
         text-decoration: none;
@@ -277,8 +278,8 @@
 }
 
 @mixin archive-term-font {
-    font-size: 112px;
-    line-height: 100px;
+    font-size: 88px;
+    line-height: 88px;
     letter-spacing: -4px;
     font-family: "Suisse Bold",sans-serif;
     text-transform: lowercase;
@@ -303,14 +304,15 @@
 }
 
 @mixin archive-title-font {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 2px;
     font-family: 'Lynon Bold', sans-serif;
 }
 
 @mixin archive-subhading-font {
-    font-size: 26px;
-    line-height: 32px;
+    font-size: 24px;
+    line-height: 30px;
     font-family: 'Lynon Reg', sans-serif;
 }
 
@@ -354,7 +356,7 @@
     line-height: 52px;
     padding-bottom: 25px;
     color: $white;
-    border-bottom: 2px dotted $white;
+    border-bottom: 4px solid $white;
     width: 100%;
     @include media-breakpoint-down(md) {
         font-size: 36px;

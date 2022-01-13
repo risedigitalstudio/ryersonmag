@@ -52,7 +52,7 @@ if ( have_posts() ) {
     
     $args = array(
         'category_name'  => 'the_name_of_the_category',
-        'posts_per_page' => 3,
+        'posts_per_page' => 9,
     );
             // Start the loop.
             while ( have_posts() ) {
@@ -149,7 +149,7 @@ if ( have_posts() ) {
             ?>
         </div>
         
-        <?php echo do_shortcode('[ajax_load_more id="alm-archive" archive="true" container_type="div" post_type="post" pause="true" scroll="false" posts_per_page="6" offset="12" no_results_text="<div class=\'no-results\'>Sorry, there are no more results</div>" transition_container_classes="row"]');?>
+        <?php echo do_shortcode('[ajax_load_more id="alm-archive" archive="true" container_type="div" post_type="post" pause="true" scroll="false" posts_per_page="9" offset="9" no_results_text="<div class=\'no-results\'>Sorry, there are no more results</div>" transition_container_classes="row"]');?>
         
         
     </div>
@@ -168,8 +168,10 @@ get_footer();
 
 ?>
 
+<!--
 <script>
-    if (<?php echo $totalpost; ?> < 13) {
+    if (<?php echo $totalpost; ?> < 10) {
         $('.alm-load-more-btn').hide();
     }
 </script>
+-->

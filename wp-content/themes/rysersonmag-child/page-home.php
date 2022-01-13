@@ -24,7 +24,11 @@ get_header('home');
                 <div class="sticky-home-intro" id="timelinepin">
                     <a href="https://www.ryerson.ca/next-chapter/" target="_blank" class="home-logo-rel-wrapper">
                        <h1 class="sr-only">Ryerson University Magazine</h1>
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo"  alt="Logo">
+<!--                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo"  alt="Logo">-->
+                       
+
+                        <?php get_template_part( 'global-templates/ryerson-home-logo' ); ?>
+
                         <p>Renaming <br>in process<br><span>Learn More</span></p>
                     </a>
                     <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>

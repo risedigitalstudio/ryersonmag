@@ -45,15 +45,15 @@
         display: inline-block;
         position: relative;
         &::before {
-            height: 30px;
+            height: 26px;
             width: 100%;
             content: "";
             background-color: rgba(196, 196, 196, 0.7);
             position: absolute;
-            bottom: -7px;
+            bottom: -12px;
             @include media-breakpoint-down(sm) {
-                height: 20px;
-                bottom: 26px;
+                height: 17px;
+                bottom: -1px;
             }
         }
         &.green {
@@ -93,7 +93,7 @@
     span.taxonomy-thumb {
         display: block;
         position: relative;
-        margin-bottom: 10px;
+        margin-bottom: 14px;
         a.lead-img-wrap {
             display: block;
             @include box-color-hovers;
