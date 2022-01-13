@@ -25,7 +25,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <?php do_action( 'wp_body_open' ); ?>
 <div class="site" id="page">
 
-<header>
+<header class="not-homepg">
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" class="desktop-nav">
 
@@ -117,8 +117,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 
 </header>
-
+<div class="false-header-height"></div>
 
 <main>
+
+
 
 <?php get_template_part( 'global-templates/header-mobile-drawer' ); ?>

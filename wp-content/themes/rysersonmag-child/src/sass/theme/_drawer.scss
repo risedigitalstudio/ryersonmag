@@ -125,8 +125,10 @@ input[type="search"]:-webkit-autofill::first-line {
 .drawer-tags-row {
     a {
         display: inline;
-        font-size: 36px;
-        line-height: 60px;
+//        font-size: 36px;
+//        line-height: 60px;
+        font-size: 2.3vw;
+        line-height: 3.8vw;
         font-family: 'Lynon Reg', sans-serif;
         color: $white;
         white-space: nowrap;

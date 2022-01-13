@@ -19,7 +19,7 @@ ScrollTrigger.matchMedia({
 
 ScrollTrigger.matchMedia({
 	
-  "(min-width: 960px)": function() {
+  "(min-width: 767px)": function() {
     ScrollTrigger.create({
         trigger: "#currentIssuePin",
         start: "top 10%",

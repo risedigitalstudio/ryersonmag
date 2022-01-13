@@ -1,0 +1,15 @@
+.false-header-height {
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+header.not-homepg {
+    position: fixed;
+    width: 100%;
+    background: $white;
+    z-index: 999;
+    transition: 0.2s all;
+    &.neg-margin {
+        margin-top: -80px;
+    }
+}

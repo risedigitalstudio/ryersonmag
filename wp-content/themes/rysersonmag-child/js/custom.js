@@ -14,7 +14,23 @@ $( ".post-title-subtitle" ).each(function( index ) {
     $(this).siblings('.taxonomy-thumb').removeClass('hovered');
   })
 });
-
+    
+    
+//    scroll intent nav
+var lastScrollTop = 0;
+$(window).scroll(function(event){
+   var theTop = $(this).scrollTop();
+   if (theTop > lastScrollTop){
+       //downscroll
+       $('header.not-homepg').addClass('neg-margin');
+   } else {
+      // upscrol
+      $('header.not-homepg').removeClass('neg-margin');
+   }
+   lastScrollTop = theTop;
+});
+    
+    
     
   $('.past-issue-slider').slick({
       slidesToShow: 4,
