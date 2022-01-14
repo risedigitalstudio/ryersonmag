@@ -14970,29 +14970,43 @@ body.understrap-no-sidebar .wp-block-cover.alignwide {
 
 @font-face {
   font-family: "Lynon Reg";
-  src: url("../fonts/lynon-reg/LyonText-Regular.eot");
-  src: url("../fonts/lynon-reg/LyonText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-reg/LyonText-Regular.woff") format("woff"), url("../fonts/lynon-reg/LyonText-Regular.ttf") format("truetype"), url("../fonts/lynon-reg/LyonText-Regular.svg#geometric") format("svg");
+  src: url("../fonts/lynon-reg/LyonText-Regular-Web.woff") format("woff"), url("../fonts/lynon-reg/LyonText-Regular-Web.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lynon Reg Italic";
+  src: url("../fonts/lynon-reg-italic/LyonText-RegularItalic-Web.woff") format("woff"), url("../fonts/lynon-reg-italic/LyonText-RegularItalic-Web.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Lynon Bold";
-  src: url("../fonts/lynon-bold/LyonText-Bold.eot");
-  src: url("../fonts/lynon-bold/LyonText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-bold/LyonText-Bold.woff") format("woff"), url("../fonts/lynon-bold/LyonText-Bold.ttf") format("truetype"), url("../fonts/lynon-bold/LyonText-Bold.svg#geometric") format("svg");
+  src: url("../fonts/lynon-semibold/LyonText-Semibold-Web.woff") format("woff"), url("../fonts/lynon-semibold/LyonText-Semibold-Web.woff") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Suisse Reg";
-  src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot");
-  src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-reg/SuisseIntl-Regular.woff") format("woff"), url("../fonts/suisse-reg/SuisseIntl-Regular.ttf") format("truetype"), url("../fonts/suisse-reg/SuisseIntl-Regular.svg#geometric") format("svg");
+  src: url("../fonts/suisse-reg/SuisseIntl-Regular-WebM.woff") format("woff"), url("../fonts/suisse-reg/SuisseIntl-Regular-WebM.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse Reg Italic";
+  src: url("../fonts/suisse-reg-italic/SuisseIntl-RegularItalic-WebM.woff") format("woff"), url("../fonts/suisse-reg-italic/SuisseIntl-RegularItalic-WebM.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Suisse Bold";
-  src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot");
-  src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-bold/SuisseIntl-Bold.woff") format("woff"), url("../fonts/suisse-bold/SuisseIntl-Bold.ttf") format("truetype"), url("../fonts/suisse-bold/SuisseIntl-Bold.svg#geometric") format("svg");
+  src: url("../fonts/suisse-bold/SuisseIntl-Bold-WebM.woff") format("woff"), url("../fonts/suisse-bold/SuisseIntl-Bold-WebM.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Suisse Bold Italic";
+  src: url("../fonts/suisse-bold-italic/SuisseIntl-BoldItalic-WebM.woff") format("woff"), url("../fonts/suisse-bold-italic/SuisseIntl-BoldItalic-WebM.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
 }
@@ -15001,8 +15015,11 @@ body {
   font-size: 20px;
   line-height: 30px;
 }
-body strong {
+body strong, body b {
   font-family: "Lynon Bold", sans-serif;
+}
+body i, body em {
+  font-family: "Lynon Reg Italic", sans-serif;
 }
 
 .full {
@@ -15351,13 +15368,30 @@ input[type=search] {
   color: #fff !important;
   font-size: 48px;
 }
+input[type=search] i, input[type=search] em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search] b, input[type=search] strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 input[type=search]:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "Suisse Reg", sans-serif;
   color: #fff !important;
   font-size: 48px;
 }
+input[type=search]:-ms-input-placeholder i, input[type=search]:-ms-input-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]:-ms-input-placeholder b, input[type=search]:-ms-input-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 input[type=search]::-moz-placeholder {
+  font-family: "Suisse Reg", sans-serif;
+  color: #fff !important;
+  font-size: 48px;
+}
+input[type=search]:-ms-input-placeholder {
   font-family: "Suisse Reg", sans-serif;
   color: #fff !important;
   font-size: 48px;
@@ -15366,6 +15400,24 @@ input[type=search]::placeholder {
   font-family: "Suisse Reg", sans-serif;
   color: #fff !important;
   font-size: 48px;
+}
+input[type=search]::-moz-placeholder i, input[type=search]::-moz-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]:-ms-input-placeholder i, input[type=search]:-ms-input-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]::placeholder i, input[type=search]::placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]::-moz-placeholder b, input[type=search]::-moz-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
+input[type=search]:-ms-input-placeholder b, input[type=search]:-ms-input-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
+input[type=search]::placeholder b, input[type=search]::placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 input[type=search]:focus {
   border: none;
@@ -15423,11 +15475,31 @@ input[type=search]:-webkit-autofill:focus {
   color: #fff !important;
   font-size: 48px;
 }
+input[type=search]:-webkit-autofill i, input[type=search]:-webkit-autofill em,
+input[type=search]:-webkit-autofill:hover i,
+input[type=search]:-webkit-autofill:hover em,
+input[type=search]:-webkit-autofill:focus i,
+input[type=search]:-webkit-autofill:focus em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]:-webkit-autofill b, input[type=search]:-webkit-autofill strong,
+input[type=search]:-webkit-autofill:hover b,
+input[type=search]:-webkit-autofill:hover strong,
+input[type=search]:-webkit-autofill:focus b,
+input[type=search]:-webkit-autofill:focus strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 
 input[type=search]:-webkit-autofill::first-line {
   font-family: "Suisse Reg", sans-serif;
   color: #fff !important;
   font-size: 48px;
+}
+input[type=search]:-webkit-autofill::first-line i, input[type=search]:-webkit-autofill::first-line em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-autofill::first-line strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 
 .explore h2 {
@@ -15560,13 +15632,30 @@ input[type=search]:-webkit-autofill::first-line {
   color: #000 !important;
   font-size: 24px;
 }
+.mobile-header-drawer input[type=search] i, .mobile-header-drawer input[type=search] em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search] b, .mobile-header-drawer input[type=search] strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 .mobile-header-drawer input[type=search]:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "Suisse Reg", sans-serif;
   color: #000 !important;
   font-size: 24px;
 }
+.mobile-header-drawer input[type=search]:-ms-input-placeholder i, .mobile-header-drawer input[type=search]:-ms-input-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]:-ms-input-placeholder b, .mobile-header-drawer input[type=search]:-ms-input-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 .mobile-header-drawer input[type=search]::-moz-placeholder {
+  font-family: "Suisse Reg", sans-serif;
+  color: #000 !important;
+  font-size: 24px;
+}
+.mobile-header-drawer input[type=search]:-ms-input-placeholder {
   font-family: "Suisse Reg", sans-serif;
   color: #000 !important;
   font-size: 24px;
@@ -15575,6 +15664,24 @@ input[type=search]:-webkit-autofill::first-line {
   font-family: "Suisse Reg", sans-serif;
   color: #000 !important;
   font-size: 24px;
+}
+.mobile-header-drawer input[type=search]::-moz-placeholder i, .mobile-header-drawer input[type=search]::-moz-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]:-ms-input-placeholder i, .mobile-header-drawer input[type=search]:-ms-input-placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]::placeholder i, .mobile-header-drawer input[type=search]::placeholder em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]::-moz-placeholder b, .mobile-header-drawer input[type=search]::-moz-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
+.mobile-header-drawer input[type=search]:-ms-input-placeholder b, .mobile-header-drawer input[type=search]:-ms-input-placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
+}
+.mobile-header-drawer input[type=search]::placeholder b, .mobile-header-drawer input[type=search]::placeholder strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 .mobile-header-drawer input[type=search]:focus {
   border: none;
@@ -15604,10 +15711,30 @@ input[type=search]:-webkit-autofill::first-line {
   color: #000 !important;
   font-size: 24px;
 }
+.mobile-header-drawer input[type=search]:-webkit-autofill i, .mobile-header-drawer input[type=search]:-webkit-autofill em,
+.mobile-header-drawer input[type=search]:-webkit-autofill:hover i,
+.mobile-header-drawer input[type=search]:-webkit-autofill:hover em,
+.mobile-header-drawer input[type=search]:-webkit-autofill:focus i,
+.mobile-header-drawer input[type=search]:-webkit-autofill:focus em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]:-webkit-autofill b, .mobile-header-drawer input[type=search]:-webkit-autofill strong,
+.mobile-header-drawer input[type=search]:-webkit-autofill:hover b,
+.mobile-header-drawer input[type=search]:-webkit-autofill:hover strong,
+.mobile-header-drawer input[type=search]:-webkit-autofill:focus b,
+.mobile-header-drawer input[type=search]:-webkit-autofill:focus strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 .mobile-header-drawer input[type=search]:-webkit-autofill::first-line {
   font-family: "Suisse Reg", sans-serif;
   color: #000 !important;
   font-size: 24px;
+}
+.mobile-header-drawer input[type=search]:-webkit-autofill::first-line i, .mobile-header-drawer input[type=search]:-webkit-autofill::first-line em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.mobile-header-drawer input[type=search]:-webkit-autofill::first-line b, .mobile-header-drawer input[type=search]:-webkit-autofill::first-line strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 .mobile-header-drawer ul.drawer-footer-social {
   display: flex;
@@ -15752,6 +15879,12 @@ ul.mobile-drawer-links li a {
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 18px;
 }
+.post-header-info-wrap .single-post-subheading i, .post-header-info-wrap .single-post-subheading em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.post-header-info-wrap .single-post-subheading b, .post-header-info-wrap .single-post-subheading strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 @media (max-width: 767.98px) {
   .post-header-info-wrap .single-post-subheading {
     font-size: 18px;
@@ -15764,7 +15897,10 @@ ul.mobile-drawer-links li a {
   font-family: "Suisse Reg", sans-serif;
   margin-bottom: 45px;
 }
-.post-header-info-wrap .author-meta span.bold {
+.post-header-info-wrap .author-meta i, .post-header-info-wrap .author-meta em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.post-header-info-wrap .author-meta span.bold, .post-header-info-wrap .author-meta b, .post-header-info-wrap .author-meta strong {
   font-family: "Suisse Bold", sans-serif;
 }
 
@@ -15800,6 +15936,13 @@ figcaption {
   margin-bottom: 26px;
   position: relative;
   left: 26px;
+  width: 90%;
+}
+figcaption i, figcaption em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+figcaption b, figcaption strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 figcaption p {
   margin: 0;
@@ -15892,6 +16035,12 @@ figcaption .caption-arrow {
   font-size: 20px;
   line-height: 24px;
   font-family: "Lynon Reg", sans-serif;
+}
+.related-articles-sec h4 a i, .related-articles-sec h4 a em {
+  font-family: "Lynon Reg Italic", sans-serif;
+}
+.related-articles-sec h4 a b, .related-articles-sec h4 a strong {
+  font-family: "Lynon Bold", sans-serif;
 }
 .related-articles-sec h4 a:hover {
   text-decoration: none;
@@ -16006,12 +16155,21 @@ cite.aside .desc {
   line-height: 18px;
   font-family: "Suisse Reg", sans-serif;
 }
+cite.aside .desc i, cite.aside .desc em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+cite.aside .desc b, cite.aside .desc strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 
 .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
   font-size: 28px;
   line-height: 36px;
   font-family: "Suisse Bold", sans-serif;
   margin-bottom: 18px;
+}
+.post-body h1 b, .post-body h1 strong, .post-body h2 b, .post-body h2 strong, .post-body h3 b, .post-body h3 strong, .post-body h4 b, .post-body h4 strong, .post-body h5 b, .post-body h5 strong, .post-body h6 b, .post-body h6 strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 @media (max-width: 767.98px) {
   .post-body h1, .post-body h2, .post-body h3, .post-body h4, .post-body h5, .post-body h6 {
@@ -16128,6 +16286,12 @@ blockquote {
   font-family: "Suisse Reg", sans-serif;
   text-align: center;
 }
+.dyk-content i, .dyk-content em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.dyk-content b, .dyk-content strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 .dyk-content p {
   margin: 0;
 }
@@ -16145,6 +16309,12 @@ blockquote {
   text-align: center;
   display: block;
   margin-top: 55px;
+}
+.watn-wrap i, .watn-wrap em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.watn-wrap b, .watn-wrap strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 .watn-wrap p {
   margin: 0;
@@ -16225,6 +16395,12 @@ blockquote {
   display: block;
   margin-top: 55px;
   margin-bottom: 55px;
+}
+.btnums-wrap i, .btnums-wrap em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.btnums-wrap b, .btnums-wrap strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 .btnums-wrap h3 {
   font-family: "Suisse Bold", sans-serif;
@@ -16310,6 +16486,12 @@ blockquote {
   font-family: "Suisse Reg", sans-serif;
   margin-top: 18px;
 }
+.author-info .author-social i, .author-info .author-social em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.author-info .author-social b, .author-info .author-social strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 
 .author-social-item {
   display: inline-block;
@@ -16345,6 +16527,12 @@ blockquote {
   font-size: 14px;
   line-height: 19px;
   font-family: "Suisse Reg", sans-serif;
+}
+.post-tags i, .post-tags em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.post-tags b, .post-tags strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 .post-tags .post-tag-link {
   background: #e8e8e8;
@@ -16411,6 +16599,9 @@ div#comments h2.comments-title {
   line-height: 36px;
   font-family: "Suisse Bold", sans-serif;
   margin-bottom: 28px;
+}
+div#comments h2.comments-title b, div#comments h2.comments-title strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 @media (max-width: 767.98px) {
   div#comments h2.comments-title {
@@ -16594,6 +16785,12 @@ p.form-submit {
   font-family: "Lynon Reg", sans-serif;
   text-align: left;
 }
+.archive-page .subheading i, .archive-page .subheading em, .home .subheading i, .home .subheading em {
+  font-family: "Lynon Reg Italic", sans-serif;
+}
+.archive-page .subheading b, .archive-page .subheading strong, .home .subheading b, .home .subheading strong {
+  font-family: "Lynon Bold", sans-serif;
+}
 
 span.taxonomy-thumb {
   display: block;
@@ -16712,6 +16909,9 @@ span.taxonomy-thumb.hovered img {
   border-radius: 5px;
   box-shadow: 2px 2px 0;
 }
+.alm-load-more-btn:hover {
+  background: #d9d9d9;
+}
 .alm-load-more-btn:disabled {
   display: none;
 }
@@ -16736,6 +16936,23 @@ span.taxonomy-thumb.hovered img {
   padding: 0 0 13px 0;
 }
 
+.over1340 {
+  display: block;
+}
+
+.under1340 {
+  display: none;
+}
+
+@media (max-width: 1340px) {
+  .over1340 {
+    display: none;
+  }
+
+  .under1340 {
+    display: block;
+  }
+}
 a.home-logo-rel-wrapper {
   position: relative;
   display: block;
@@ -16748,6 +16965,11 @@ a.home-logo-rel-wrapper p {
   text-align: center;
   position: absolute;
   left: 253px;
+}
+@media (max-width: 1340px) {
+  a.home-logo-rel-wrapper p {
+    left: 123px;
+  }
 }
 a.home-logo-rel-wrapper span {
   display: inline-block;
@@ -16797,6 +17019,11 @@ a.home-logo-rel-wrapper:hover span::after {
 .sticky-home-intro img.home-logo {
   width: 440px;
 }
+@media (max-width: 960px) {
+  .sticky-home-intro {
+    top: -60px;
+  }
+}
 
 .home .single-archive-post-wrap {
   margin-top: 0;
@@ -16834,6 +17061,12 @@ a.home-logo-rel-wrapper:hover span::after {
   line-height: 48px;
   font-family: "Lynon Reg", sans-serif;
 }
+.featured-post-headings .subheading i, .featured-post-headings .subheading em {
+  font-family: "Lynon Reg Italic", sans-serif;
+}
+.featured-post-headings .subheading b, .featured-post-headings .subheading strong {
+  font-family: "Lynon Bold", sans-serif;
+}
 @media (max-width: 991.98px) {
   .featured-post-headings .subheading {
     font-size: 26px;
@@ -16855,6 +17088,9 @@ a.home-logo-rel-wrapper:hover span::after {
   line-height: 36px;
   font-family: "Suisse Bold", sans-serif;
   margin-bottom: 15px;
+}
+.home-editors-picks h2 b, .home-editors-picks h2 strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 @media (max-width: 767.98px) {
   .home-editors-picks h2 {
@@ -17025,11 +17261,14 @@ a.home-logo-rel-wrapper:hover span::after {
   top: -23px;
   transition: 0.2s all;
 }
-.featured-cat-heading a.see-all img.see-all-circle {
+.featured-cat-heading a.see-all .see-all-circle {
   width: 75px;
 }
 .featured-cat-heading a.see-all:hover {
   transform: rotate(20deg);
+}
+.featured-cat-heading a.see-all:hover .filledCircle {
+  fill: #d9d9d9;
 }
 .featured-cat-heading span.stars {
   position: absolute;
@@ -17135,6 +17374,12 @@ a.home-logo-rel-wrapper:hover span::after {
   line-height: 36px;
   font-family: "Lynon Reg", sans-serif;
 }
+.current-issue-info h1 i, .current-issue-info h1 em {
+  font-family: "Lynon Reg Italic", sans-serif;
+}
+.current-issue-info h1 b, .current-issue-info h1 strong {
+  font-family: "Lynon Bold", sans-serif;
+}
 .current-issue-info .issue-description {
   font-size: 16px;
   line-height: 18px;
@@ -17148,6 +17393,12 @@ a.home-logo-rel-wrapper:hover span::after {
   font-family: "Suisse Reg", sans-serif;
   margin-top: 10px;
   margin-bottom: 25px;
+}
+.current-issue-info .file-link i, .current-issue-info .file-link em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.current-issue-info .file-link b, .current-issue-info .file-link strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 
 .read-about-tags-label {
@@ -17320,6 +17571,8 @@ h2.contact-masthead-title {
   letter-spacing: -4px;
   font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
+  font-size: 72px;
+  line-height: 72px;
   display: inline-block;
   position: relative;
 }
@@ -17338,17 +17591,17 @@ h2.contact-masthead-title {
   }
 }
 #error-404-wrapper h1.page-title::before {
-  height: 30px;
+  height: 26px;
   width: 100%;
   content: "";
   background-color: rgba(196, 196, 196, 0.7);
   position: absolute;
-  bottom: -7px;
+  bottom: -12px;
 }
 @media (max-width: 767.98px) {
   #error-404-wrapper h1.page-title::before {
-    height: 20px;
-    bottom: 26px;
+    height: 17px;
+    bottom: 2px;
   }
 }
 #error-404-wrapper .four04 {
@@ -17383,6 +17636,12 @@ h2.contact-masthead-title {
   font-family: "Suisse Reg", sans-serif;
   color: #fff;
 }
+.main-footer i, .main-footer em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.main-footer b, .main-footer strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 @media (max-width: 767.98px) {
   .main-footer {
     font-size: 16px !important;
@@ -17400,6 +17659,12 @@ h2.contact-masthead-title {
   color: #fff;
   text-decoration: underline;
 }
+.main-footer a i, .main-footer a em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.main-footer a b, .main-footer a strong {
+  font-family: "Suisse Bold", sans-serif;
+}
 @media (max-width: 767.98px) {
   .main-footer a {
     font-size: 16px !important;
@@ -17413,6 +17678,12 @@ h2.contact-masthead-title {
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 13px;
+}
+.main-footer h2.footer-heading i, .main-footer h2.footer-heading em {
+  font-family: "Suisse Reg Italic", sans-serif;
+}
+.main-footer h2.footer-heading b, .main-footer h2.footer-heading strong {
+  font-family: "Suisse Bold", sans-serif;
 }
 @media (max-width: 767.98px) {
   .main-footer h2.footer-heading {
@@ -17437,7 +17708,7 @@ h2.contact-masthead-title {
   display: inline-block;
 }
 .main-footer .give-btn:hover {
-  background: #D9D9D9;
+  background: #FCF661;
 }
 @media (max-width: 991.98px) {
   .main-footer {
@@ -17521,6 +17792,12 @@ h2.contact-masthead-title {
     font-family: "Suisse Reg", sans-serif;
     color: #fff;
   }
+  .main-footer-mob i, .main-footer-mob em {
+    font-family: "Suisse Reg Italic", sans-serif;
+  }
+  .main-footer-mob b, .main-footer-mob strong {
+    font-family: "Suisse Bold", sans-serif;
+  }
 }
 @media (max-width: 767.98px) and (max-width: 767.98px) {
   .main-footer-mob {
@@ -17542,6 +17819,12 @@ h2.contact-masthead-title {
     color: #fff;
     text-decoration: underline;
   }
+  .main-footer-mob a i, .main-footer-mob a em {
+    font-family: "Suisse Reg Italic", sans-serif;
+  }
+  .main-footer-mob a b, .main-footer-mob a strong {
+    font-family: "Suisse Bold", sans-serif;
+  }
 }
 @media (max-width: 767.98px) and (max-width: 767.98px) {
   .main-footer-mob a {
@@ -17557,6 +17840,12 @@ h2.contact-masthead-title {
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 13px;
+  }
+  .main-footer-mob h2.footer-heading i, .main-footer-mob h2.footer-heading em {
+    font-family: "Suisse Reg Italic", sans-serif;
+  }
+  .main-footer-mob h2.footer-heading b, .main-footer-mob h2.footer-heading strong {
+    font-family: "Suisse Bold", sans-serif;
   }
 }
 @media (max-width: 767.98px) and (max-width: 767.98px) {

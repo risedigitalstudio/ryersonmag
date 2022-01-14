@@ -7,62 +7,70 @@ $orange: #FF891D;
 $yellow: #FCF661;
 $lightGrey: #e8e8e8;
 $medGrey: #4c4c4c;
+$hoverGrey: #d9d9d9;
 $space: 18px;
 
 @font-face {
     font-family: "Lynon Reg";
-    src: url("../fonts/lynon-reg/LyonText-Regular.eot");
-    src: url("../fonts/lynon-reg/LyonText-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-reg/LyonText-Regular.woff") format("woff"), 
-    url("../fonts/lynon-reg/LyonText-Regular.ttf") format("truetype"), 
-    url("../fonts/lynon-reg/LyonText-Regular.svg#geometric") format("svg");
+    src: url("../fonts/lynon-reg/LyonText-Regular-Web.woff") format("woff"), url("../fonts/lynon-reg/LyonText-Regular-Web.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+@font-face {
+    font-family: "Lynon Reg Italic";
+    src: url("../fonts/lynon-reg-italic/LyonText-RegularItalic-Web.woff") format("woff"), url("../fonts/lynon-reg-italic/LyonText-RegularItalic-Web.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 } 
 
 @font-face {
     font-family: "Lynon Bold";
-    src: url("../fonts/lynon-bold/LyonText-Bold.eot");
-    src: url("../fonts/lynon-bold/LyonText-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/lynon-bold/LyonText-Bold.woff") format("woff"), 
-    url("../fonts/lynon-bold/LyonText-Bold.ttf") format("truetype"), 
-    url("../fonts/lynon-bold/LyonText-Bold.svg#geometric") format("svg");
+    src: url("../fonts/lynon-semibold/LyonText-Semibold-Web.woff") format("woff"), url("../fonts/lynon-semibold/LyonText-Semibold-Web.woff") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+} 
+
+
+@font-face {
+    font-family: "Suisse Reg";
+    src: url("../fonts/suisse-reg/SuisseIntl-Regular-WebM.woff") format("woff"), url("../fonts/suisse-reg/SuisseIntl-Regular-WebM.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 } 
 
 @font-face {
-    font-family: "Suisse Reg";
-    src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot");
-    src: url("../fonts/suisse-reg/SuisseIntl-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-reg/SuisseIntl-Regular.woff") format("woff"), 
-    url("../fonts/suisse-reg/SuisseIntl-Regular.ttf") format("truetype"), 
-    url("../fonts/suisse-reg/SuisseIntl-Regular.svg#geometric") format("svg");
+    font-family: "Suisse Reg Italic";
+    src: url("../fonts/suisse-reg-italic/SuisseIntl-RegularItalic-WebM.woff") format("woff"), url("../fonts/suisse-reg-italic/SuisseIntl-RegularItalic-WebM.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 } 
 
 @font-face {
     font-family: "Suisse Bold";
-    src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot");
-    src: url("../fonts/suisse-bold/SuisseIntl-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/suisse-bold/SuisseIntl-Bold.woff") format("woff"), 
-    url("../fonts/suisse-bold/SuisseIntl-Bold.ttf") format("truetype"), 
-    url("../fonts/suisse-bold/SuisseIntl-Bold.svg#geometric") format("svg");
+    src: url("../fonts/suisse-bold/SuisseIntl-Bold-WebM.woff") format("woff"), url("../fonts/suisse-bold/SuisseIntl-Bold-WebM.woff2") format("woff2");
     font-weight: normal;
     font-style: normal;
 } 
 
-//@font-face {
-//    font-family: "Suisse Black";
-//    src: url("../fonts/suisse-black/SuisseIntl-Black.woff") format("woff");
-//    font-weight: normal;
-//    font-style: normal;
-//} 
+@font-face {
+    font-family: "Suisse Bold Italic";
+    src: url("../fonts/suisse-bold-italic/SuisseIntl-BoldItalic-WebM.woff") format("woff"), url("../fonts/suisse-bold-italic/SuisseIntl-BoldItalic-WebM.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+} 
+
 
 
 body {
     font-family: 'Lynon Reg', sans-serif;
     font-size: 20px;
     line-height: 30px;
-    strong {
+    strong, b {
         font-family: 'Lynon Bold', sans-serif;
+    }
+    i, em {
+        font-family: 'Lynon Reg Italic', sans-serif;
     }
 }
 

@@ -26,8 +26,12 @@ get_header('home');
                        <h1 class="sr-only">Ryerson University Magazine</h1>
 <!--                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo"  alt="Logo">-->
                        
-
+                        <div class="over1340">
                         <?php get_template_part( 'global-templates/ryerson-home-logo' ); ?>
+                        </div>
+                        <div class="under1340">
+                        <?php get_template_part( 'global-templates/ryerson-home-logo-ipad' ); ?>
+                        </div>
 
                         <p>Renaming <br>in process<br><span>Learn More</span></p>
                     </a>
@@ -198,7 +202,9 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading green">People
                    <a href="<?php echo site_url();?>/category/people" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
+<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+                    <?php get_template_part( 'global-templates/see-all-circle' ); ?>
+
                    </a>
 <!--
                     <span class="stars">
@@ -216,7 +222,8 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/people" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
+<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+                   <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                </a>
            </div>
        </div>
@@ -384,7 +391,8 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading blue">Research &amp; Ideas
                    <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
+<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+                  <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                    </a>
 <!--
                     <span class="stars">
@@ -401,7 +409,8 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/research-ideas" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
+<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+                  <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                </a>
            </div>
        </div>
@@ -532,7 +541,8 @@ get_header('home');
            <div classs="col-md-12">
                <h2 class="featured-cat-heading orange">Campus
                    <a href="<?php echo site_url();?>/category/campus/" class="see-all">
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all"> 
+<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all"> -->
+                      <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                    </a>
 <!--
                     <span class="stars">
@@ -550,7 +560,8 @@ get_header('home');
            </div>
            <div class="col-3">
                <a href="<?php echo site_url();?>/category/campus" class="see-all">
-                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">
+<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+                  <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                </a>
            </div>
        </div>

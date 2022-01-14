@@ -20,14 +20,10 @@ get_header();
 <section class="archive-page page-template page-single sec-pad" id="content">
     <div class="container">
         <div class="row">
-            <div class="col-md-7">
+           <div class="col-lg-6 offset-lg-3 col-md-10 offset-md-1">
                 <header>
                    <h1 class="page-title"><?php the_title(); ?></h1>
                 </header><!-- .page-header -->
-            </div>
-        </div>
-        <div class="row">
-           <div class="col-md-6 offset-md-3">
                <?php the_content(); ?>
            </div>
         </div>

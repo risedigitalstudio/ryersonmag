@@ -10,7 +10,7 @@
                 <?php if ($block_data['video_credit']) {
                     ?>
                    <figcaption>
-                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
+                        <?php get_template_part( 'global-templates/caption-arrow' ); ?>
                        <?php echo $block_data['video_credit']; ?>
                     </figcaption>
                 <?php } ?>

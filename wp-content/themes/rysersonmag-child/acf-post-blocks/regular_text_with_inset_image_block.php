@@ -11,7 +11,7 @@
                        <?php echo wp_get_attachment_image($block_data['image'], "medium", "", ['class'=>'inset-img']); ;?>
                        <?php if ($block_data['image_caption']) { ?>
                         <figcaption>
-                           <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">
+                            <?php get_template_part( 'global-templates/caption-arrow' ); ?>
                             <?php echo $block_data['image_caption']; ?>
                         </figcaption>
                         <?php } ?>

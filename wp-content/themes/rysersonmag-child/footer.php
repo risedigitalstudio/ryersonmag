@@ -26,7 +26,7 @@ defined( 'ABSPATH' ) || exit;
                 <p><a href="https://www.ryerson.ca/next-chapter/">Renaming in process</a></p>
                 <p>350 Victoria Street,<br>Toronto, ON M5B 2K3<br>P: 416-979-5000</p>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-lg-2">
                 <h2 class="footer-heading">Magazine</h2>
                 <ul>
                     <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/">Update your subscription</a></li>
@@ -34,7 +34,7 @@ defined( 'ABSPATH' ) || exit;
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
                 </ul>
             </div>
-            <div class="col-lg-2 offset-lg-4 col-md-3 offset-md-2">
+            <div class="col-lg-3 offset-lg-3 col-md-3 offset-md-2">
                 <h2 class="footer-heading">Campus News &amp; Events</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="https://www.ryerson.ca/news-events/">ryerson.ca/news-events/events</a></p>
             </div>

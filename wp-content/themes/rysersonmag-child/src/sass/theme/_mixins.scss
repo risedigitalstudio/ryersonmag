@@ -175,6 +175,12 @@
     font-size: 14px;
     line-height: 18px;
     font-family: 'Suisse Reg', sans-serif;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
 }
 
 @mixin author-font {
@@ -187,6 +193,12 @@
     font-family: 'Suisse Reg', sans-serif;
     color: $white !important;
     font-size: 48px;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
 }
 
 
@@ -194,6 +206,12 @@
     font-family: 'Suisse Reg', sans-serif;
     color: $black !important;
     font-size: 24px;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
 }
 
 @mixin large-title {
@@ -214,12 +232,24 @@
     font-size: 20px;
     line-height: 24px;
     font-family: 'Lynon Reg', sans-serif;
+    i, em {
+        font-family: 'Lynon Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Lynon Bold', sans-serif;
+    }
 }
 
 @mixin single-subheading {
     font-size: 28px;
     line-height: 36px;
     font-family: 'Suisse Reg', sans-serif;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
     @include media-breakpoint-down(sm) {
         font-size: 18px;
         line-height: 24px;
@@ -231,6 +261,9 @@
     font-size: 28px;
     line-height: 36px;
     font-family: 'Suisse Bold', sans-serif;
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
     @include media-breakpoint-down(sm) {
         font-size: 24px;
         line-height: 30px;
@@ -241,13 +274,22 @@
     font-size: 14px;
     line-height: 19px;
     font-family: 'Suisse Reg', sans-serif;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
 }
 
 @mixin post-meta {
     font-size: 14px;
     line-height: 24px;
     font-family: 'Suisse Reg', sans-serif;
-    span.bold {
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    span.bold, b, strong {
         font-family: 'Suisse Bold', sans-serif;
     }
 }
@@ -256,6 +298,12 @@
     font-size: 14px;
     line-height: 20px;
     font-family: 'Suisse Reg', sans-serif;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
     color: #585858;
 }
 
@@ -270,6 +318,12 @@
     font-size: 14px;
     line-height: 20px;
     font-family: 'Suisse Reg', sans-serif;
+    i, em {
+        font-family: 'Suisse Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Suisse Bold', sans-serif;
+    }
     color: $white;
     @include media-breakpoint-down(sm) {
         font-size: 16px !important;
@@ -309,10 +363,16 @@
     font-family: 'Lynon Bold', sans-serif;
 }
 
-@mixin archive-subhading-font {
+@mixin archive-subheading-font {
     font-size: 24px;
     line-height: 30px;
     font-family: 'Lynon Reg', sans-serif;
+    i, em {
+        font-family: 'Lynon Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Lynon Bold', sans-serif;
+    }
 }
 
 @mixin home-archive-title-font {
@@ -325,10 +385,16 @@
     }
 }
 
-@mixin home-archive-subhading-font {
+@mixin home-archive-subheading-font {
     font-size: 40px;
     line-height: 48px;
     font-family: 'Lynon Reg', sans-serif;
+    i, em {
+        font-family: 'Lynon Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Lynon Bold', sans-serif;
+    }
     @include media-breakpoint-down(md) {
         font-size: 26px;
         line-height: 32px;
@@ -346,6 +412,12 @@
     font-size: 36px;
     line-height: 36px;
     font-family: 'Lynon Reg', sans-serif;
+    i, em {
+        font-family: 'Lynon Reg Italic', sans-serif;
+    }
+    b, strong {
+        font-family: 'Lynon Bold', sans-serif;
+    }
 }
 
 @mixin dotted-heading {
