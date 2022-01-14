@@ -15185,7 +15185,7 @@ body i, body em {
 }
 
 .navbar-nav {
-  padding: 25px 0;
+  padding: 20px 0;
 }
 
 .nav-item {
@@ -15289,7 +15289,7 @@ body i, body em {
 .false-header-height {
   display: block;
   width: 100%;
-  height: 80px;
+  height: 68px;
 }
 
 header.not-homepg {
@@ -15300,7 +15300,7 @@ header.not-homepg {
   transition: 0.2s all;
 }
 header.not-homepg.neg-margin {
-  margin-top: -80px;
+  margin-top: -68px;
 }
 
 @media (min-width: 768px) {

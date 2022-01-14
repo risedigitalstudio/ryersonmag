@@ -171,6 +171,7 @@ if ($blocks) {
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 offset-md-3">
+                       
                         <?php if (get_field('author_photo')) { ?>
                             <div class="author-img">
                                 <?php echo wp_get_attachment_image(get_field('author_photo'), 'small-square'); ?>
@@ -217,11 +218,22 @@ if ($blocks) {
                     <div class="col-md-6 offset-md-3">
         <!--                <div class="row">-->
                         <?php $authorID = get_the_author_meta('ID'); ?>
+                        <?php 
+                            if (get_field('custom_author_image', 'user_'.$authorID)) {
+                                ?>
+                                    <div class="author-img">
+                                        <?php echo wp_get_attachment_image(get_field('custom_author_image', 'user_'.$authorID), 'small-square'); ?>
+                                    </div>
+                                <?php
+                            } else {
+                        ?>
                         <?php if (get_avatar($authorID)) { ?>
                             <div class="author-img">
                                 <?php echo get_avatar($authorID, 'small-square'); ?>
                             </div>
-                        <?php } ?>
+                        <?php } 
+                        }
+                        ?>
                             <div class="author-info">
                                 <div class="author-desc">
                                     <?php echo get_the_author_meta('description'); ?>
