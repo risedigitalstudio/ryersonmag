@@ -17455,6 +17455,9 @@ span.taxonomy-thumb.hovered img {
 .current-issue-articles .default-btn:disabled {
   display: none;
 }
+.current-issue-articles .default-btn:hover {
+  background: #d9d9d9;
+}
 
 .flex {
   display: flex;
@@ -17528,6 +17531,11 @@ span.taxonomy-thumb.hovered img {
 .flex-row-end {
   display: flex;
   justify-content: end;
+}
+
+.flex-row-pages {
+  display: flex;
+  justify-content: space-between;
 }
 
 .sec-pad-xl {

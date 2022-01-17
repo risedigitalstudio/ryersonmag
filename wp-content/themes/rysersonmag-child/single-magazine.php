@@ -37,7 +37,7 @@ $thisIssue = get_the_ID();
                         $pdfFile = get_field("pdf_file"); 
                         $pdfUrl = $pdfFile['url'];
                         ?>
-                        <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf">Download PDF</a>
+                        <a href="<?php echo $pdfUrl; ?>" target="_blank" class="downloadPdf drawUnderline">Download PDF</a>
                     </div>
                 </div>
                 
@@ -89,7 +89,7 @@ $thisIssue = get_the_ID();
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($issueArticle, 'archive-hor');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-hor');
                                         } else {
                                             echo get_the_post_thumbnail( $issueArticle, 'archive-hor' ); 
                                         }
@@ -99,7 +99,7 @@ $thisIssue = get_the_ID();
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($issueArticle, 'archive-ver');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-ver');
                                         } else {
                                             echo get_the_post_thumbnail( $issueArticle, 'archive-ver' ); 
                                         }
@@ -109,7 +109,7 @@ $thisIssue = get_the_ID();
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($issueArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $issueArticle, 'archive-square' ); 
                                         }
@@ -119,7 +119,7 @@ $thisIssue = get_the_ID();
 
                                         <?php 
                                         if ($taxThumbOptionalID) {
-                                            echo wp_get_attachment_image($issueArticle, 'archive-square');
+                                            echo wp_get_attachment_image($taxThumbOptionalID, 'archive-square');
                                         } else {
                                             echo get_the_post_thumbnail( $issueArticle, 'archive-square' ); 
                                         }
@@ -158,26 +158,36 @@ $thisIssue = get_the_ID();
 
 
 
-<?php 
-
-$the_query = new WP_Query( array('posts_per_page'=>30,
-     'post_type'=>'magazine',
-      'post__not_in' => array(get_the_ID()),
-     'paged' => get_query_var('paged') ? get_query_var('paged') : 1) 
-); 
-?>
-<?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-
 <section class="mag-pagination sec-pad-xl">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 flex-row-end">
-                <a href="<?php the_permalink(); ?>" class="mag-pagination-next">
-                    <?php echo get_the_title(); ?>
-                    <svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.31372 22.981L12.5668 12.7279L13.6274 11.6672L13.981 11.3137L2.66727 -1.2964e-05L1.25306 1.4142L11.1526 11.3137L0.899507 21.5667L2.31372 22.981Z" fill="black"/>
-                    </svg>
-                </a>
+            <div class="col-md-12 flex-row-pages">
+            
+<?php
+$prev_post = get_previous_post();
+if($prev_post) {
+   $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
+   echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class="mag-pagination-next ">&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.6672 0L1.41419 10.253L0.353526 11.3137L-2.73287e-05 11.6673L11.3137 22.981L12.7279 21.5668L2.8284 11.6673L13.0814 1.41421L11.6672 0Z" fill="black"/>
+</svg>
+'. $prev_title . '</a>' . "\n";
+}
+
+$next_post = get_next_post();
+if($next_post) {
+   $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
+   echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="mag-pagination-next ">'. $next_title . '&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.31372 22.981L12.5668 12.7279L13.6274 11.6672L13.981 11.3137L2.66727 -1.2964e-05L1.25306 1.4142L11.1526 11.3137L0.899507 21.5667L2.31372 22.981Z" fill="black"/>
+</svg>
+</a>' . "\n";
+}
+?>
+
+
+
+                
+                
+                
             </div>
         </div>
     </div>
@@ -185,20 +195,7 @@ $the_query = new WP_Query( array('posts_per_page'=>30,
 
 
 
-<?php
-endwhile;
 
-$big = 999999999; // need an unlikely integer
- echo paginate_links( array(
-    'base' => str_replace( $big, '%#%', get_pagenum_link( $big ) ),
-    'format' => '?paged=%#%',
-    'current' => max( 1, get_query_var('paged') ),
-    'total' => $the_query->max_num_pages
-) );
-
-wp_reset_postdata();
-
-?>
 
 <?php
 get_footer();

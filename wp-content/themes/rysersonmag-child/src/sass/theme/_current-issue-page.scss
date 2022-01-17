@@ -45,6 +45,9 @@
         &:disabled {
             display: none;
         }
+        &:hover {
+            background: $hoverGrey;
+        }
     }
 }
 
@@ -117,6 +120,10 @@
 .flex-row-end {
     display: flex;
     justify-content: end;
+}
+.flex-row-pages {
+    display: flex;
+    justify-content: space-between;
 }
 
 .sec-pad-xl {
