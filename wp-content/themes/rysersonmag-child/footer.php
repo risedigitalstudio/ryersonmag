@@ -10,13 +10,15 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+$thePgID = get_the_ID();
+
 ?>
 
 </main>
 
 <footer>
 
-<section class="main-footer">
+<section class="main-footer <?php if ($thePgID !== 211) {echo 'extraFooterPadding';}?>">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-2">
@@ -36,7 +38,7 @@ defined( 'ABSPATH' ) || exit;
             </div>
             <div class="col-lg-3 offset-lg-3 col-md-3 offset-md-2">
                 <h2 class="footer-heading">Campus News &amp; Events</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="https://www.ryerson.ca/news-events/">ryerson.ca/news-events/events</a></p>
+                <p>Want to know more about what's happening at the university? <a href="https://www.ryerson.ca/news-events/">ryerson.ca/news-events/events</a></p>
             </div>
             <div class="col-md-2">
                 <a href="https://ryerson.ca/giving/" class="give-btn">Give</a>

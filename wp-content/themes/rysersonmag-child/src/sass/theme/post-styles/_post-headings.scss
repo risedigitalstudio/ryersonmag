@@ -58,9 +58,16 @@ figcaption {
         top: -7px;
     }
     @include media-breakpoint-down(sm) {
-        width: 90%;
+        figcaption {
+            .caption-arrow {
+                position: relative;
+            }
+            width: auto;
+            left: auto;
+        }
     }
 }
+
 
 
 .author-date-sep {

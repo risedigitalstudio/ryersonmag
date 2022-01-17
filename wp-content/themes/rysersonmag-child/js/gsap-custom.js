@@ -13,7 +13,7 @@ ScrollTrigger.matchMedia({
   "(min-width: 960px)": function() {
     ScrollTrigger.create({
         trigger: "#timeline",
-        start: "top 120px",
+        start: "top 95px",
         end : "bottom bottom",
         pin: "#timelinepin"
     })

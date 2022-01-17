@@ -22,7 +22,7 @@ get_header('home');
         <div class="row">
             <div class="col-md-4">
                 <div class="sticky-home-intro" id="timelinepin">
-                    <a href="https://www.ryerson.ca/next-chapter/" target="_blank" class="home-logo-rel-wrapper">
+                    <div class="home-logo-rel-wrapper">
                        <h1 class="sr-only">Ryerson University Magazine</h1>
 <!--                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/ryerson-new-name.png" class="home-logo"  alt="Logo">-->
                        
@@ -33,8 +33,8 @@ get_header('home');
                         <?php get_template_part( 'global-templates/ryerson-home-logo-ipad' ); ?>
                         </div>
 
-                        <p>Renaming <br>in process<br><span>Learn More</span></p>
-                    </a>
+                        <a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming <br>in process<br><span>Learn More</span></a>
+                    </div>
                     <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>
                 </div>
             </div>
@@ -217,10 +217,10 @@ get_header('home');
        </div>
        
        <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-9">
+           <div classs="col-8">
                <h2 class="featured-cat-heading green">People</h2>
            </div>
-           <div class="col-3">
+           <div class="col-4 pr-0">
                <a href="<?php echo site_url();?>/category/people" class="see-all">
 <!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
                    <?php get_template_part( 'global-templates/see-all-circle' ); ?>
@@ -404,10 +404,10 @@ get_header('home');
            </div>
        </div>
        <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-9">
+           <div classs="col-8">
                <h2 class="featured-cat-heading blue">Research &amp;<br class="mobile"> Ideas</h2>
            </div>
-           <div class="col-3">
+           <div class="col-4 pr-0">
                <a href="<?php echo site_url();?>/category/research-ideas" class="see-all">
 <!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
                   <?php get_template_part( 'global-templates/see-all-circle' ); ?>
@@ -555,10 +555,10 @@ get_header('home');
        </div>
        
        <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-9">
+           <div classs="col-8">
                <h2 class="featured-cat-heading orange">Campus</h2>
            </div>
-           <div class="col-3">
+           <div class="col-4 pr-0">
                <a href="<?php echo site_url();?>/category/campus" class="see-all">
 <!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
                   <?php get_template_part( 'global-templates/see-all-circle' ); ?>

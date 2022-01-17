@@ -2,6 +2,11 @@
     background: $black;
     padding: 40px 40px 0 40px;
     @include footer-font;
+    &.extraFooterPadding {
+        @include media-breakpoint-up(sm) {
+            margin-top: 50px;
+        }
+    }
     img.white-ryerson-logo {
         margin-bottom: $space * 1.5;
         max-width: 135px;
@@ -47,7 +52,7 @@
 }
 
 .footer-bottom-inner {
-    border-top: 2px dotted $white;
+    border-top: 1.25px solid $white;
     margin-top: 45px;
     ul {
         list-style-type: none;

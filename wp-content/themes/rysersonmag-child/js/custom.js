@@ -13,13 +13,26 @@ $( ".post-title-subtitle" ).each(function( index ) {
   $(this).on('mouseout', function () {
     $(this).siblings('.taxonomy-thumb').removeClass('hovered');
   })
+});    
+    
+
+$( ".taxonomy-thumb" ).each(function( index ) {
+  $(this).on('mouseover', function () {
+    $(this).siblings('.post-title-subtitle').children().addClass('hoveredArchive');
+  })
+    
+  $(this).on('mouseout', function () {
+    $(this).siblings('.post-title-subtitle').children().removeClass('hoveredArchive');
+  })
 });
+    
     
     
 //    scroll intent nav
 var lastScrollTop = 0;
 $(window).scroll(function(event){
    var theTop = $(this).scrollTop();
+    if (theTop > 200) {
    if (theTop > lastScrollTop){
        //downscroll
        $('header.not-homepg').addClass('neg-margin');
@@ -28,6 +41,7 @@ $(window).scroll(function(event){
       $('header.not-homepg').removeClass('neg-margin');
    }
    lastScrollTop = theTop;
+    } 
 });
     
     
@@ -110,6 +124,6 @@ $(window).scroll(function(event){
     $('.intro-block-body-drop-cap p:first-of-type').html(function (i, html) {
         return html.replace(/^[^a-zA-Z]*([a-zA-Z])/g, '<span class="drop-cap">$1</span>');
     });
-    
+
 
 })

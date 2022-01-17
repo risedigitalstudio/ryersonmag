@@ -90,6 +90,17 @@
     }
 }
 
+.hoveredArchive {
+    color: $medGrey;
+}
+.post-title-subtitle {
+    &:hover {
+        h2, h3, .subheading, .entry-title {
+            color: $medGrey;
+        }
+    }
+}
+
     span.taxonomy-thumb {
         display: block;
         position: relative;

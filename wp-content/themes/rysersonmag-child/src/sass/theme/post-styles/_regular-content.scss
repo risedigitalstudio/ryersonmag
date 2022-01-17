@@ -1,6 +1,9 @@
 .post-body a {
     color: $ryersonBlue;
     text-decoration: underline;
+    &:hover {
+        text-decoration: none;
+    }
 }
 .post-body cite {
     font-style: normal;
@@ -10,6 +13,12 @@
 }
 .sidebar-citations {
 //    @include flex-height;
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 cite.aside {
     font-style: normal;
