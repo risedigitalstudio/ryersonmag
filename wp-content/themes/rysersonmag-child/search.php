@@ -127,13 +127,17 @@ if ( have_posts() ) {
                             </a>
                         </span>
 
-                        <?php 
-
-                        $topics = wp_get_post_terms(get_the_ID(), 'topic');
-                        $topicName = $topics[0]->name;
-                        $topicSlug = $topics[0]->slug;
-
+                        <?php
+                        $term_list = wp_get_post_terms(get_the_ID(), 'topic', ['fields' => 'all']);
+                        foreach($term_list as $term) {
+                           if( get_post_meta(get_the_ID(), '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                             // this is a primary category
+                               $topicName = $term->name;
+                               $topicSlug = $term->slug;
+                           }
+                        }
                         ?>
+                        
                         <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                         <a href="<?php echo get_the_permalink();?>">
@@ -153,13 +157,13 @@ if ( have_posts() ) {
 } else {
     ?>
     
-    <section class="archive-page search-results-page no-results sec-pad">
+    <section class="archive-page search-results-page no-results-search sec-pad">
         <div class="container">
             <div class="row">
                 <div class="<?php if (is_category()) {echo 'col-md-12';} else {echo 'col-md-7';} ?>">
                     <header>
                        <p>No results for</p>
-                       <h1 class="page-title"><?php echo get_search_query(); ?></h1>
+                       <h1 class="search-title"><?php echo get_search_query(); ?></h1>
                     </header><!-- .page-header -->
                 </div>
             </div>

@@ -43,10 +43,23 @@
                                 ?>
                                 <?php
                                     $category = get_the_category($editorsPick);
-                                    $topics = wp_get_post_terms($editorsPick, 'topic');
-                                    $topicName = $topics[0]->name;
-                                    $topicSlug = $topics[0]->slug;
+//                                    $topics = wp_get_post_terms($editorsPick, 'topic');
+//                                    $topicName = $topics[0]->name;
+//                                    $topicSlug = $topics[0]->slug;
                                 ?>
+                                
+                                <?php
+                                $term_list = wp_get_post_terms($editorsPick, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($editorsPick, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
+                                ?>
+                                
+                                
                                 <li class="single-related-article">
                                    <a href="<?php echo get_the_permalink($editorsPick);?>" class="<?php echo $postColorClass; ?>">
                                         <p class="mb-0 primary-category"><?php echo $topicName; ?></p>

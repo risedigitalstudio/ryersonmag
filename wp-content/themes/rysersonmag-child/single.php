@@ -123,7 +123,7 @@ get_header();
     <section class="featured-image-horizontal-full-width">
         <div class="container-fluid px-0">
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12 px-0">
                     <?php the_post_thumbnail('horizontal-full-header', ['class'=>'full']); ?>
                 </div>
             </div>
@@ -273,7 +273,7 @@ if ($blocks) {
      }
 ?>
 
-<section class="post-tag-wrap sec-pad-half">
+<section class="post-tag-wrap sec-pad-half-bot">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
@@ -408,13 +408,17 @@ if ($blocks) {
                             </a>
                         </span>
 
-                        <?php 
-
-                        $topics = wp_get_post_terms($relatedPostID, 'topic');
-                        $topicName = $topics[0]->name;
-                        $topicSlug = $topics[0]->slug;
-
+                        <?php
+                        $term_list = wp_get_post_terms(get_the_ID(), 'topic', ['fields' => 'all']);
+                        foreach($term_list as $term) {
+                           if( get_post_meta(get_the_ID(), '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                             // this is a primary category
+                               $topicName = $term->name;
+                               $topicSlug = $term->slug;
+                           }
+                        }
                         ?>
+                        
                         <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category"><?php echo $topicName; ?></a></p>
 
                         <a href="<?php echo get_the_permalink($relatedPostID);?>" class="post-title-subtitle">

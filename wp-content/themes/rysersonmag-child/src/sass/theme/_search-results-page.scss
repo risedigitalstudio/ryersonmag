@@ -8,7 +8,10 @@
     }
 }
 
+.search-title {
+    @include archive-term-font;
+}
 
-.no-results {
+.no-results-search {
     height: calc(100vh - 348px);
 }

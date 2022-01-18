@@ -179,22 +179,10 @@ input[type="search"]:-webkit-autofill::first-line {
             margin-left: $space;
             margin-right: 0;
             a {
-                i {
-                    color: $medGrey;
-                    width: 24px;
-                    height: 24px;
-                    border-radius: 100%;
-                    display: block;
-                    background: $white;
-                    text-align: center;
-                    line-height: 24px;
-                }
-                img {
-                    width: 24px;
-                }
                 &:hover {
-                    i {
-                        background: #D9D9D9;
+                    cursor: pointer;
+                    svg path {
+                        fill: #D9D9D9;
                     }
                 }
             }

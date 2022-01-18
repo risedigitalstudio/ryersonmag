@@ -69,13 +69,19 @@ get_header('home');
                                     </a>
                                 </span>
 
-                                <?php 
-
-                                $topics = wp_get_post_terms($featuredPostID, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-
+                                
+                                <?php
+                                $term_list = wp_get_post_terms($featuredPostID, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($featuredPostID, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
                                 ?>
+                                
+                                
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings post-title-subtitle">
@@ -163,13 +169,19 @@ get_header('home');
                                     </a>
                                 </span>
 
-                                <?php 
-
-                                $topics = wp_get_post_terms($featuredArticle, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-
+                                
+                                <?php
+                                $term_list = wp_get_post_terms($featuredArticle, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($featuredArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
                                 ?>
+                                
+                                
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($featuredArticle);?>" class="post-title-subtitle">
@@ -307,13 +319,19 @@ get_header('home');
                                     </a>
                                  </span>
 
-                                <?php 
 
-                                $topics = wp_get_post_terms($peopleArticle, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-
+                                <?php
+                                $term_list = wp_get_post_terms($peopleArticle, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($peopleArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
                                 ?>
+                                
+                                
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($peopleArticle);?>" class="post-title-subtitle">
@@ -350,9 +368,19 @@ get_header('home');
                     <?php 
                         foreach ($editorsPicksArray as $editorsPick) {
 
-                                $pickTopics = wp_get_post_terms($editorsPick, 'topic');
-                                $pickTopicName = $pickTopics[0]->name;
-                                $pickTopicSlug = $pickTopics[0]->slug;
+
+                                $term_list = wp_get_post_terms($editorsPick, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($editorsPick, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $pickTopicName = $term->name;
+                                       $pickTopicSlug = $term->slug;
+                                   }
+                                }
+                      
+//                                $pickTopics = wp_get_post_terms($editorsPick, 'topic');
+//                                $pickTopicName = $pickTopics[0]->name;
+//                                $pickTopicSlug = $pickTopics[0]->slug;
 
                                 $pickPostColorClass = '';
                                 $pickPostCat = get_the_category($editorsPick);
@@ -494,13 +522,17 @@ get_header('home');
                                     </a>
                                 </span>
 
-                                <?php 
-
-                                $topics = wp_get_post_terms($researchArticle, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-
+                                <?php
+                                $term_list = wp_get_post_terms($researchArticle, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($researchArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
                                 ?>
+                                
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($researchArticle);?>" class="post-title-subtitle">
@@ -646,13 +678,18 @@ get_header('home');
                                     </a>
                                 </span>
 
-                                <?php 
-
-                                $topics = wp_get_post_terms($campusArticle, 'topic');
-                                $topicName = $topics[0]->name;
-                                $topicSlug = $topics[0]->slug;
-
+                                <?php
+                                $term_list = wp_get_post_terms($campusArticle, 'topic', ['fields' => 'all']);
+                                foreach($term_list as $term) {
+                                   if( get_post_meta($campusArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                     // this is a primary category
+                                       $topicName = $term->name;
+                                       $topicSlug = $term->slug;
+                                   }
+                                }
                                 ?>
+                                
+                                
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
                                 <a href="<?php echo get_the_permalink($campusArticle);?>" class="post-title-subtitle">

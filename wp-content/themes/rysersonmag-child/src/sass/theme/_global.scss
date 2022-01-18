@@ -115,6 +115,10 @@ body {
     padding-bottom: 26px;
 }
 
+.sec-pad-half-bot {
+    padding-bottom: 26px;
+}
+
 .sec-pad-top {
     padding-top: 55px;
 }
@@ -173,6 +177,10 @@ body {
     padding-right: 22px;
     padding-left: 22px;
 } 
+
+.separator_block-sep {
+    border-top: 1.25px solid $black;
+}
 
 //@media (min-width: 576px) { ... }
 //
