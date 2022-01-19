@@ -1,5 +1,11 @@
 .page-single, .page-contact {
+    @include media-breakpoint-down(sm) {
+        header {
+            margin-bottom: 45px;
+        }
+    }
     h1 {
+        @include archive-term-font;
         margin-bottom: 60px;
     }
     h2, h3, h4, h5 {
@@ -8,5 +14,11 @@
         font-family: 'Suisse Bold', sans-serif;
         text-transform: uppercase;
         margin: 0;
+    }
+    a {
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }

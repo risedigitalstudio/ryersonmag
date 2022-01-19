@@ -14,7 +14,7 @@ $thisIssue = get_the_ID();
 
 ?>
 					
-<section class="archive-page sec-pad" id="content">
+<section class="single-mag sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -131,9 +131,9 @@ $thisIssue = get_the_ID();
                                 </span>
 
                                 <?php
-                                $term_list = wp_get_post_terms(get_the_ID(), 'topic', ['fields' => 'all']);
+                                $term_list = wp_get_post_terms($issueArticle, 'topic', ['fields' => 'all']);
                                 foreach($term_list as $term) {
-                                   if( get_post_meta(get_the_ID(), '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                   if( get_post_meta($issueArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
                                      // this is a primary category
                                        $topicName = $term->name;
                                        $topicSlug = $term->slug;

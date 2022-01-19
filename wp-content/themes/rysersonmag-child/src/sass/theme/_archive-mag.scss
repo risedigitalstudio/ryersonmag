@@ -8,4 +8,9 @@
     .current-issue-info .issue-description {
             padding: 0 0 13px 0;
     }
-}
+    @include media-breakpoint-down(sm) {
+        img {
+            margin-bottom: 18px;
+        }
+    }
+} 

@@ -10,7 +10,7 @@ $theCurrentIssueArray = get_field('current_magazine_issue');
 $theCurrentIssueID = $theCurrentIssueArray[0];
 ?>
 
-<section class="archive-page current-issue-page sec-pad" id="content">
+<section class="current-issue-page sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="col-md-5">
@@ -127,9 +127,9 @@ $theCurrentIssueID = $theCurrentIssueArray[0];
                                 </span>
 
                                 <?php
-                                $term_list = wp_get_post_terms(get_the_ID(), 'topic', ['fields' => 'all']);
+                                $term_list = wp_get_post_terms($featuredArticle, 'topic', ['fields' => 'all']);
                                 foreach($term_list as $term) {
-                                   if( get_post_meta(get_the_ID(), '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
+                                   if( get_post_meta($featuredArticle, '_yoast_wpseo_primary_topic',true) == $term->term_id ) {
                                      // this is a primary category
                                        $topicName = $term->name;
                                        $topicSlug = $term->slug;

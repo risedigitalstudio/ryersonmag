@@ -1,7 +1,15 @@
-.archive-page, .home {
+.archive-page, .single-mag {
+    @include media-breakpoint-down(sm) {
+        padding-top: 25px !important; 
+    }
+}
+.archive-page, .home, .related-articles, .single-mag, .current-issue-page, .search-results-page {
     .single-archive-post-wrap {
         margin-top: 70px;
         text-align: left;
+        @include media-breakpoint-down(sm) {
+            margin-top: 50px;
+        }
     }
     .primary-category {
         @include post-cat;
@@ -12,70 +20,10 @@
         text-decoration: none;
         text-align: left;
     } 
-//    h1.page-title {
-//        @include archive-term-font;
-//        display: inline-block;
-//        background-image: none;
-//        background-repeat: no-repeat;
-//        background-position: 0 95px;
-//        background-size: 100% 30px;
-//        padding-bottom: 35px;
-//        background-image: linear-gradient(180deg, #c4c4c4, #c4c4c4);
-//        display: inline;
-//        @include media-breakpoint-down(sm) {
-//            display: inline;
-//        }
-//        &.green {
-//            background-image: linear-gradient(180deg, $green, $green);
-//        }
-//        &.blue {
-//            background-image: linear-gradient(180deg, $blue, $blue);
-//        }
-//        &.orange {
-//            background-image: linear-gradient(180deg, $orange, $orange);
-//        }
-//        &.yellow {
-//            background-image: linear-gradient(180deg, $yellow, $yellow);
-//        }
-//    }    
     
     
     h1.page-title {
         @include archive-term-font;
-        display: inline-block;
-        position: relative;
-        &::before {
-            height: 26px;
-            width: 100%;
-            content: "";
-            background-color: rgba(196, 196, 196, 0.7);
-            position: absolute;
-            bottom: -12px;
-            @include media-breakpoint-down(sm) {
-                height: 17px;
-                bottom: 2px;
-            }
-        }
-        &.green {
-            &::before {
-                background-color: rgba(0, 218, 43, 0.7);
-            }
-        }
-        &.blue {
-            &::before {
-                background-color: rgba(4, 210, 255, 0.7);
-            }
-        }
-        &.orange {
-            &::before {
-                background-color: rgba(255, 137, 29, 0.7);
-            }
-        }        
-        &.yellow {
-            &::before {
-                background-color: rgba(252, 246, 97, 0.7);
-            }
-        }
     }
     
     
@@ -147,7 +95,8 @@
 
 .alm-load-more-btn {
     @include alm-btn-font;
-    margin-top: 75px;
+    margin-top: 50px;
+    margin-bottom: 10px;
     text-align: center;
     background: $white;
     border: 1.25px solid $black;

@@ -27,6 +27,36 @@ $( ".taxonomy-thumb" ).each(function( index ) {
 });
     
     
+
+var space = " ";
+$( ".page-title").each(function( index ) {
+    var arr = $(this).text().split(space);
+    var words="";
+    for (i = 0; i < arr.length; i++) {
+        words+= "<span>"+arr[i]+"&nbsp;</span>";
+    }
+    $(this).html(words);
+});
+    
+
+var re = /(\s+)/;
+$( ".featured-cat-heading").each(function( index ) {
+    var arr = $(this).text().split(re);
+    
+    var words="";
+    for (i = 0; i < arr.length; i++) {
+        if (arr[i] !== "" && arr[i] !== " ") {
+            words+= "<span>"+arr[i]+"&nbsp;</span>";
+        }
+    }
+    $(this).html(words);
+});
+
+    
+
+
+
+    
     
 //    scroll intent nav
 var lastScrollTop = 0;

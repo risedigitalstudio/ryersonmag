@@ -15,4 +15,7 @@
     background: 0 0;
     border: none;
     box-shadow: none;
+    @include media-breakpoint-down(sm) {
+        right: -5px;
+    }
 }

@@ -14,7 +14,11 @@
                         ?>
                         <div class="full">
                             <?php
-                            echo wp_get_attachment_image($imgObj['image'], 'post-body-image', "", ['class'=>'full post-body-img']);
+                            if ($imgObj['variable_height']) {
+                                echo wp_get_attachment_image($imgObj['image'], 'large', "", ['class'=>'full post-body-img']);
+                            }else {
+                                echo wp_get_attachment_image($imgObj['image'], 'post-body-image', "", ['class'=>'full post-body-img']);
+                            }
                             ?>
                         </div>
                         
@@ -24,8 +28,6 @@
                             <div class="full">
                                <figcaption>    
                                     <?php get_template_part( 'global-templates/caption-arrow' ); ?>
-
-<!--                                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/caption-arrow.png" class="caption-arrow" alt="">-->
                                    <?php echo $imgObj['image_caption']; ?>
                                 </figcaption>
                             </div>

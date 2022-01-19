@@ -251,8 +251,8 @@
         font-family: 'Suisse Bold', sans-serif;
     }
     @include media-breakpoint-down(sm) {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 20px;
+        line-height: 28px;
     }
 }
 
@@ -332,21 +332,66 @@
 }
 
 @mixin archive-term-font {
-    font-size: 88px;
-    line-height: 88px;
-    letter-spacing: -4px;
-    font-family: "Suisse Bold",sans-serif;
-    text-transform: lowercase;
-    @include media-breakpoint-down(md) {
-        font-size: 80px;
-        line-height: 80px;
-    } 
-    @include media-breakpoint-down(sm) {
-        display: inline;
-        font-size: 60px;
-        line-height: 60px;
-        letter-spacing: -2px;
-    } 
+        font-size: 88px;
+        line-height: 88px;
+        letter-spacing: -4px;
+        font-family: "Suisse Bold",sans-serif;
+        text-transform: lowercase;
+        @include media-breakpoint-down(md) {
+            font-size: 80px;
+            line-height: 80px;
+        } 
+        @include media-breakpoint-down(sm) {
+            display: inline;
+            font-size: 60px;
+            line-height: 60px;
+            letter-spacing: -2px;
+        } 
+        span {
+            display: inline-block;
+            position: relative;
+            &::before {
+                height: 26px;
+                width: 100%;
+                content: "";
+                background-color: rgba(196, 196, 196, 0.7);
+                position: absolute;
+                bottom: -12px;
+                @include media-breakpoint-down(sm) {
+                    height: 17px;
+                    bottom: -7px;
+                }
+            }
+        }
+
+        &.green {
+            span {
+            &::before {
+                background-color: rgba(0, 218, 43, 0.7);
+            }
+            }
+        }
+        &.blue {
+            span {
+            &::before {
+                background-color: rgba(4, 210, 255, 0.7);
+            }
+            }
+        }
+        &.orange {
+            span {
+            &::before {
+                background-color: rgba(255, 137, 29, 0.7);
+            }
+            }
+        }        
+        &.yellow {
+            span {
+            &::before {
+                background-color: rgba(252, 246, 97, 0.7);
+            }
+            }
+        }
 }
 
 @mixin mobile-drawer-term-font {
@@ -382,6 +427,7 @@
     @include media-breakpoint-down(md) {
         font-size: 26px;
         line-height: 32px;
+        margin-top: 4px;
     }
 }
 
@@ -411,7 +457,7 @@
 @mixin current-issue-title-font {
     font-size: 36px;
     line-height: 36px;
-    font-family: 'Lynon Reg', sans-serif;
+    font-family: 'Lynon Bold', sans-serif;
     i, em {
         font-family: 'Lynon Reg Italic', sans-serif;
     }

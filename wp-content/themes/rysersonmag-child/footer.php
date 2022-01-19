@@ -28,20 +28,20 @@ $thePgID = get_the_ID();
                 <p><a href="https://www.ryerson.ca/next-chapter/">Renaming in process</a></p>
                 <p>350 Victoria Street,<br>Toronto, ON M5B 2K3<br>P: 416-979-5000</p>
             </div>
-            <div class="col-md-3 col-lg-2">
+            <div class="col-lg-4">
                 <h2 class="footer-heading">Magazine</h2>
                 <ul>
-                    <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/">Update your subscription</a></li>
+                    <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/">Subscribe to the digital edition</a></li>
                     <li><a href="<?php echo site_url();?>/current-issue/">Issue archive</a></li>
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
+                    <li>
+                        <a href="https://ryerson.ca/giving/" class="give-btn">Give</a>
+                    </li>
                 </ul>
             </div>
-            <div class="col-lg-3 offset-lg-3 col-md-3 offset-md-2">
+            <div class="col-lg-3 offset-lg-3">
                 <h2 class="footer-heading">Campus News &amp; Events</h2>
                 <p>Want to know more about what's happening at the university? <a href="https://www.ryerson.ca/news-events/">ryerson.ca/news-events/events</a></p>
-            </div>
-            <div class="col-md-2">
-                <a href="https://ryerson.ca/giving/" class="give-btn">Give</a>
             </div>
         </div>
     </div>
@@ -90,7 +90,7 @@ $thePgID = get_the_ID();
         <div class="row">
             <div class="col-md-2">
                 <ul>
-                    <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/">Update your subscription</a></li>
+                    <li><a href="https://www.ryerson.ca/alumni/news-and-stories/ryerson-magazine/subscribe/">Subscribe to the digital edition</a></li>
                     <li><a href="<?php echo site_url();?>/current-issue/">Issue archive</a></li>
                     <li><a href="<?php echo site_url();?>/advertising">Advertising</a></li>
                 </ul>
@@ -104,7 +104,7 @@ $thePgID = get_the_ID();
 	<div class="container-fluid footer-bottom">
 	    <div class="row footer-bottom-inner">
 	        <div class="col-lg-12">
-                <?php get_template_part( 'global-templates/social-icons' ); ?>
+                <?php get_template_part( 'global-templates/social-icons-footer-mobile' ); ?>
 	        </div>
 	        <div class="col-lg-8">
 	            <ul class="drawer-footer-links flex-row-between">

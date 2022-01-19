@@ -39,7 +39,7 @@ if ($resultsCount === 1) {
 if ( have_posts() ) {
 ?>
 
-<section class="archive-page search-results-page sec-pad" id="content">
+<section class="search-results-page sec-pad" id="content">
     <div class="container">
         <div class="row">
             <div class="<?php if (is_category()) {echo 'col-md-12';} else {echo 'col-md-7';} ?>">

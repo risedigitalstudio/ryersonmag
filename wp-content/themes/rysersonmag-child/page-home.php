@@ -210,36 +210,18 @@ get_header('home');
 
 <section class="category-featured sec-pad home-people">
     <div class="container">
-       <div class="row desktop">
+       <div class="row">
            <div classs="col-md-12">
-               <h2 class="featured-cat-heading green">People
+              <div class="featured-cat-heading-wrap">
+                   <h2 class="featured-cat-heading green">People</h2>
                    <a href="<?php echo site_url();?>/category/people" class="see-all">
-<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
                     <?php get_template_part( 'global-templates/see-all-circle' ); ?>
-
                    </a>
-<!--
-                    <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
-                    </span>
--->
-               </h2>
+               </div>
            </div>
        </div>
        
-       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-8">
-               <h2 class="featured-cat-heading green">People</h2>
-           </div>
-           <div class="col-4 pr-0">
-               <a href="<?php echo site_url();?>/category/people" class="see-all">
-<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
-                   <?php get_template_part( 'global-templates/see-all-circle' ); ?>
-               </a>
-           </div>
-       </div>
-        <div class="row">
+        <div class="row sec-pad-top">
                 
                 <?php 
                     $peopleArticleArray = get_field("people_featured_posts");
@@ -249,7 +231,7 @@ get_header('home');
                         if ($peopleCounter == 0) {
                             $peopleColWidth = 'col-md-5';
                         } else if ($peopleCounter == 2) {
-                            $peopleColWidth = 'col-md-3';
+                            $peopleColWidth = 'col-md-3 no-bottom-border-mobile';
                         }
                         ?>
                         
@@ -415,34 +397,18 @@ get_header('home');
 
 <section class="category-featured sec-pad-bot">
     <div class="container">
-       <div class="row desktop">
+       <div class="row">
            <div classs="col-md-12">
-               <h2 class="featured-cat-heading blue">Research &amp; Ideas
-                   <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all">
-<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
+              <div class="featured-cat-heading-wrap">
+                   <h2 class="featured-cat-heading blue">Research &amp; Ideas</h2>
+                   <a href="<?php echo site_url();?>/category/research-ideas/" class="see-all see-all-ri">
                   <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                    </a>
-<!--
-                    <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
-                    </span>
--->
-               </h2>
+               </div>
            </div>
        </div>
-       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-8">
-               <h2 class="featured-cat-heading blue">Research &amp;<br class="mobile"> Ideas</h2>
-           </div>
-           <div class="col-4 pr-0">
-               <a href="<?php echo site_url();?>/category/research-ideas" class="see-all">
-<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
-                  <?php get_template_part( 'global-templates/see-all-circle' ); ?>
-               </a>
-           </div>
-       </div>
-        <div class="row">
+
+        <div class="row sec-pad-top">
                 
                 <?php 
                     $researchArticleArray = get_field("research_featured_posts");
@@ -452,7 +418,7 @@ get_header('home');
                         if ($researchCounter == 1) {
                             $researchColWidth = 'col-md-3';
                         } else if ($researchCounter == 2) {
-                            $researchColWidth = 'col-md-5';
+                            $researchColWidth = 'col-md-5 no-bottom-border-mobile';
                         }
                         ?>
                         
@@ -569,35 +535,18 @@ get_header('home');
 
 <section class="category-featured sec-pad">
     <div class="container">
-       <div class="row desktop">
+       <div class="row">
            <div classs="col-md-12">
-               <h2 class="featured-cat-heading orange">Campus
+              <div class="featured-cat-heading-wrap">
+                   <h2 class="featured-cat-heading orange">Campus</h2>
                    <a href="<?php echo site_url();?>/category/campus/" class="see-all">
-<!--                       <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all"> -->
                       <?php get_template_part( 'global-templates/see-all-circle' ); ?>
                    </a>
-<!--
-                    <span class="stars">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-lg-stars.png" class="see-all-lg-stars" data-aos="fade-in" data-aos-delay="200" alt="">
-                        <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-sm-stars.png" class="see-all-sm-stars" data-aos="fade-in" data-aos-delay="400" alt="">
-                    </span>
--->
-               </h2>
+               </div>
            </div>
        </div>
        
-       <div class="row mobile-flex container-padding flex-between featured-cat-heading-mobile-wrap">
-           <div classs="col-8">
-               <h2 class="featured-cat-heading orange">Campus</h2>
-           </div>
-           <div class="col-4 pr-0">
-               <a href="<?php echo site_url();?>/category/campus" class="see-all">
-<!--                   <img src="<?php echo get_stylesheet_directory_uri();?>/img/see-all-circle.png" class="see-all-circle" alt="See all">-->
-                  <?php get_template_part( 'global-templates/see-all-circle' ); ?>
-               </a>
-           </div>
-       </div>
-        <div class="row">
+        <div class="row sec-pad-top">
                 
                 <?php 
                     $campusArticleArray = get_field("campus_featured_posts");
@@ -608,7 +557,7 @@ get_header('home');
                         if ($campusCounter == 1) {
                             $campusColWidth = 'col-md-5';
                         } else if ($campusCounter == 2) {
-                            $campusColWidth = 'col-md-3';
+                            $campusColWidth = 'col-md-3 no-bottom-border-mobile';
                         }
                         ?>
                         

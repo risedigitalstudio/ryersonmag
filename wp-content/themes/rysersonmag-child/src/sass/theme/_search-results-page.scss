@@ -10,6 +10,9 @@
 
 .search-title {
     @include archive-term-font;
+    &::before {
+        content:none;
+    }
 }
 
 .no-results-search {
