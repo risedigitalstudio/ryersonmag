@@ -35,7 +35,7 @@ get_header('home');
 
                         <a href="https://www.ryerson.ca/next-chapter/" target="_blank">Renaming <br>in process<br><span>Learn More</span></a>
                     </div>
-                    <p class="sticky-low-p">Ryerson University magazine writes on topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>
+                    <p class="sticky-low-p">Ryerson University magazine covers topics such as community, education, equity, city-building, innovation and more. <a href="#" id="viewAllTopics" class="drawUnderline">View all topics.</a></p>
                 </div>
             </div>
             <div class="col-md-8 left-border" id="timeline">
@@ -84,7 +84,7 @@ get_header('home');
                                 
                                 <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                                <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings post-title-subtitle">
+                                <a href="<?php echo get_the_permalink($featuredPostID);?>" class="featured-post-headings post-title-subtitle homeFeatOnlyPost">
                                     <h3 class="entry-title"><?php echo get_the_title($featuredPostID); ?></h3>
                                     <?php if (get_field('subheading', $featuredPostID)) { ?>
                                     <p class="subheading"><?php echo get_field('subheading', $featuredPostID);?></p>

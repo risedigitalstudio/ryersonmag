@@ -1,22 +1,7 @@
 #error-404-wrapper {
     h1.page-title {
         @include archive-term-font;
-        font-size: 72px;
-        line-height: 72px;
-        display: inline-block;
-        position: relative;
-        &::before {
-            height: 26px;
-            width: 100%;
-            content: "";
-            background-color: rgba(196, 196, 196, 0.7);
-            position: absolute;
-            bottom: -12px;
-            @include media-breakpoint-down(sm) {
-                height: 17px;
-                bottom: 2px;
-            }
-        }
+//        margin-bottom: 60px;
     }
     
     .four04 {

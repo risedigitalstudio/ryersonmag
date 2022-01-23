@@ -24,7 +24,7 @@
 
                     if ($editorsPicksOn) {
 
-                            echo "<h2>Editor's Picks</h2><div class='dotted-line'></div>";
+                            echo "<h2>Editor&apos;s Picks</h2><div class='dotted-line'></div>";
                         
                             ?><ul class="editors-picks-list"><?php
                             foreach(array_slice($editorsPicksArray, 0, 3)  as $editorsPick) {

@@ -111,6 +111,13 @@
     }
 }
 
+@include media-breakpoint-up(md) {
+    .homeFeatOnlyPost {
+        display: block;
+        width: 85%;
+    }
+}
+
 .featured-post-headings {
     h2.entry-title, h3.entry-title {
         @include home-archive-title-font;

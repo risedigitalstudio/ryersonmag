@@ -121,6 +121,11 @@ $(window).scroll(function(event){
         $('#focusDrawerStart').focus();
     })
     
+    $('#backToSearch').on('click', function () {
+        $('#headerDrawer').show();
+        $('#focusDrawerStart').focus();
+    })
+    
 //    start for keyboard users
     $('#focusDrawerStop').on('focus', function() {
       $(this).on('keydown', function () {

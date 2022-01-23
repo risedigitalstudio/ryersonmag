@@ -140,7 +140,7 @@ if ( have_posts() ) {
                         
                         <p class="pb-0 mb-0"><a href="<?php echo site_url();?>/topic/<?php echo $topicSlug; ?>" class="primary-category drawUnderline"><?php echo $topicName; ?></a></p>
 
-                        <a href="<?php echo get_the_permalink();?>">
+                        <a href="<?php echo get_the_permalink();?>" class="post-title-subtitle">
                             <h2 class="entry-title"><?php echo get_the_title(); ?></h2>
                             <h3 class="subheading"><?php echo get_field('subheading');?></h3>
                         </a>
@@ -165,6 +165,8 @@ if ( have_posts() ) {
                        <p>No results for</p>
                        <h1 class="search-title"><?php echo get_search_query(); ?></h1>
                     </header><!-- .page-header -->
+                    <p>Sorry, no matches were found for <strong>&lsquo;<?php echo get_search_query(); ?>&rsquo;</strong> . Make sure all words are spelled correctly, or try another search.</p>
+                    <p><a href="#" id="backToSearch" class="drawUnderline">Back to search</a></p>
                 </div>
             </div>
         </div>
