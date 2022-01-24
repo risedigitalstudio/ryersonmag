@@ -18,7 +18,7 @@
     right: 0;
     top: 0;
     z-index: 999;
-    background: $white;
+    background: $medGrey;
     width: 100vw;
     height: 100vh;
     
@@ -27,7 +27,7 @@
     }
     
     input.search-submit{
-        background-image: url('../img/search-submit-mobile.png');
+        background-image: url('../img/search-submit-mob.png');
         background-repeat: no-repeat;
         background-size: 50%;
         background-color: rgba(255,255,255,0);
@@ -37,14 +37,14 @@
         top: 16px;
         background-position: top right;
         border: none;
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $white;
         border-radius: 0;
     }
 
     input[type=search] {
         background: none !important;
         border: none;
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $white;
         border-radius: 0;
         padding: 29px 0;
         @include search-font-mobile;
@@ -64,7 +64,7 @@
         &:focus {
         border: none;
         box-shadow: none;
-        border-bottom: 2px solid $black;
+        border-bottom: 2px solid $white;
             &::-webkit-input-placeholder { /* Edge */
                 color: transparent;
             }
@@ -84,8 +84,8 @@
     input[type="search"]:-webkit-autofill:hover, 
     input[type="search"]:-webkit-autofill:focus {
         border: 1px solid $white;
-        -webkit-text-fill-color: $black;
-        border-bottom: 2px solid $black;
+        -webkit-text-fill-color: $white;
+        border-bottom: 2px solid $white;
         -webkit-box-shadow: 0 0 0px 80px $white inset;
         transition: none;
         @include search-font-mobile;
@@ -116,6 +116,7 @@
             }
         }
     }
+    
 }
 
 
@@ -124,51 +125,59 @@
     list-style-type: none;
     margin-top: 25px;
     margin-bottom: 10px;
-    border-bottom: 2px dotted $black;
     li {
         a {
             @include mobile-drawer-term-font;
             display: inline-block;
             position: relative;
             margin-bottom: 32px;
+            color: $white;
             &.green {
-                &::before {
-                    height: 11px;
-                    width: 100%;
-                    content: "";
-                    background-color: rgba(0, 218, 43, 0.7);
-                    position: absolute;
-                    bottom: -12px;
+                &:hover, &:focus, &:active {
+                    &::before {
+                        height: 11px;
+                        width: 100%;
+                        content: "";
+                        background-color: rgba(0, 218, 43, 0.7);
+                        position: absolute;
+                        bottom: -12px;
+                    }
                 }
             }
             &.blue {
-                &::before {
-                    height: 11px;
-                    width: 100%;
-                    content: "";
-                    background-color: rgba(4, 210, 255, 0.7);
-                    position: absolute;
-                    bottom: -12px;
+                &:hover, &:focus, &:active {
+                    &::before {
+                        height: 11px;
+                        width: 100%;
+                        content: "";
+                        background-color: rgba(4, 210, 255, 0.7);
+                        position: absolute;
+                        bottom: -12px;
+                    }
                 }
             }
             &.orange {
-                &::before {
-                    height: 11px;
-                    width: 100%;
-                    content: "";
-                    background-color: rgba(255, 137, 29, 0.7);
-                    position: absolute;
-                    bottom: -12px;
+                &:hover, &:focus, &:active {
+                    &::before {
+                        height: 11px;
+                        width: 100%;
+                        content: "";
+                        background-color: rgba(255, 137, 29, 0.7);
+                        position: absolute;
+                        bottom: -12px;
+                    }
                 }
             }
             &.yellow {
-                &::before {
-                    height: 11px;
-                    width: 100%;
-                    content: "";
-                    background-color: rgba(252, 246, 97, 0.7);
-                    position: absolute;
-                    bottom: -12px;
+                &:hover, &:focus, &:active {
+                    &::before {
+                        height: 11px;
+                        width: 100%;
+                        content: "";
+                        background-color: rgba(252, 246, 97, 0.7);
+                        position: absolute;
+                        bottom: -12px;
+                    }
                 }
             }
             &:hover {
@@ -196,7 +205,7 @@ ul.mobile-drawer-links {
         margin-bottom: 6px;
         a {
             font-size: 16px;
-            color: $black;
+            color: $white;
             font-family: 'Suisse Reg', sans-serif;
             text-decoration: underline;
         }
@@ -204,6 +213,6 @@ ul.mobile-drawer-links {
 }
 .mob-drawer-copy {
     font-size: 16px;
-    color: $black;
+    color: $white;
     font-family: 'Suisse Reg', sans-serif;
 }

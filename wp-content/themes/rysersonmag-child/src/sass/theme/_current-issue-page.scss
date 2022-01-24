@@ -42,7 +42,9 @@
         border: 1.25px solid $black;
         border-radius: 5px;
         box-shadow: 2px 2px 0;
-        margin: 25px 0 55px 0;
+        @include media-breakpoint-up(sm) {
+            margin: 25px 0 55px 0;
+        }
         &:disabled {
             display: none;
         }

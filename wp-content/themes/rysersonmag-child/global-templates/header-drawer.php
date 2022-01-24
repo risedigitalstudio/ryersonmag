@@ -73,15 +73,18 @@
 	
 	<div class="container-fluid drawer-footer">
 	    <div class="row full drawer-footer-inner">
-	        <div class="col-md-8">
+	        <div class="col-md-9">
 	            <ul class="drawer-footer-links">
+                    <li>
+                        &copy; 2022 Ryerson University
+                    </li>
 	                <li><a href="https://www.ryerson.ca/alumni/" target="_blank">Ryerson Alumni</a></li>
 	                <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
-	                <li><a href="#">Privacy Policy</a></li>
-	                <li><a href="#">Accessibility</a></li>
+	                <li><a href="https://www.ryerson.ca/privacy/">Privacy Policy</a></li>
+	                <li><a href="https://www.ryerson.ca/accessibility/">Accessibility</a></li>
 	            </ul>
 	        </div>
-	        <div class="col-md-4">
+	        <div class="col-md-3">
                 <?php get_template_part( 'global-templates/social-icons' ); ?>
 	        </div>
 	    </div>

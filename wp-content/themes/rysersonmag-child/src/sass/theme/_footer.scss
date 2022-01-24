@@ -53,8 +53,10 @@
 }
 
 .footer-bottom-inner {
-    border-top: 1.25px solid $white;
     margin-top: 45px;
+    @include media-breakpoint-up(sm) {
+        border-top: 1.25px solid $white;
+    }
     ul {
         list-style-type: none;
         padding: 23px 0;
@@ -162,7 +164,8 @@
         
         ul.drawer-footer-social {
             justify-content: start !important;
-            margin: 25px 0;
+            padding: 25px 0;
+            border-top: 1.25px solid $white; 
             li:first-child {
                 margin-left: 0;
             }

@@ -54,12 +54,12 @@ $thePgID = get_the_ID();
 	        <div class="col-lg-9">
 	            <ul class="drawer-footer-links">
                     <li>
-                        &copy; 2021 Ryerson University
+                        &copy; 2022 Ryerson University
                     </li>
 	                <li><a href="https://www.ryerson.ca/alumni/">Ryerson Alumni</a></li>
 	                <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
-	                <li><a href="#">Privacy Policy</a></li>
-	                <li><a href="#">Accessibility</a></li>
+	                <li><a href="https://www.ryerson.ca/privacy/">Privacy Policy</a></li>
+	                <li><a href="https://www.ryerson.ca/accessibility/">Accessibility</a></li>
 	            </ul>
 	        </div>
 	        <div class="col-lg-3">
@@ -113,8 +113,8 @@ $thePgID = get_the_ID();
                         <li><a href="<?php echo site_url();?>/contact">Contact Us</a></li>
 	                </div>
 	                <div>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="https://www.ryerson.ca/privacy/">Privacy Policy</a></li>
+                        <li><a href="https://www.ryerson.ca/accessibility/">Accessibility</a></li>
 	                </div>
 	            </ul>
 	        </div>

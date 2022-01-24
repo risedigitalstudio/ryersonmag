@@ -238,19 +238,19 @@ a.see-all {
 
 
 @media (min-width: 768px) {
-    .featured-cat-heading {
+    .featured-cat-heading-wrap{
         left: -30px;
     }
 }
 
-@media (min-width: 1065px) {
-    .featured-cat-heading {
+@media (min-width: 1030px) {
+    .featured-cat-heading-wrap {
         left: -50px;
     }
 }
 
 @media (min-width: 1400px) {
-    .featured-cat-heading {
+    .featured-cat-heading-wrap {
         left: -100px;
     }
 }

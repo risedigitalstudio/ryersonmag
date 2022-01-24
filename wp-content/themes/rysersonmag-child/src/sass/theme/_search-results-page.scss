@@ -1,3 +1,10 @@
+.lgopen {display: block;}
+.smopen {display: none;}
+@include media-breakpoint-down(sm) {
+    .lgopen {display: none;}
+    .smopen {display: block;}
+}
+
 .search-results-page {
     header {
         p {
@@ -19,7 +26,7 @@
             margin-bottom: 35px;
         }
     }
-    #backToSearch {
+    .back-to-search {
         font-size: 16px;
         line-height: 20px;
         font-family: 'Suisse Reg', sans-serif;

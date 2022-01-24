@@ -109,8 +109,9 @@ input[type="search"]:-webkit-autofill::first-line {
 //Explore
 .explore {
     h2 {
-        font-size: 20px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 20px;
+        text-transform: uppercase;
         font-family: 'Suisse Reg', sans-serif;
         color: $white;
         width: 100%;
@@ -124,9 +125,9 @@ input[type="search"]:-webkit-autofill::first-line {
         display: inline;
 //        font-size: 36px;
 //        line-height: 60px;
-        font-size: 2.2vw;
-        line-height: 3.6vw;
-        font-family: 'Lynon Reg', sans-serif;
+        font-size: 2.1vw;
+        line-height: 3.2vw;
+        font-family: 'Suisse Reg', sans-serif;
         color: $white;
         white-space: nowrap;
         border-bottom: none !important;
@@ -160,10 +161,14 @@ input[type="search"]:-webkit-autofill::first-line {
         li {
             float: left;
             margin-right: 45px;
-            a {
                 font-size: 16px;
                 line-height: 20px;
                 font-family: 'Suisse Reg', sans-serif;
+                color: $white;
+            a {
+//                font-size: 16px;
+//                line-height: 20px;
+//                font-family: 'Suisse Reg', sans-serif;
                 color: $white;
                 text-decoration: underline;
             }

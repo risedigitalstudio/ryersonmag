@@ -15020,6 +15020,7 @@ body strong, body b {
 }
 body i, body em {
   font-family: "Lynon Reg Italic", sans-serif;
+  font-style: normal;
 }
 
 .full {
@@ -15353,7 +15354,7 @@ header.not-homepg.neg-margin {
   right: 0;
   top: 0;
   z-index: 999;
-  background: #4c4c4c;
+  background: #585858;
   width: 100vw;
   height: 100vh;
 }
@@ -15371,7 +15372,7 @@ input.search-submit {
   background-image: url("../img/search-submit.png");
   background-repeat: no-repeat;
   background-size: 66%;
-  background-color: #4c4c4c;
+  background-color: #585858;
   width: 50px;
   height: 60px;
   position: relative;
@@ -15489,10 +15490,10 @@ input[type=search]::-webkit-search-results-decoration {
 input[type=search]:-webkit-autofill,
 input[type=search]:-webkit-autofill:hover,
 input[type=search]:-webkit-autofill:focus {
-  border: 1px solid #4c4c4c;
+  border: 1px solid #585858;
   -webkit-text-fill-color: #fff;
   border-bottom: 2px solid #fff;
-  -webkit-box-shadow: 0 0 0px 80px #4c4c4c inset;
+  -webkit-box-shadow: 0 0 0px 80px #585858 inset;
   -webkit-transition: none;
   transition: none;
   font-family: "Suisse Reg", sans-serif;
@@ -15527,8 +15528,9 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 }
 
 .explore h2 {
-  font-size: 20px;
-  line-height: 32px;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
   font-family: "Suisse Reg", sans-serif;
   color: #fff;
   width: 100%;
@@ -15538,9 +15540,9 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 
 .drawer-tags-row a {
   display: inline;
-  font-size: 2.2vw;
-  line-height: 3.6vw;
-  font-family: "Lynon Reg", sans-serif;
+  font-size: 2.1vw;
+  line-height: 3.2vw;
+  font-family: "Suisse Reg", sans-serif;
   color: #fff;
   white-space: nowrap;
   border-bottom: none !important;
@@ -15573,11 +15575,12 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 .drawer-footer-inner ul li {
   float: left;
   margin-right: 45px;
-}
-.drawer-footer-inner ul li a {
   font-size: 16px;
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
+  color: #fff;
+}
+.drawer-footer-inner ul li a {
   color: #fff;
   text-decoration: underline;
 }
@@ -15614,7 +15617,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   right: 0;
   top: 0;
   z-index: 999;
-  background: #fff;
+  background: #585858;
   width: 100vw;
   height: 100vh;
 }
@@ -15622,7 +15625,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   margin-top: 15px;
 }
 .mobile-header-drawer input.search-submit {
-  background-image: url("../img/search-submit-mobile.png");
+  background-image: url("../img/search-submit-mob.png");
   background-repeat: no-repeat;
   background-size: 50%;
   background-color: rgba(255, 255, 255, 0);
@@ -15632,17 +15635,17 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   top: 16px;
   background-position: top right;
   border: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
   border-radius: 0;
 }
 .mobile-header-drawer input[type=search] {
   background: none !important;
   border: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
   border-radius: 0;
   padding: 29px 0;
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search] i, .mobile-header-drawer input[type=search] em {
@@ -15654,7 +15657,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 .mobile-header-drawer input[type=search]:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]:-ms-input-placeholder i, .mobile-header-drawer input[type=search]:-ms-input-placeholder em {
@@ -15665,17 +15668,17 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 }
 .mobile-header-drawer input[type=search]::-moz-placeholder {
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]:-ms-input-placeholder {
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]::placeholder {
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]::-moz-placeholder i, .mobile-header-drawer input[type=search]::-moz-placeholder em {
@@ -15699,7 +15702,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 .mobile-header-drawer input[type=search]:focus {
   border: none;
   box-shadow: none;
-  border-bottom: 2px solid #000;
+  border-bottom: 2px solid #fff;
 }
 .mobile-header-drawer input[type=search]:focus:-ms-input-placeholder {
   /* Internet Explorer 10-11 */
@@ -15715,13 +15718,13 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 .mobile-header-drawer input[type=search]:-webkit-autofill:hover,
 .mobile-header-drawer input[type=search]:-webkit-autofill:focus {
   border: 1px solid #fff;
-  -webkit-text-fill-color: #000;
-  border-bottom: 2px solid #000;
+  -webkit-text-fill-color: #fff;
+  border-bottom: 2px solid #fff;
   -webkit-box-shadow: 0 0 0px 80px #fff inset;
   -webkit-transition: none;
   transition: none;
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]:-webkit-autofill i, .mobile-header-drawer input[type=search]:-webkit-autofill em,
@@ -15740,7 +15743,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
 }
 .mobile-header-drawer input[type=search]:-webkit-autofill::first-line {
   font-family: "Suisse Reg", sans-serif;
-  color: #000 !important;
+  color: #fff !important;
   font-size: 24px;
 }
 .mobile-header-drawer input[type=search]:-webkit-autofill::first-line i, .mobile-header-drawer input[type=search]:-webkit-autofill::first-line em {
@@ -15773,7 +15776,6 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   list-style-type: none;
   margin-top: 25px;
   margin-bottom: 10px;
-  border-bottom: 2px dotted #000;
 }
 .mobile-drawer-cat-list li a {
   font-size: 32px;
@@ -15783,8 +15785,9 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   display: inline-block;
   position: relative;
   margin-bottom: 32px;
+  color: #fff;
 }
-.mobile-drawer-cat-list li a.green::before {
+.mobile-drawer-cat-list li a.green:hover::before, .mobile-drawer-cat-list li a.green:focus::before, .mobile-drawer-cat-list li a.green:active::before {
   height: 11px;
   width: 100%;
   content: "";
@@ -15792,7 +15795,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   position: absolute;
   bottom: -12px;
 }
-.mobile-drawer-cat-list li a.blue::before {
+.mobile-drawer-cat-list li a.blue:hover::before, .mobile-drawer-cat-list li a.blue:focus::before, .mobile-drawer-cat-list li a.blue:active::before {
   height: 11px;
   width: 100%;
   content: "";
@@ -15800,7 +15803,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   position: absolute;
   bottom: -12px;
 }
-.mobile-drawer-cat-list li a.orange::before {
+.mobile-drawer-cat-list li a.orange:hover::before, .mobile-drawer-cat-list li a.orange:focus::before, .mobile-drawer-cat-list li a.orange:active::before {
   height: 11px;
   width: 100%;
   content: "";
@@ -15808,7 +15811,7 @@ input[type=search]:-webkit-autofill::first-line b, input[type=search]:-webkit-au
   position: absolute;
   bottom: -12px;
 }
-.mobile-drawer-cat-list li a.yellow::before {
+.mobile-drawer-cat-list li a.yellow:hover::before, .mobile-drawer-cat-list li a.yellow:focus::before, .mobile-drawer-cat-list li a.yellow:active::before {
   height: 11px;
   width: 100%;
   content: "";
@@ -15841,14 +15844,14 @@ ul.mobile-drawer-links li {
 }
 ul.mobile-drawer-links li a {
   font-size: 16px;
-  color: #000;
+  color: #fff;
   font-family: "Suisse Reg", sans-serif;
   text-decoration: underline;
 }
 
 .mob-drawer-copy {
   font-size: 16px;
-  color: #000;
+  color: #fff;
   font-family: "Suisse Reg", sans-serif;
 }
 
@@ -16161,7 +16164,7 @@ figcaption .caption-arrow {
 }
 .post-body h4 {
   font-size: 24px !important;
-  line-height: 28px !important;
+  line-height: 30px !important;
 }
 .post-body h4 strong {
   font-family: "Suisse Bold", sans-serif;
@@ -16388,7 +16391,7 @@ blockquote {
   margin: 0;
 }
 .watn-wrap .watn-sub {
-  font-style: italic;
+  font-family: "Suisse Reg Italic", sans-serif;
 }
 .watn-wrap .watn-arrow, .watn-wrap .watn-sep {
   display: flex;
@@ -16471,7 +16474,7 @@ blockquote {
   margin-bottom: 16px;
 }
 .btnums-wrap .btnums-sub {
-  font-style: italic;
+  font-family: "Lynon Reg Italic", sans-serif;
   padding-bottom: 16px;
   border-bottom: 2px dotted #000;
   text-align: left;
@@ -16690,7 +16693,7 @@ div#comments .comment-author img {
   display: none;
 }
 div#comments .comment-metadata {
-  font-style: italic;
+  font-family: "Lynon Reg Italic", sans-serif;
   font-size: 13px;
 }
 div#comments .comment-metadata .comment-edit-link {
@@ -16861,17 +16864,17 @@ p.form-submit {
 }
 
 .hoveredArchive {
-  color: #4c4c4c;
+  color: #585858;
 }
 
 .post-title-subtitle:hover h2, .post-title-subtitle:hover h3, .post-title-subtitle:hover .subheading, .post-title-subtitle:hover .entry-title {
-  color: #4c4c4c;
+  color: #585858;
 }
 
 span.taxonomy-thumb {
   display: block;
   position: relative;
-  margin-bottom: 14px;
+  margin-bottom: 16px;
 }
 span.taxonomy-thumb a.lead-img-wrap {
   display: block;
@@ -17385,17 +17388,17 @@ a.see-all:hover .filledCircle {
 }
 
 @media (min-width: 768px) {
-  .featured-cat-heading {
+  .featured-cat-heading-wrap {
     left: -30px;
   }
 }
-@media (min-width: 1065px) {
-  .featured-cat-heading {
+@media (min-width: 1030px) {
+  .featured-cat-heading-wrap {
     left: -50px;
   }
 }
 @media (min-width: 1400px) {
-  .featured-cat-heading {
+  .featured-cat-heading-wrap {
     left: -100px;
   }
 }
@@ -17494,7 +17497,11 @@ a.see-all:hover .filledCircle {
   border: 1.25px solid #000;
   border-radius: 5px;
   box-shadow: 2px 2px 0;
-  margin: 25px 0 55px 0;
+}
+@media (min-width: 576px) {
+  .current-issue-articles .default-btn {
+    margin: 25px 0 55px 0;
+  }
 }
 .current-issue-articles .default-btn:disabled {
   display: none;
@@ -17569,7 +17576,7 @@ a.see-all:hover .filledCircle {
 }
 .mag-pagination-next:hover {
   text-decoration: none;
-  color: #4c4c4c;
+  color: #585858;
 }
 
 .flex-row-end {
@@ -17596,6 +17603,23 @@ a.see-all:hover .filledCircle {
     padding-left: 15px;
   }
 }
+.lgopen {
+  display: block;
+}
+
+.smopen {
+  display: none;
+}
+
+@media (max-width: 767.98px) {
+  .lgopen {
+    display: none;
+  }
+
+  .smopen {
+    display: block;
+  }
+}
 .search-results-page header p {
   font-size: 16px;
   line-height: 32px;
@@ -17616,7 +17640,7 @@ a.see-all:hover .filledCircle {
     margin-bottom: 35px;
   }
 }
-.search-results-page #backToSearch {
+.search-results-page .back-to-search {
   font-size: 16px;
   line-height: 20px;
   font-family: "Suisse Reg", sans-serif;
@@ -17786,7 +17810,7 @@ h2.contact-masthead-title {
   margin-top: 30px;
 }
 .contact-chunk .contact-person-title {
-  font-style: italic;
+  font-family: "Lynon Reg Italic", sans-serif;
   margin: 0;
 }
 .contact-chunk .contact-person-name {
@@ -17964,8 +17988,12 @@ h2.contact-masthead-title {
 }
 
 .footer-bottom-inner {
-  border-top: 1.25px solid #fff;
   margin-top: 45px;
+}
+@media (min-width: 576px) {
+  .footer-bottom-inner {
+    border-top: 1.25px solid #fff;
+  }
 }
 .footer-bottom-inner ul {
   list-style-type: none;
@@ -18134,7 +18162,8 @@ h2.contact-masthead-title {
 @media (max-width: 767.98px) {
   .main-footer-mob ul.drawer-footer-social {
     justify-content: start !important;
-    margin: 25px 0;
+    padding: 25px 0;
+    border-top: 1.25px solid #fff;
   }
   .main-footer-mob ul.drawer-footer-social li:first-child {
     margin-left: 0;
@@ -18151,13 +18180,7 @@ h2.contact-masthead-title {
     margin-top: 12px;
   }
 }
-@media only screen and (max-width: 1366px) and (max-height: 768px) {
-  .drawer-tags-row a {
-    font-size: 2vw;
-    line-height: 2.5vw;
-  }
-}
-@media only screen and (max-width: 1280px) and (max-height: 800px) {
+@media only screen and (max-height: 700px) and (min-width: 768px) {
   .drawer-tags-row a {
     font-size: 2vw;
     line-height: 2.5vw;

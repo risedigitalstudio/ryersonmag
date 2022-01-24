@@ -166,7 +166,8 @@ if ( have_posts() ) {
                        <h1 class="search-title"><?php echo get_search_query(); ?></h1>
                     </header><!-- .page-header -->
                     <p>Sorry, no matches were found for <strong>&lsquo;<?php echo get_search_query(); ?>&rsquo;</strong> . Make sure all words are spelled correctly, or try another search.</p>
-                    <p><a href="#" id="backToSearch" class="drawUnderline">Back to search</a></p>
+                    <p class="lgopen"><a href="#" id="backToSearch" class="back-to-search drawUnderline">Back to search</a></p>
+                    <p class="smopen"><a href="#" id="backToSearchMob" class="back-to-search drawUnderline">Back to search</a></p>
                 </div>
             </div>
         </div>

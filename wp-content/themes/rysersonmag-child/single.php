@@ -64,7 +64,7 @@ get_header();
     <section class="caption-sec vertical-caption-sec">
         <div class="container">
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-6 offset-md-6">
                    <?php if (get_the_post_thumbnail_caption()) { ?>
                     <figcaption>
                         <?php get_template_part( 'global-templates/caption-arrow' ); ?>

@@ -144,6 +144,11 @@ $(window).scroll(function(event){
     })
     
     
+    $('#backToSearchMob').on('click', function () {
+        $('#mobileHeaderDrawer').show();
+    })    
+    
+    
     $('#mobileHamburgerMenu').on('click', function () {
         $('#mobileHeaderDrawer').show();
     })    
