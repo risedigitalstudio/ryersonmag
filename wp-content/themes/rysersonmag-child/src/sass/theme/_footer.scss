@@ -52,11 +52,13 @@
 
 }
 
-.footer-bottom-inner {
+
+hr.footer-line {
     margin-top: 45px;
-    @include media-breakpoint-up(sm) {
-        border-top: 1.25px solid $white;
-    }
+    border-top: 1.25px solid $white;
+    width: 100%;
+}
+.footer-bottom-inner {
     ul {
         list-style-type: none;
         padding: 23px 0;

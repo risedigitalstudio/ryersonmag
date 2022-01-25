@@ -109,14 +109,36 @@
     }
 }
 
-.mag-pagination-next {
-    font-size: 18px;
-    line-height: 26px;
+.mag-pagination-next, .mag-pagination-prev {
+    font-size: 20px;
+    line-height: 28px;
     font-family: 'Suisse Bold', sans-serif;
     text-transform: lowercase;
+    width: 120px;
     &:hover {
         text-decoration: none;
         color: $medGrey;
+    }
+    span {
+        width: 100px;
+        text-align: center;
+        position: relative;
+        top: -15px;
+    }
+}
+
+.mag-pagination-prev {
+    float: left;
+    span {
+        float: right;
+    }
+}
+
+
+.mag-pagination-next {
+    float: right;
+    span {
+        float: left;
     }
 }
 

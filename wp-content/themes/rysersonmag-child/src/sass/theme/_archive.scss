@@ -29,7 +29,8 @@
     
     h2.entry-title, h3.entry-title {
         @include archive-title-font;
-        margin-bottom: 3px;
+        margin-top: 6px;
+        margin-bottom: 0px;
         text-align: left;
     }
     .subheading {

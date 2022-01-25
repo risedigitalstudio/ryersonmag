@@ -50,6 +50,11 @@ $thePgID = get_the_ID();
     
 	
 	<div class="container-fluid footer-bottom">
+        <div class="row">
+            <div class="col-md-12">
+                <hr class="footer-line">
+            </div>
+        </div>
 	    <div class="row footer-bottom-inner">
 	        <div class="col-lg-9">
 	            <ul class="drawer-footer-links">
@@ -119,7 +124,7 @@ $thePgID = get_the_ID();
 	            </ul>
 	        </div>
 	        <div class="col-md-12">
-	            <p>&copy; 2021 Ryerson University</p>
+	            <p>&copy; 2022 Ryerson University</p>
 	        </div>
 	    </div>
 	</div>

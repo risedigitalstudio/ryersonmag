@@ -16847,7 +16847,8 @@ p.form-submit {
   line-height: 30px;
   margin-top: 2px;
   font-family: "Lynon Bold", sans-serif;
-  margin-bottom: 3px;
+  margin-top: 6px;
+  margin-bottom: 0px;
   text-align: left;
 }
 .archive-page .subheading, .home .subheading, .related-articles .subheading, .single-mag .subheading, .current-issue-page .subheading, .search-results-page .subheading {
@@ -17140,7 +17141,8 @@ span.taxonomy-thumb.hovered img {
 }
 .featured-post-headings h2.entry-title, .featured-post-headings h3.entry-title {
   font-size: 40px;
-  line-height: 48px;
+  line-height: 46px;
+  letter-spacing: -0.01em;
   font-family: "Lynon Bold", sans-serif;
 }
 @media (max-width: 991.98px) {
@@ -17568,15 +17570,36 @@ a.see-all:hover .filledCircle {
   margin-right: 40px;
 }
 
-.mag-pagination-next {
-  font-size: 18px;
-  line-height: 26px;
+.mag-pagination-next, .mag-pagination-prev {
+  font-size: 20px;
+  line-height: 28px;
   font-family: "Suisse Bold", sans-serif;
   text-transform: lowercase;
+  width: 120px;
 }
-.mag-pagination-next:hover {
+.mag-pagination-next:hover, .mag-pagination-prev:hover {
   text-decoration: none;
   color: #585858;
+}
+.mag-pagination-next span, .mag-pagination-prev span {
+  width: 100px;
+  text-align: center;
+  position: relative;
+  top: -15px;
+}
+
+.mag-pagination-prev {
+  float: left;
+}
+.mag-pagination-prev span {
+  float: right;
+}
+
+.mag-pagination-next {
+  float: right;
+}
+.mag-pagination-next span {
+  float: left;
 }
 
 .flex-row-end {
@@ -17987,14 +18010,12 @@ h2.contact-masthead-title {
   }
 }
 
-.footer-bottom-inner {
+hr.footer-line {
   margin-top: 45px;
+  border-top: 1.25px solid #fff;
+  width: 100%;
 }
-@media (min-width: 576px) {
-  .footer-bottom-inner {
-    border-top: 1.25px solid #fff;
-  }
-}
+
 .footer-bottom-inner ul {
   list-style-type: none;
   padding: 23px 0;

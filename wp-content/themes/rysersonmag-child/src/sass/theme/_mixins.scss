@@ -422,7 +422,8 @@
 
 @mixin home-archive-title-font {
     font-size: 40px;
-    line-height: 48px;
+    line-height: 46px;
+    letter-spacing: -0.01em;
     font-family: 'Lynon Bold', sans-serif;
     @include media-breakpoint-down(md) {
         font-size: 26px;

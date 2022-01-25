@@ -171,16 +171,16 @@ $thisIssue = get_the_ID();
 $prev_post = get_previous_post();
 if($prev_post) {
    $prev_title = strip_tags(str_replace('"', '', $prev_post->post_title));
-   echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class="mag-pagination-next ">&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+   echo "\t" . '<a rel="prev" href="' . get_permalink($prev_post->ID) . '" title="' . $prev_title. '" class="mag-pagination-prev ">&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6672 0L1.41419 10.253L0.353526 11.3137L-2.73287e-05 11.6673L11.3137 22.981L12.7279 21.5668L2.8284 11.6673L13.0814 1.41421L11.6672 0Z" fill="black"/>
-</svg>
-'. $prev_title . '</a>' . "\n";
+</svg><span>
+'. $prev_title . '</span></a>' . "\n";
 }
 
 $next_post = get_next_post();
 if($next_post) {
    $next_title = strip_tags(str_replace('"', '', $next_post->post_title));
-   echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="mag-pagination-next ">'. $next_title . '&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+   echo "\t" . '<a rel="next" href="' . get_permalink($next_post->ID) . '" title="' . $next_title. '" class="mag-pagination-next "><span>'. $next_title . '</span>&nbsp;<svg width="14" height="23" viewBox="0 0 14 23" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.31372 22.981L12.5668 12.7279L13.6274 11.6672L13.981 11.3137L2.66727 -1.2964e-05L1.25306 1.4142L11.1526 11.3137L0.899507 21.5667L2.31372 22.981Z" fill="black"/>
 </svg>
 </a>' . "\n";
